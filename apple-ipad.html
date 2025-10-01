@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="sv" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>iRepair of Sweden – Apple · iPad</title>
+
+  <!-- Use RELATIVE paths if this file is alongside /assets -->
+  <link rel="stylesheet" href="assets/styles.css?v=6">
+  <script src="assets/site.js?v=6" defer></script>
+</head>
+<body>
+  <!-- Shared header -->
+  <header class="site-header">
+    <div class="container head">
+      <div class="brand">
+        <div class="brand-badge">🔧</div>
+        <a href="index.html">iRepair <span>of Sweden</span></a>
+      </div>
+      <nav>
+        <a href="index.html" data-i18n="nav.home">Hem</a>
+        <a href="repairs.html" class="active" data-i18n="nav.repairs">Reparationer</a>
+        <a href="about.html" data-i18n="nav.about">Om oss</a>
+        <a href="stores.html" data-i18n="nav.stores">Våra butiker</a>
+        <a href="contact.html" data-i18n="nav.contact">Kontakt</a>
+      </nav>
+      <div class="actions">
+        <button id="themeBtn" class="btn ghost" aria-label="Byt tema">☀️ Ljust</button>
+        <button id="langBtn" class="btn">English</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container">
+      <div class="eyebrow" data-i18n="apple.eyebrow">Apple • iPad</div>
+      <h1 class="h1" data-i18n="apple.title">iPad – välj serie</h1>
+      <p class="lead" data-i18n="apple.sub">Reparationer på plats – ofta klara inom en timme. Drop-in.</p>
+          <div class="subnav">
+      <a class="pill" href="apple.html">← Apple</a>
+    </div>
+    </div>
+  </section>
+
+  <!-- Cards -->
+  <main class="container section">
+    <div class="grid">
+      <a class="card link-card" href="apple-ipad-7-10.html">
+        <h3>iPad 7 &amp; 10 (10,2")</h3><p class="muted">Prislista &amp; tjänster</p>
+      </a>
+      <a class="card link-card" href="apple-ipad-6.html">
+        <h3>iPad 6 (2018) 9,7"</h3><p class="muted">Prislista &amp; tjänster</p>
+      </a>
+      <a class="card link-card" href="apple-ipad-5.html">
+        <h3>iPad 3/4/5</h3><p class="muted">Prislista &amp; tjänster</p>
+      </a>
+      <a class="card link-card" href="apple-ipad-air.html">
+        <h3>iPad Air-serien</h3><p class="muted">Prislista &amp; tjänster</p>
+      </a>
+      <a class="card link-card" href="apple-ipad-pro.html">
+        <h3>iPad Pro-serien</h3><p class="muted">Prislista &amp; tjänster</p>
+      </a>
+      <a class="card link-card" href="apple-ipad-mini.html">
+        <h3>iPad mini-serien</h3><p class="muted">Kontakta oss för pris</p>
+      </a>
+    </div>
+
+    <p class="muted" style="margin-top:1rem">
+      Betalning: Klarna, Swish, Mastercard, Visa. Kontakt: 08-34 88 88 · info@irepairofsweden.com
+    </p>
+  </main>
+
+  <footer id="site-footer"></footer>
+
+  <!-- Page translations -->
+  <script>
+    const DICT={
+      sv:{nav:{home:"Hem",repairs:"Reparationer",about:"Om oss",stores:"Våra butiker",contact:"Kontakt"},
+          apple:{eyebrow:"Apple • iPad",title:"iPad – välj serie",sub:"Reparationer på plats – ofta klara inom en timme. Drop-in."}},
+      en:{nav:{home:"Home",repairs:"Repairs",about:"About us",stores:"Our stores",contact:"Contact"},
+          apple:{eyebrow:"Apple • iPad",title:"iPad — choose a series",sub:"On-site repairs — often within an hour. Walk-in."}}
+    };
+    window.applyLang = (lang)=>{
+      const t=DICT[lang]||DICT.sv;
+      document.querySelectorAll("[data-i18n]").forEach(el=>{
+        let c=t; for(const k of el.dataset.i18n.split(".")) c=c&&c[k];
+        if(typeof c==="string") el.textContent=c;
+      });
+    };
+  </script>
+</body>
+</html>

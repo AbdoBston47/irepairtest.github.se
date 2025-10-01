@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="sv" data-theme="light">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Samsung Galaxy S23 – prislista</title>
+  <link rel="stylesheet" href="assets/styles.css?v=10" />
+  <script src="assets/site.js?v=10" defer></script>
+</head>
+<body>
+<header class="site-header">
+  <div class="container head">
+    <div class="brand"><div class="brand-badge">🔧</div><a href="index.html">iRepair <span>of Sweden</span></a></div>
+    <nav>
+      <a href="index.html">Hem</a><a class="active" href="repairs.html">Reparationer</a>
+      <a href="about.html">Om oss</a><a href="stores.html">Våra butiker</a><a href="contact.html">Kontakt</a>
+    </nav>
+    <div class="actions"><button id="themeBtn" class="btn ghost">☀️ Ljust</button><button id="langBtn" class="btn">English</button></div>
+  </div>
+</header>
+
+<section class="hero"><div class="container">
+  <div class="eyebrow">Samsung</div>
+  <h1 class="h1">Galaxy S23/Plus/Ultra – prislista</h1>
+  <div class="subnav"><a class="pill" href="samsung.html">← Samsung</a></div>
+</div></section>
+
+<main class="container section" style="padding-top:24px">
+  <section class="card price-card">
+    <table class="price-table">
+      <thead><tr><th>Tjänst</th><th class="price">Pris</th></tr></thead>
+      <tbody>
+        <tr><td>S23 FE skärmbyte (original)</td><td class="price">2200 kr</td></tr>
+        <tr><td>S23 skärmbyte (original)</td><td class="price">2990 kr</td></tr>
+        <tr><td>S23 Plus skärmbyte (original)</td><td class="price">3300 kr</td></tr>
+        <tr><td>S23 Ultra skärmbyte (original)</td><td class="price">4500 kr</td></tr>
+        <tr><td>S23 Ultra skärmbyte (kopia)</td><td class="price">4000 kr</td></tr>
+        <tr><td>S23-serien baksidebyte</td><td class="price">1090 kr</td></tr>
+        <tr><td>S23-serien batteribyte</td><td class="price">990 kr</td></tr>
+        <tr><td>S23-serien laddportsbyte</td><td class="price">1200 kr</td></tr>
+        <tr><td>Felsökningsavgift</td><td class="price">300 kr</td></tr>
+        <tr><td>Fuktsanering</td><td class="price">699 kr</td></tr>
+        <tr><td>Lödningsarbete</td><td class="price">fr. 700 kr</td></tr>
+        <tr><td>Mjukvara</td><td class="price">fr. 400 kr</td></tr>
+      </tbody>
+    </table>
+    <p class="muted">Källa: iRepair – Galaxy S23 serien.</p>
+  </section>
+</main>
+
+<script>
+  const DICT={sv:{nav:{home:"Hem",repairs:"Reparationer",about:"Om oss",stores:"Våra butiker"},
+                  apple:{eyebrow:"Apple • iPhone",title:"iPhone 11-serien – prislista",sub:"Reparationer på plats – ofta klara inom en timme. Drop-in."},
+                  t:{service:"Tjänst",price:"Pris",pay:"Betalning: Klarna, Swish, Mastercard, Visa.",contact:"Kontakt: 08-34 88 88 · info@irepairofsweden.com"},
+                  _btn:"English"},
+             en:{nav:{home:"Home",repairs:"Repairs",about:"About us",stores:"Our stores"},
+                  apple:{eyebrow:"Apple • iPhone",title:"iPhone 11 series — price list",sub:"On-site repairs — often within an hour. Walk-in."},
+                  t:{service:"Service",price:"Price",pay:"Payment: Klarna, Swish, Mastercard, Visa.",contact:"Contact: 08-34 88 88 · info@irepairofsweden.com"},
+                  _btn:"Svenska"}};
+  function applyLang(lang){const t=DICT[lang];document.documentElement.lang=lang;document.querySelectorAll("[data-i18n]").forEach(el=>{let c=t;for(const k of el.dataset.i18n.split("."))c=c&&c[k];if(typeof c==="string")el.textContent=c;});document.getElementById('langBtn').textContent=t._btn;}
+
+  (function themeInit(){const KEY='theme',btn=document.getElementById('themeBtn');function set(x){document.documentElement.setAttribute('data-theme',x);localStorage.setItem(KEY,x);btn.textContent=x==='dark'?'🌙 Mörkt':'☀️ Ljust';btn.setAttribute('aria-label',x==='dark'?'Byt till ljust tema':'Byt till mörkt tema');}set(localStorage.getItem(KEY)||'light');btn.addEventListener('click',()=>set(document.documentElement.getAttribute('data-theme')==='dark'?'light':'dark'));})();
+  (function langInit(){const saved=localStorage.getItem('lang')||'sv';applyLang(saved);document.getElementById('langBtn').addEventListener('click',()=>{const next=(localStorage.getItem('lang')||'sv')==='sv'?'en':'sv';localStorage.setItem('lang',next);applyLang(next);});})();
+  document.getElementById('year').textContent=new Date().getFullYear();
+</script>
+
+<footer id="site-footer"></footer>
+</body>
+</html>

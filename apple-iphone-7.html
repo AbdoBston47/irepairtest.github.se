@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="sv" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>iRepair of Sweden – Apple · iPhone 7-serien</title>
+  <link rel="stylesheet" href="assets/styles.css">
+  <style>
+    .subnav{display:flex;flex-wrap:wrap;gap:8px;margin:16px 0 0}
+    .pill{display:inline-flex;align-items:center;gap:.5rem;padding:.5rem .9rem;border:1px solid var(--border);border-radius:999px;background:var(--card);color:var(--text);text-decoration:none}
+    .pill:hover{border-color:var(--accent)}
+    .price-card{margin-top:16px}
+    .price-table{width:100%;border-collapse:collapse;font-size:.98rem}
+    .price-table th,.price-table td{border:1px solid var(--border);padding:10px 12px;vertical-align:top}
+    .price-table th{text-align:left;background:var(--surface)}
+    .price{text-align:right;white-space:nowrap;font-weight:700}
+    .hint{color:var(--muted);font-size:.9rem}
+  </style>
+</head>
+<body>
+<header class="site-header">
+  <div class="container head">
+    <div class="brand"><div class="brand-badge">🔧</div><a href="index.html">iRepair <span style="color:var(--muted)">of Sweden</span></a></div>
+    <nav>
+      <a href="index.html" data-i18n="nav.home">Hem</a>
+      <a href="repairs.html" class="active" data-i18n="nav.repairs">Reparationer</a>
+      <a href="about.html" data-i18n="nav.about">Om oss</a>
+      <a href="stores.html" data-i18n="nav.stores">Våra butiker</a>
+    </nav>
+    <div style="display:flex;gap:8px">
+      <button id="themeBtn" class="theme-btn btn" aria-label="Byt tema">☀️ Ljust</button>
+      <button id="langBtn" class="lang-btn">English</button>
+    </div>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <div class="eyebrow" style="color:var(--muted);font-weight:600;text-transform:uppercase;letter-spacing:.04em" data-i18n="apple.eyebrow">Apple • iPhone</div>
+    <h1 class="h1" data-i18n="apple.title">iPhone 7-serien – prislista</h1>
+    <p class="muted" data-i18n="apple.sub">Reparationer på plats – ofta klara inom en timme. Drop-in.</p>
+    <div class="subnav">
+      <a class="pill" href="#iphone7">iPhone 7</a>
+      <a class="pill" href="#iphone7plus">iPhone 7 Plus</a>
+    </div>
+          <div>
+      <a class="pill" href="repairs.html" onclick="if(history.length>1){history.back();return false;}" aria-label="Tillbaka">← iPhone</a>
+      </div>
+  </div>
+</section>
+
+<main class="container section" style="padding-top:24px">
+  <!-- iPhone 7 -->
+  <section id="iphone7" class="card price-card">
+    <h2 style="margin:0 0 10px">iPhone 7</h2>
+    <table class="price-table">
+      <thead><tr><th data-i18n="t.service">Tjänst</th><th class="price" data-i18n="t.price">Pris</th></tr></thead>
+      <tbody>
+        <tr><td>Skärmbyte (OEM–skärm)</td><td class="price">750 kr</td></tr>
+        <tr><td>Skärmbyte (kopia)</td><td class="price">590 kr</td></tr>
+        <tr><td>Batteribyte</td><td class="price">450 kr</td></tr>
+        <tr><td>Laddport, mikrofon &amp; hörlursuttagsbyte</td><td class="price">440 kr</td></tr>
+        <tr><td>Samtalshögtalare</td><td class="price">390 kr</td></tr>
+        <tr><td>Musikhögtalare</td><td class="price">440 kr</td></tr>
+        <tr><td>Volymknappsbyte</td><td class="price">690 kr</td></tr>
+        <tr><td>On/Off knapp &amp; volymknapp</td><td class="price">440 kr</td></tr>
+        <tr><td>Framkamera &amp; sensorbyte</td><td class="price">490 kr</td></tr>
+        <tr><td>Bakkamerabyte</td><td class="price">690 kr</td></tr>
+        <tr><td>Kameraglasbyte</td><td class="price">350 kr</td></tr>
+        <tr><td>Felsökningsavgift</td><td class="price">300 kr</td></tr>
+        <tr><td>Lödningsarbete</td><td class="price">fr. 700 kr</td></tr>
+        <tr><td>Fuktsanering</td><td class="price">699 kr</td></tr>
+        <tr><td>Mjukvara</td><td class="price">fr. 200 kr</td></tr>
+      </tbody>
+    </table>
+    <p class="hint">Källa: iRepair of Sweden – iPhone 7.</p>
+  </section>
+
+  <!-- iPhone 7 Plus -->
+  <section id="iphone7plus" class="card price-card">
+    <h2 style="margin:0 0 10px">iPhone 7 Plus</h2>
+    <table class="price-table">
+      <thead><tr><th data-i18n="t.service">Tjänst</th><th class="price" data-i18n="t.price">Pris</th></tr></thead>
+      <tbody>
+        <tr><td>Skärmbyte (OEM–skärm)</td><td class="price">890 kr</td></tr>
+        <tr><td>Skärmbyte (kopia)</td><td class="price">690 kr</td></tr>
+        <tr><td>Batteribyte</td><td class="price">450 kr</td></tr>
+        <tr><td>Laddport, mikrofon &amp; hörlursuttagsbyte</td><td class="price">490 kr</td></tr>
+        <tr><td>Samtalshögtalare</td><td class="price">390 kr</td></tr>
+        <tr><td>Musikhögtalare</td><td class="price">390 kr</td></tr>
+        <tr><td>Volymknappsbyte</td><td class="price">690 kr</td></tr>
+        <tr><td>On/Off knapp &amp; volymknapp</td><td class="price">490 kr</td></tr>
+        <tr><td>Framkamera &amp; sensorbyte</td><td class="price">450 kr</td></tr>
+        <tr><td>Bakkamerabyte</td><td class="price">990 kr</td></tr>
+        <tr><td>Kameraglasbyte</td><td class="price">390 kr</td></tr>
+        <tr><td>Felsökningsavgift</td><td class="price">300 kr</td></tr>
+        <tr><td>Lödningsarbete</td><td class="price">fr. 700 kr</td></tr>
+        <tr><td>Fuktsanering</td><td class="price">699 kr</td></tr>
+        <tr><td>Mjukvara</td><td class="price">fr. 200 kr</td></tr>
+      </tbody>
+    </table>
+    <p class="hint">Källa: iRepair of Sweden – iPhone 7 Plus.</p>
+  </section>
+
+  <p class="hint" style="margin-top:18px">
+    <span data-i18n="t.pay">Betalning: Klarna, Swish, Mastercard, Visa.</span><br>
+    <span data-i18n="t.contact">Kontakt: 08-34 88 88 · info@irepairofsweden.com</span>
+  </p>
+</main>
+
+<footer>© <span></span> Bston-Tech. <span data-i18n="foot.rights">Alla rättigheter förbehållna.</span></footer>
+
+<script>
+  const DICT={sv:{nav:{home:"Hem",repairs:"Reparationer",about:"Om oss",stores:"Våra butiker"},
+                  apple:{eyebrow:"Apple • iPhone",title:"iPhone 7-serien – prislista",sub:"Reparationer på plats – ofta klara inom en timme. Drop-in."},
+                  t:{service:"Tjänst",price:"Pris",pay:"Betalning: Klarna, Swish, Mastercard, Visa.",contact:"Kontakt: 08-34 88 88 · info@irepairofsweden.com"},
+                  _btn:"English"},
+             en:{nav:{home:"Home",repairs:"Repairs",about:"About us",stores:"Our stores"},
+                  apple:{eyebrow:"Apple • iPhone",title:"iPhone 7 series — price list",sub:"On-site repairs — often within an hour. Walk-in."},
+                  t:{service:"Service",price:"Price",pay:"Payment: Klarna, Swish, Mastercard, Visa.",contact:"Contact: 08-34 88 88 · info@irepairofsweden.com"},
+                  _btn:"Svenska"}};
+  function applyLang(lang){const t=DICT[lang];document.documentElement.lang=lang;document.querySelectorAll("[data-i18n]").forEach(el=>{let c=t;for(const k of el.dataset.i18n.split("."))c=c&&c[k];if(typeof c==="string")el.textContent=c;});document.getElementById('langBtn').textContent=t._btn;}
+  (function themeInit(){const KEY='theme',btn=document.getElementById('themeBtn');function set(x){document.documentElement.setAttribute('data-theme',x);localStorage.setItem(KEY,x);btn.textContent=x==='dark'?'🌙 Mörkt':'☀️ Ljust';btn.setAttribute('aria-label',x==='dark'?'Byt till ljust tema':'Byt till mörkt tema');}set(localStorage.getItem(KEY)||'light');btn.addEventListener('click',()=>set(document.documentElement.getAttribute('data-theme')==='dark'?'light':'dark'));})();
+  (function langInit(){const saved=localStorage.getItem('lang')||'sv';applyLang(saved);document.getElementById('langBtn').addEventListener('click',()=>{const next=(localStorage.getItem('lang')||'sv')==='sv'?'en':'sv';localStorage.setItem('lang',next);applyLang(next);});})();
+  document.getElementById('year7').textContent=new Date().getFullYear();
+</script>
+</body>
+</html>

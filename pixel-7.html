@@ -1,0 +1,277 @@
+<!doctype html>
+<html lang="sv" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>iRepair of Sweden – Google Pixel 7 & 7 Pro – prislista</title>
+
+  <!-- Keep your global CSS/JS -->
+  <link rel="stylesheet" href="assets/styles.css">
+  <script src="assets/site.js" defer></script>
+</head>
+<body>
+  <!-- Header (unchanged) -->
+  <header class="site-header">
+    <div class="container head">
+      <div class="brand">
+        <div class="brand-badge">🔧</div>
+        <a href="index.html">iRepair <span>of Sweden</span></a>
+      </div>
+      <nav>
+        <a href="index.html">Hem</a>
+        <a href="repairs.html" class="active">Reparationer</a>
+        <a href="about.html">Om oss</a>
+        <a href="stores.html">Våra butiker</a>
+        <a href="contact.html">Kontakt</a>
+      </nav>
+      <div class="actions">
+        <button id="themeBtn" class="btn ghost" aria-label="Byt tema">☀️ Ljust</button>
+        <button id="langBtn" class="btn">English</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container">
+      <div class="eyebrow">Google • Pixel</div>
+      <h1 class="h1">Google Pixel 7 & 7 Pro – prislista</h1>
+      <div class="subnav"><a class="pill" href="pixel.html">← Pixel</a></div>
+    </div>
+  </section>
+
+  <!-- MAIN CONTENT -->
+  <main class="container section" style="padding-top:24px">
+    <section class="card price-card" id="pixel7">
+      <h2 style="margin:0 0 10px">Google Pixel 7</h2>
+      <table class="price-table">
+        <thead>
+          <tr><th>Tjänst</th><th class="price">Pris</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><span data-i18n="svc.screen">Skärmbyte</span></td><td class="price">3 199 kr</td></tr>
+          <tr><td><span data-i18n="svc.battery">Batteribyte</span></td><td class="price">999 kr</td></tr>
+          <tr><td><span data-i18n="svc.port">Laddkontakt</span></td><td class="price">1 199 kr</td></tr>
+          <tr><td><span data-i18n="svc.camera">Kamera (bak)</span></td><td class="price">1 799 kr</td></tr>
+          <tr><td><span data-i18n="svc.water">Fuktsanering</span></td><td class="price">499 kr</td></tr>
+        </tbody>
+      </table>
+      <p class="muted">Ring <a href="tel:08348888">08-34 88 88</a> eller mejla
+        <a href="mailto:info@irepairofsweden.com">info@irepairofsweden.com</a> för frågor.</p>
+    </section>
+
+    <section class="card price-card" id="pixel7pro">
+      <h2 style="margin:24px 0 10px">Google Pixel 7 Pro</h2>
+      <table class="price-table">
+        <thead>
+          <tr><th>Tjänst</th><th class="price">Pris</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><span data-i18n="svc.screen">Skärmbyte</span></td><td class="price">3 699 kr</td></tr>
+          <tr><td><span data-i18n="svc.battery">Batteribyte</span></td><td class="price">1 099 kr</td></tr>
+          <tr><td><span data-i18n="svc.port">Laddkontakt</span></td><td class="price">1 299 kr</td></tr>
+          <tr><td><span data-i18n="svc.camera">Kamera (bak)</span></td><td class="price">1 999 kr</td></tr>
+          <tr><td><span data-i18n="svc.water">Fuktsanering</span></td><td class="price">499 kr</td></tr>
+        </tbody>
+      </table>
+      <p class="muted">Ring <a href="tel:08348888">08-34 88 88</a> eller mejla
+        <a href="mailto:info@irepairofsweden.com">info@irepairofsweden.com</a> för frågor.</p>
+    </section>
+  </main>
+
+  <!-- Footer (global script can fill year/rights/brand) -->
+  <footer id="site-footer" class="site-footer">
+    © <span id="footer-year"></span> <strong>Bston-Tech</strong>.
+    <span id="footer-rights">Alla rättigheter förbehållna.</span>
+  </footer>
+
+  <!-- Page-local language dictionary that plugs into your global toggle -->
+  <script>
+  (function(){
+    const D = {
+      sv:{
+        nav:{home:'Hem',repairs:'Reparationer',about:'Om oss',stores:'Våra butiker',contact:'Kontakt'},
+        hero:{eyebrow:'Google • Pixel', title:'Google Pixel 7 & 7 Pro – prislista', back:'← Pixel'},
+        th:{service:'Tjänst', price:'Pris'},
+        rights:'Alla rättigheter förbehållna.',
+        langBtn:'English',
+        theme:{light:'☀️ Ljust', dark:'🌙 Mörkt'},
+        'svc.screen':'Skärmbyte','svc.battery':'Batteribyte','svc.port':'Laddkontakt','svc.camera':'Kamera (bak)','svc.water':'Vattenskada felsökning'
+      },
+      en:{
+        nav:{home:'Home',repairs:'Repairs',about:'About us',stores:'Our stores',contact:'Contact'},
+        hero:{eyebrow:'Google • Pixel', title:'Google Pixel 7 & 7 Pro — price list', back:'← Pixel'},
+        th:{service:'Service', price:'Price'},
+        rights:'All rights reserved.',
+        langBtn:'Svenska',
+        theme:{light:'☀️ Light', dark:'🌙 Dark'},
+        'svc.screen':'Screen replacement','svc.battery':'Battery replacement','svc.port':'Charging port','svc.camera':'Camera (rear)','svc.water':'Water damage diagnosis'
+      }
+    };
+
+    function curLang(){ return localStorage.getItem(LANG_KEY) || 'sv'; }
+
+    function setTheme(mode){
+      document.documentElement.setAttribute('data-theme', mode);
+      localStorage.setItem(THEME_KEY, mode);
+      const t = D[curLang()];
+      const tb = $('#themeBtn');
+      if (tb) tb.textContent = mode==='dark' ? t.theme.dark : t.theme.light;
+    }
+
+    function setLang(lang){
+      localStorage.setItem(LANG_KEY, lang);
+      document.documentElement.lang = lang;
+      const t = D[lang] || D.sv;
+
+      // Header nav
+      [['index.html','home'],['repairs.html','repairs'],['about.html','about'],['stores.html','stores'],['contact.html','contact']]
+        .forEach(([href,key])=>{ const a = document.querySelector(`nav a[href="${href}"]`); if (a) a.textContent = t.nav[key]; });
+
+      // Hero
+      const e = $('.hero .eyebrow'); if (e) e.textContent = t.hero.eyebrow;
+      const h = $('.hero .h1');      if (h) h.textContent = t.hero.title;
+      const bp= $('.hero .subnav .pill'); if (bp) bp.textContent = t.hero.back;
+
+      // Table headers
+      document.querySelectorAll('.price-table thead th:nth-child(1)')
+        .forEach(th => th.textContent = t.th.service);
+      document.querySelectorAll('.price-table thead th:nth-child(2)')
+        .forEach(th => th.textContent = t.th.price);
+
+      // Services in tbody via data-i18n spans
+      document.querySelectorAll('[data-i18n]')
+        .forEach(el => { const k = el.getAttribute('data-i18n'); if (t[k]) el.textContent = t[k]; });
+
+      // Footer
+      const y = document.getElementById('footer-year'); if (y) y.textContent = new Date().getFullYear();
+      const r = document.getElementById('footer-rights'); if (r) r.textContent = t.rights;
+
+      // Buttons
+      const lb = $('#langBtn');  if (lb) lb.textContent = t.langBtn;
+      const tb = $('#themeBtn'); if (tb) tb.textContent = (localStorage.getItem(THEME_KEY)||'light')==='dark' ? t.theme.dark : t.theme.light;
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      // Init state
+      setTheme(localStorage.getItem(THEME_KEY) || 'light');
+      setLang(curLang());
+
+      // Bind once
+      const lb = $('#langBtn');
+      if (lb && !lb.dataset.bound){ lb.addEventListener('click', ()=> setLang(curLang()==='sv' ? 'en' : 'sv')); lb.dataset.bound = '1'; }
+      const tb = $('#themeBtn');
+      if (tb && !tb.dataset.bound){ tb.addEventListener('click', ()=> setTheme((localStorage.getItem(THEME_KEY)||'light')==='light' ? 'dark' : 'light')); tb.dataset.bound = '1'; }
+    });
+  })();
+  </script>
+  
+  <!-- i18n/theme fix: robust, single-source translations + auto-wrap services -->
+  <script id="fix-lang-theme-v2">
+  (function(){
+    if (window.__pixel7_fixBound_v2) return; window.__pixel7_fixBound_v2 = true;
+
+    const THEME_KEY='theme', LANG_KEY='lang';
+    const $ = s => document.querySelector(s);
+
+    const D = {
+      sv:{
+        nav:{home:'Hem',repairs:'Reparationer',about:'Om oss',stores:'Våra butiker',contact:'Kontakt'},
+        hero:{eyebrow:'Google • Pixel', title:'Google Pixel 7 & 7 Pro – prislista', back:'← Pixel'},
+        th:{service:'Tjänst', price:'Pris'},
+        rights:'Alla rättigheter förbehållna.',
+        langBtn:'English',
+        theme:{light:'☀️ Ljust', dark:'🌙 Mörkt'},
+        'svc.screen':'Skärmbyte',
+        'svc.battery':'Batteribyte',
+        'svc.port':'Laddkontakt',
+        'svc.camera':'Kamera (bak)',
+        'svc.water':'Fuktsanering'
+      },
+      en:{
+        nav:{home:'Home',repairs:'Repairs',about:'About us',stores:'Our stores',contact:'Contact'},
+        hero:{eyebrow:'Google • Pixel', title:'Google Pixel 7 & 7 Pro — price list', back:'← Pixel'},
+        th:{service:'Service', price:'Price'},
+        rights:'All rights reserved.',
+        langBtn:'Svenska',
+        theme:{light:'☀️ Light', dark:'🌙 Dark'},
+        'svc.screen':'Screen replacement',
+        'svc.battery':'Battery replacement',
+        'svc.port':'Charging port',
+        'svc.camera':'Camera (rear)',
+        'svc.water':'Water damage cleaning'
+      }
+    };
+
+    const prevApplyLang = window.applyLang || null;
+    function curLang(){ return localStorage.getItem(LANG_KEY) || 'sv'; }
+
+    function setTheme(mode){
+      document.documentElement.setAttribute('data-theme', mode);
+      localStorage.setItem(THEME_KEY, mode);
+      const t = D[curLang()];
+      const tb = $('#themeBtn'); if (tb) tb.textContent = mode==='dark' ? t.theme.dark : t.theme.light;
+    }
+
+    function i18nFill(lang){
+      const t = D[lang] || D.sv;
+      [['index.html','home'],['repairs.html','repairs'],['about.html','about'],['stores.html','stores'],['contact.html','contact']]
+        .forEach(([href,key])=>{ const a = document.querySelector(`nav a[href="${href}"]`); if (a) a.textContent = t.nav[key]; });
+      const e = document.querySelector('.hero .eyebrow'); if (e) e.textContent = t.hero.eyebrow;
+      const h = document.querySelector('.hero .h1');      if (h) h.textContent = t.hero.title;
+      const bp= document.querySelector('.hero .subnav .pill'); if (bp) bp.textContent = t.hero.back;
+      document.querySelectorAll('.price-table thead th:nth-child(1)')
+        .forEach(th => th.textContent = t.th.service);
+      document.querySelectorAll('.price-table thead th:nth-child(2)')
+        .forEach(th => th.textContent = t.th.price);
+      document.querySelectorAll('[data-i18n]')
+        .forEach(el => { const k = el.getAttribute('data-i18n'); if (t[k]) el.textContent = t[k]; });
+      const y = document.getElementById('footer-year'); if (y) y.textContent = new Date().getFullYear();
+      const r = document.getElementById('footer-rights'); if (r) r.textContent = t.rights;
+      const lb = document.getElementById('langBtn');  if (lb) lb.textContent = t.langBtn;
+      const tb = document.getElementById('themeBtn'); if (tb) tb.textContent = (localStorage.getItem(THEME_KEY)||'light')==='dark' ? t.theme.dark : t.theme.light;
+    }
+
+    function ensureServiceSpans(){
+      const map = {
+        'Skärmbyte':'svc.screen',
+        'Batteribyte':'svc.battery',
+        'Laddkontakt':'svc.port',
+        'Kamera (bak)':'svc.camera',
+        'Vattenskada felsökning':'svc.water'
+      };
+      document.querySelectorAll('table.price-table tbody tr td:first-child').forEach(td=>{
+        const span = td.querySelector('[data-i18n]');
+        if (!span){
+          const txt = td.textContent.trim();
+          const key = map[txt];
+          if (key){ td.innerHTML = `<span data-i18n="${key}">${txt}</span>`; }
+        }
+      });
+    }
+
+    function setLang(lang){
+      localStorage.setItem(LANG_KEY, lang);
+      document.documentElement.lang = lang;
+      i18nFill(lang);
+      try { if (typeof prevApplyLang === 'function') prevApplyLang(lang); } catch(e){}
+    }
+
+    // Make this the global entry point for language switching
+    window.applyLang = setLang;
+
+    document.addEventListener('DOMContentLoaded', ()=>{
+      // Replace button nodes to remove any old listeners, then bind cleanly
+      const lb = document.getElementById('langBtn');
+      if (lb){ const clone = lb.cloneNode(true); lb.parentNode.replaceChild(clone, lb); clone.addEventListener('click', ()=> setLang(curLang()==='sv' ? 'en' : 'sv')); }
+      const tb = document.getElementById('themeBtn');
+      if (tb){ const cloneT = tb.cloneNode(true); tb.parentNode.replaceChild(cloneT, tb); cloneT.addEventListener('click', ()=> setTheme((localStorage.getItem(THEME_KEY)||'light')==='light' ? 'dark' : 'light')); }
+
+      ensureServiceSpans();
+      setTheme(localStorage.getItem(THEME_KEY) || 'light');
+      i18nFill(curLang());
+    });
+  })();
+  </script>
+</body>
+</html>

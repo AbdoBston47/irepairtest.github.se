@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="sv" data-theme="light">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>iRepair of Sweden – Sälj mobil · IMEI-kontroll</title>
+
+  <link rel="stylesheet" href="assets/styles.css" />
+  <script src="assets/site.js" defer></script>
+  <script src="assets/sell.js" defer></script>
+
+  <style>
+    /* ——— Page look & feel (keeps your CSS vars: --card, --border, --text, --muted, --accent) ——— */
+    .hero .eyebrow{color:var(--muted);font-weight:700;letter-spacing:.04em;text-transform:uppercase}
+    .hero .h1{line-height:1.15;margin-top:.25rem}
+    .subnav{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+    .pill{display:inline-flex;align-items:center;gap:.5rem;padding:.5rem .9rem;border:1px solid var(--border);border-radius:999px;background:var(--surface);color:var(--text);text-decoration:none}
+    .pill:hover{border-color:var(--accent)}
+    .grid{display:grid;gap:18px}
+    .cols-2{grid-template-columns:1.1fr .9fr}
+    @media (max-width:900px){.cols-2{grid-template-columns:1fr}}
+
+    .card{background:var(--card);border:1px solid var(--border);border-radius:18px;padding:18px;box-shadow:0 6px 24px rgba(0,0,0,.05)}
+    .field{display:flex;flex-direction:column;gap:8px}
+    .field label{font-weight:600}
+    .input{padding:.9rem 1rem;border-radius:12px;border:1px solid var(--border);background:var(--surface);color:var(--text);font-size:1rem}
+    .muted{color:var(--muted)}
+    .ok{color:#2e7d32;font-weight:700}
+    .warn{color:#c62828;font-weight:700}
+
+    .table{width:100%;border-collapse:collapse}
+    .table th,.table td{border:1px solid var(--border);padding:.6rem .75rem;vertical-align:top}
+    .table th{background:var(--surface);text-align:left}
+    .kbd{font-variant-numeric:tabular-nums;letter-spacing:.03em}
+
+    .btn{display:inline-flex;align-items:center;justify-content:center;padding:.7rem 1rem;border-radius:12px;border:1px solid var(--border);background:var(--surface);cursor:pointer}
+    .btn.primary{background:var(--accent);border-color:var(--accent);color:#fff}
+    .btn[disabled]{opacity:.6;cursor:not-allowed}
+
+    .inline-help{display:flex;align-items:center;gap:.5rem}
+    .price{font-weight:900;font-size:1.25rem}
+
+    /* Tiny loading badge */
+    .badge{display:inline-flex;align-items:center;gap:.5rem;border:1px solid var(--border);padding:.35rem .6rem;border-radius:999px;background:var(--surface);font-size:.9rem}
+    .dot{width:.6rem;height:.6rem;border-radius:999px;background:var(--muted);animation:pulse 1.4s infinite}
+    @keyframes pulse{0%{opacity:.4}50%{opacity:1}100%{opacity:.4}}
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container head">
+      <div class="brand">
+        <div class="brand-badge">🔧</div>
+        <a href="index.html">iRepair <span style="color:var(--muted)">of Sweden</span></a>
+      </div>
+      <nav>
+        <a href="index.html" data-i18n="nav.home">Hem</a>
+        <a href="repairs.html" data-i18n="nav.repairs">Reparationer</a>
+        <a href="sell.html" class="active" data-i18n="nav.sell">Sälj mobil</a>
+        <a href="stores.html" data-i18n="nav.stores">Våra butiker</a>
+        <a href="contact.html" data-i18n="nav.contact">Kontakt</a>
+      </nav>
+      <div style="display:flex;gap:8px">
+        <button id="themeBtn" class="btn" aria-label="Byt tema">☀️ Ljust</button>
+        <button id="langBtn" class="btn">English</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container">
+      <div class="eyebrow" data-i18n="hero.eyebrow">Sälj din mobil</div>
+      <h1 class="h1" data-i18n="hero.title">IMEI-kontroll & offert direkt</h1>
+      <p class="muted" data-i18n="hero.sub">Skriv in ditt IMEI (15 siffror). Vi gör onlinelookup och ger ett prisförslag.</p>
+      <div class="subnav">
+        <a class="pill" href="#imei" data-i18n="hero.goto">Gå till IMEI-kontroll ↓</a>
+        <a class="pill" href="contact.html" data-i18n="hero.contact">Kontakta oss</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main -->
+  <main id="sell-page" class="container section" style="padding-top:24px">
+    <div class="grid cols-2">
+
+      <!-- Left: IMEI form -->
+      <section class="card">
+        <div class="inline-help" style="justify-content:space-between">
+          <h2 style="margin:0" data-i18n="form.title">IMEI-kontroll</h2>
+          <span id="netState" class="badge" style="display:none"><span class="dot"></span><span data-i18n="form.online">Online</span></span>
+        </div>
+
+        <div id="imei" class="field" style="margin-top:8px">
+          <label for="imeiInput" data-i18n="form.imei">IMEI (15 siffror)</label>
+          <input id="imeiInput" class="input" inputmode="numeric" pattern="[0-9]*" minlength="15" maxlength="15" placeholder="35XXXXXXXXXXXXX" />
+          <div id="imeiStatus" class="muted"></div>
+        </div>
+
+        <div class="grid" style="grid-template-columns:1fr 1fr;margin-top:10px">
+          <button id="checkBtn" type="button" class="btn primary" data-i18n="form.check">Kontrollera IMEI</button>
+          <button id="genReportBtn" type="button" class="btn" disabled data-i18n="form.report">Generera rapport</button>
+        </div>
+
+        <p class="muted" style="margin-top:10px" data-i18n="form.disclaimer">
+          Obs: Vi genererar inte nya IMEI-nummer. Vi verifierar och hämtar modellinfo online.
+        </p>
+      </section>
+
+      <!-- Right: Result & quote -->
+      <section class="card">
+        <h2 style="margin-top:0" data-i18n="result.title">Resultat & modell</h2>
+        <table class="table">
+          <tbody>
+            <tr><th data-i18n="result.valid">IMEI giltighet</th><td id="rValid" class="kbd">–</td></tr>
+            <tr><th data-i18n="result.tac">TAC (modellkod)</th><td id="rTAC" class="kbd">–</td></tr>
+            <tr><th data-i18n="result.brand">Märke</th><td id="rBrand">–</td></tr>
+            <tr><th data-i18n="result.model">Identifierad modell</th><td id="rModel">–</td></tr>
+            <tr><th data-i18n="result.blacklist">Blacklist</th><td id="rBlacklist" data-i18n="result.unknown" class="kbd">Okänt – kräver online-koll</td></tr>
+            <tr><th data-i18n="result.warranty">Garanti</th><td id="rWarranty" data-i18n="result.unknown">Okänt – kräver online-koll</td></tr>
+          </tbody>
+        </table>
+
+        <div class="field" style="margin-top:12px">
+          <label data-i18n="quote.title">Snabb prisindikator</label>
+          <div class="grid" style="grid-template-columns:1fr 1fr">
+            <label class="inline-help"><input type="checkbox" id="qScreen" /> <span data-i18n="quote.screen">Sprucken skärm</span></label>
+            <label class="inline-help"><input type="checkbox" id="qWater" /> <span data-i18n="quote.water">Vattenskada/Fuktsanering behövs</span></label>
+            <label class="inline-help"><input type="checkbox" id="qBattery" /> <span data-i18n="quote.battery">Batterihälsa &lt; 80%</span></label>
+            <label class="inline-help">
+              <span style="min-width:90px" data-i18n="quote.storage">Lagring</span>
+              <select id="qStorage" class="input" style="padding:.4rem .6rem;max-width:160px">
+                <option value="64">64 GB</option>
+                <option value="128" selected>128 GB</option>
+                <option value="256">256 GB</option>
+                <option value="512">512 GB</option>
+                <option value="1024">1 TB</option>
+              </select>
+            </label>
+          </div>
+        </div>
+
+        <div class="inline-help" style="justify-content:space-between;margin-top:12px">
+          <div class="muted" id="offerNote" data-i18n="quote.note">Indikativt pris. Slutligt pris efter test i butik.</div>
+          <div class="price" id="offerPrice">–</div>
+        </div>
+
+        <div class="grid" style="margin-top:12px">
+          <a class="btn" href="contact.html" data-i18n="quote.contact">Boka inlämning</a>
+        </div>
+      </section>
+    </div>
+
+    <!-- Printable report -->
+    <section id="report" class="card" style="margin-top:16px;display:none">
+      <h2 data-i18n="report.title">IMEI-rapport</h2>
+      <div id="reportBody"></div>
+      <div class="inline-help" style="gap:8px;margin-top:12px">
+        <button class="btn" type="button" onclick="window.print()" data-i18n="report.print">Skriv ut / Spara som PDF</button>
+        <a class="btn" href="contact.html" data-i18n="report.contact">Kontakta oss</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer is filled by site.js -->
+  <footer id="site-footer" class="site-footer"></footer>
+</body>
+</html>

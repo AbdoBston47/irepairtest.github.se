@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="sv" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>iRepair of Sweden – iPad Air</title>
+  <link rel="stylesheet" href="assets/styles.css?v=9">
+  <!-- Optional: you can keep your global script; this page also works without it -->
+  <script src="assets/site.js?v=9" defer></script>
+</head>
+<body>
+<header class="site-header">
+  <div class="container head">
+    <div class="brand"><div class="brand-badge">🔧</div><a href="index.html">iRepair <span>of Sweden</span></a></div>
+    <nav>
+      <a href="index.html">Hem</a>
+      <a href="repairs.html" class="active">Reparationer</a>
+      <a href="about.html">Om oss</a>
+      <a href="stores.html">Våra butiker</a>
+      <a href="contact.html">Kontakt</a>
+    </nav>
+    <div class="actions">
+      <button id="themeBtn" class="btn ghost" aria-label="Byt tema">☀️ Ljust</button>
+      <button id="langBtn" class="btn">English</button>
+    </div>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <div class="eyebrow">Apple • iPad</div>
+    <h1 class="h1">iPad Air – reparationer</h1>
+    <div class="subnav"><a class="pill" href="apple-ipad.html">← iPad</a></div>
+  </div>
+</section>
+
+<main class="container section" style="padding-top:24px">
+  <section class="card price-card">
+    <h2 style="margin:0 0 10px">iPad Air (alla generationer)</h2>
+    <table class="price-table">
+      <thead>
+        <tr>
+          <th>Tjänst</th>
+          <th class="price">Pris</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Skärm/glasbyte</td><td class="price">Kontakta oss</td></tr>
+        <tr><td>Batteribyte</td><td class="price">Kontakta oss</td></tr>
+        <tr><td>Laddport</td><td class="price">Kontakta oss</td></tr>
+        <tr><td>Kamera / kameraglas</td><td class="price">Kontakta oss</td></tr>
+        <tr><td>Bakglas / baksida</td><td class="price">Kontakta oss</td></tr>
+        <tr><td>Felsökning</td><td class="price">Kontakta oss</td></tr>
+        <tr><td>Fuktsanering</td><td class="price">Kontakta oss</td></tr>
+        <tr><td>Mjukvara</td><td class="price">Kontakta oss</td></tr>
+      </tbody>
+    </table>
+    <p class="muted">Ring <a href="tel:08348888">08-34 88 88</a> eller mejla <a href="mailto:info@irepairofsweden.com">info@irepairofsweden.com</a> för pris och reservdelstillgång.</p>
+  </section>
+</main>
+
+<footer class="site-footer">
+  © <span id="footer-year"></span> <strong>Bston-Tech</strong>.
+  <span id="footer-rights">Alla rättigheter förbehållna.</span>
+</footer>
+
+<!-- Self-contained: theme + language logic for THIS page -->
+<script>
+(function(){
+  const $ = (s)=>document.querySelector(s);
+  const THEME_KEY='theme', LANG_KEY='lang';
+
+  /* ========= Dictionary (SV/EN) ========= */
+  const D = {
+    sv:{
+      nav:{home:"Hem",repairs:"Reparationer",about:"Om oss",stores:"Våra butiker",contact:"Kontakt"},
+      hero:{eyebrow:"Apple • iPad", title:"iPad Air – reparationer", back:"← iPad"},
+      tableHead:{service:"Tjänst", price:"Pris"},
+      rows:{
+        display:"Skärm/glasbyte",
+        battery:"Batteribyte",
+        charge:"Laddport",
+        camera:"Kamera / kameraglas",
+        back:"Bakglas / baksida",
+        diag:"Felsökning",
+        liquid:"Fuktsanering",
+        software:"Mjukvara",
+        priceText:"Kontakta oss"
+      },
+      note:'Ring <a href="tel:08348888">08-34 88 88</a> eller mejla <a href="mailto:info@irepairofsweden.com">info@irepairofsweden.com</a> för pris och reservdelstillgång.',
+      rights:'Alla rättigheter förbehållna.',
+      langBtn:'English',
+      themeLight:'☀️ Ljust',
+      themeDark:'🌙 Mörkt'
+    },
+    en:{
+      nav:{home:"Home",repairs:"Repairs",about:"About us",stores:"Our stores",contact:"Contact"},
+      hero:{eyebrow:"Apple • iPad", title:"iPad Air — repairs", back:"← iPad"},
+      tableHead:{service:"Service", price:"Price"},
+      rows:{
+        display:"Display/glass replacement",
+        battery:"Battery replacement",
+        charge:"Charging port",
+        camera:"Camera / camera glass",
+        back:"Back glass / rear",
+        diag:"Diagnostics",
+        liquid:"Liquid damage cleaning",
+        software:"Software",
+        priceText:"Contact us"
+      },
+      note:'Call <a href="tel:08348888">08-34 88 88</a> or email <a href="mailto:info@irepairofsweden.com">info@irepairofsweden.com</a> for pricing and parts availability.',
+      rights:'All rights reserved.',
+      langBtn:'Svenska',
+      themeLight:'☀️ Light',
+      themeDark:'🌙 Dark'
+    }
+  };
+
+  /* ========= Theme ========= */
+  function setTheme(theme){
+    document.documentElement.setAttribute('data-theme', theme);
+    localStorage.setItem(THEME_KEY, theme);
+    const lang = localStorage.getItem(LANG_KEY) || 'sv';
+    const btn = $('#themeBtn');
+    if (btn) btn.textContent = (theme === 'dark') ? D[lang].themeDark : D[lang].themeLight;
+    if (btn) btn.setAttribute('aria-label', theme==='dark' ? (lang==='en'?'Switch to light theme':'Byt till ljust tema')
+                                                          : (lang==='en'?'Switch to dark theme':'Byt till mörkt tema'));
+  }
+  function bindTheme(){
+    setTheme(localStorage.getItem(THEME_KEY) || 'light');
+    const btn = $('#themeBtn');
+    if (btn && !btn.dataset.bound){
+      btn.addEventListener('click', ()=> setTheme((localStorage.getItem(THEME_KEY)||'light')==='light'?'dark':'light'));
+      btn.dataset.bound = '1';
+    }
+  }
+
+  /* ========= Language (page-local) ========= */
+  function setHTML(sel, html){ const el=$(sel); if(el) el.innerHTML = html; }
+  function applyLangPage(lang){
+    const t = D[lang] || D.sv;
+    document.documentElement.lang = lang;
+
+    // Nav
+    setHTML('nav a[href="index.html"]',   t.nav.home);
+    setHTML('nav a[href="repairs.html"]', t.nav.repairs);
+    setHTML('nav a[href="about.html"]',   t.nav.about);
+    setHTML('nav a[href="stores.html"]',  t.nav.stores);
+    setHTML('nav a[href="contact.html"]', t.nav.contact);
+
+    // Hero
+    setHTML('.hero .eyebrow', t.hero.eyebrow);
+    setHTML('.hero .h1',      t.hero.title);
+    setHTML('.hero .subnav .pill', t.hero.back);
+
+    // Table headers
+    setHTML('.price-table thead th:nth-child(1)', t.tableHead.service);
+    setHTML('.price-table thead th:nth-child(2)', t.tableHead.price);
+
+    // Rows (fixed order)
+    const labels=[t.rows.display,t.rows.battery,t.rows.lcd||t.rows.display,t.rows.camera,t.rows.back,t.rows.diag,t.rows.liquid,t.rows.software];
+    document.querySelectorAll('.price-table tbody tr').forEach((tr,i)=>{
+      const nameCell = tr.querySelector('td:nth-child(1)');
+      const priceCell= tr.querySelector('td.price');
+      if (nameCell && labels[i]) nameCell.textContent = labels[i];
+      if (priceCell) priceCell.textContent = t.rows.priceText;
+    });
+
+    // Note
+    const note = document.querySelector('.price-card .muted');
+    if (note) note.innerHTML = t.note;
+
+    // Footer + button labels
+    const rights = $('#footer-rights'); if (rights) rights.textContent = t.rights;
+    const langBtn = $('#langBtn'); if (langBtn) langBtn.textContent = t.langBtn;
+
+    // Update theme button label to current language
+    const theme = localStorage.getItem(THEME_KEY) || 'light';
+    const themeBtn = $('#themeBtn'); if (themeBtn) themeBtn.textContent = (theme==='dark') ? t.themeDark : t.themeLight;
+  }
+  function setLang(lang){
+    localStorage.setItem(LANG_KEY, lang);
+    applyLangPage(lang);
+  }
+  function bindLang(){
+    const start = localStorage.getItem(LANG_KEY) || 'sv';
+    setLang(start);
+    const btn = $('#langBtn');
+    if (btn && !btn.dataset.bound){
+      btn.addEventListener('click', ()=>{
+        const next = (localStorage.getItem(LANG_KEY) || 'sv') === 'sv' ? 'en' : 'sv';
+        setLang(next);
+      });
+      btn.dataset.bound = '1';
+    }
+  }
+
+  /* ========= Footer year ========= */
+  const y = $('#footer-year'); if (y) y.textContent = new Date().getFullYear();
+
+  /* ========= Init ========= */
+  document.addEventListener('DOMContentLoaded', function(){
+    bindTheme();
+    bindLang();
+  });
+})();
+</script>
+
+<footer id="site-footer" class="site-footer">
+  © <span id="footer-year"></span> <strong>Bston-Tech</strong>.
+  <span id="footer-rights" data-i18n="foot.rights">Alla rättigheter förbehållna.</span>
+</footer>
+
+</body>
+</html>

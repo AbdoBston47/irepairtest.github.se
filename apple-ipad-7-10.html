@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="sv" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>iRepair of Sweden – iPad 7 & 10 (10,2") – prislista</title>
+
+  <!-- Keep your global CSS/JS -->
+  <link rel="stylesheet" href="assets/styles.css">
+  <script src="assets/site.js" defer></script>
+</head>
+<body>
+  <!-- Header (unchanged) -->
+  <header class="site-header">
+    <div class="container head">
+      <div class="brand">
+        <div class="brand-badge">🔧</div>
+        <a href="index.html">iRepair <span>of Sweden</span></a>
+      </div>
+      <nav>
+        <a href="index.html">Hem</a>
+        <a href="repairs.html" class="active">Reparationer</a>
+        <a href="about.html">Om oss</a>
+        <a href="stores.html">Våra butiker</a>
+        <a href="contact.html">Kontakt</a>
+      </nav>
+      <div class="actions">
+        <button id="themeBtn" class="btn ghost" aria-label="Byt tema">☀️ Ljust</button>
+        <button id="langBtn" class="btn">English</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container">
+      <div class="eyebrow">Apple • iPad</div>
+      <h1 class="h1">iPad 7 & 10 (10,2") – prislista</h1>
+      <div class="subnav"><a class="pill" href="apple-ipad.html">← iPad</a></div>
+    </div>
+  </section>
+
+  <!-- MAIN CONTENT: keep your own rows/prices exactly as-is -->
+  <main class="container section" style="padding-top:24px">
+    <section class="card price-card">
+      <h2 style="margin:0 0 10px">iPad 7 & 10 (10,2")</h2>
+      <table class="price-table">
+        <thead>
+          <tr><th>Tjänst</th><th class="price">Pris</th></tr>
+        </thead>
+        <tbody>
+
+
+          <tr><td>Glasbyte ipad 7</td><td class="price">1290kr</td></tr>
+          <tr><td>Glasbyte ipad 10,2 8 Gen</td><td class="price">1490kr</td></tr>
+          <tr><td>Glasbyte ipad 10,2 9 Gen</td><td class="price">1690kr</td></tr>
+          <!--<tr><td>Batteribyte</td><td class="price">—</td></tr>
+          <tr><td>LCD-byte</td><td class="price">—</td></tr>-->
+          <tr><td>Felsökningsavgift</td><td class="price">300kr</td></tr>
+          <tr><td>Lödningsarbete</td><td class="price">fr. 700kr</td></tr>
+          <tr><td>Fuktsanering</td><td class="price">699kr</td></tr>
+          <tr><td>Mjukvara</td><td class="price">fr. 200kr</td></tr>
+        </tbody>
+      </table>
+      </tbody>
+      </table>
+      <p class="muted">
+        Ring <a href="tel:08348888">08-34 88 88</a> eller mejla
+        <a href="mailto:info@irepairofsweden.com">info@irepairofsweden.com</a> för frågor.
+      </p>
+    </section>
+  </main>
+
+  <!-- Footer (your global script will fill year/rights/brand) -->
+  <footer id="site-footer" class="site-footer">
+    © <span id="footer-year"></span> <strong>Bston-Tech</strong>.
+    <span id="footer-rights">Alla rättigheter förbehållna.</span>
+  </footer>
+
+  <!-- Page-local language dictionary that plugs into your global toggle -->
+  <script>
+  (function(){
+    const D = {
+      sv:{
+        nav:{home:"Hem",repairs:"Reparationer",about:"Om oss",stores:"Våra butiker",contact:"Kontakt"},
+        hero:{eyebrow:"Apple • iPad", title:'iPad 7 & 10 (10,2") – prislista', back:"← iPad"},
+        th:{service:"Tjänst", price:"Pris"}
+        // NOTE: We intentionally DO NOT translate your table body rows/prices.
+      },
+      en:{
+        nav:{home:"Home",repairs:"Repairs",about:"About us",stores:"Our stores",contact:"Contact"},
+        hero:{eyebrow:"Apple • iPad", title:'iPad 7 & 10 (10.2") — price list', back:"← iPad"},
+        th:{service:"Service", price:"Price"}
+        // Table body left untouched on purpose.
+      }
+    };
+
+    // Chain safely with your global applyLang
+    const prev = window.applyLang || function(){};
+    function setHTML(sel, html){ const el = document.querySelector(sel); if (el) el.innerHTML = html; }
+
+    window.applyLang = function(lang){
+      try { prev(lang); } catch(e){}
+      const t = (D[lang] || D.sv);
+
+      // Nav items (selected by hrefs so no IDs needed)
+      setHTML('nav a[href="index.html"]',   t.nav.home);
+      setHTML('nav a[href="repairs.html"]', t.nav.repairs);
+      setHTML('nav a[href="about.html"]',   t.nav.about);
+      setHTML('nav a[href="stores.html"]',  t.nav.stores);
+      setHTML('nav a[href="contact.html"]', t.nav.contact);
+
+      // Hero
+      setHTML('.hero .eyebrow', t.hero.eyebrow);
+      setHTML('.hero .h1',      t.hero.title);
+      setHTML('.hero .subnav .pill', t.hero.back);
+
+      // Table headers
+      setHTML('.price-table thead th:nth-child(1)', t.th.service);
+      setHTML('.price-table thead th:nth-child(2)', t.th.price);
+
+      // Footer year (keep updated)
+      const y = document.getElementById('footer-year');
+      if (y) y.textContent = new Date().getFullYear();
+    };
+
+    // Ensure current language applies once on load
+    document.addEventListener('DOMContentLoaded', function(){
+      window.applyLang(localStorage.getItem('lang') || 'sv');
+    });
+  })();
+  </script>
+
+  <script id="fix-lang-theme">
+(function(){
+  if (window.__ipad710_fixBound) return; window.__ipad710_fixBound = true;
+
+  const THEME_KEY='theme', LANG_KEY='lang';
+  const $ = s => document.querySelector(s);
+
+  const D = {
+    sv:{
+      nav:{home:'Hem',repairs:'Reparationer',about:'Om oss',stores:'Våra butiker',contact:'Kontakt'},
+      hero:{eyebrow:'Apple • iPad', title:'iPad 7 & 10 (10,2") – prislista', back:'← iPad'},
+      th:{service:'Tjänst', price:'Pris'},
+      rights:'Alla rättigheter förbehållna.',
+      langBtn:'English',
+      theme:{light:'☀️ Ljust', dark:'🌙 Mörkt'}
+    },
+    en:{
+      nav:{home:'Home',repairs:'Repairs',about:'About us',stores:'Our stores',contact:'Contact'},
+      hero:{eyebrow:'Apple • iPad', title:'iPad 7 & 10 (10.2") — price list', back:'← iPad'},
+      th:{service:'Service', price:'Price'},
+      rights:'All rights reserved.',
+      langBtn:'Svenska',
+      theme:{light:'☀️ Light', dark:'🌙 Dark'}
+    }
+  };
+
+  function curLang(){ return localStorage.getItem(LANG_KEY) || 'sv'; }
+
+  function setTheme(mode){
+    document.documentElement.setAttribute('data-theme', mode);
+    localStorage.setItem(THEME_KEY, mode);
+    const t = D[curLang()];
+    const tb = $('#themeBtn');
+    if (tb) tb.textContent = mode==='dark' ? t.theme.dark : t.theme.light;
+  }
+
+  function setLang(lang){
+    localStorage.setItem(LANG_KEY, lang);
+    document.documentElement.lang = lang;
+    const t = D[lang] || D.sv;
+
+    // Header nav
+    [['index.html','home'],['repairs.html','repairs'],['about.html','about'],['stores.html','stores'],['contact.html','contact']]
+      .forEach(([href,key])=>{
+        const a = document.querySelector(`nav a[href="${href}"]`);
+        if (a) a.textContent = t.nav[key];
+      });
+
+    // Hero
+    const e = $('.hero .eyebrow'); if (e) e.textContent = t.hero.eyebrow;
+    const h = $('.hero .h1');      if (h) h.textContent = t.hero.title;
+    const bp= $('.hero .subnav .pill'); if (bp) bp.textContent = t.hero.back;
+
+    // Table headers (prices/rows LEFT UNTOUCHED)
+    const th1 = document.querySelector('.price-table thead th:nth-child(1)'); if (th1) th1.textContent = t.th.service;
+    const th2 = document.querySelector('.price-table thead th:nth-child(2)'); if (th2) th2.textContent = t.th.price;
+
+    // Footer
+    const y = document.getElementById('footer-year'); if (y) y.textContent = new Date().getFullYear();
+    const r = document.getElementById('footer-rights'); if (r) r.textContent = t.rights;
+
+    // Buttons
+    const lb = $('#langBtn');  if (lb) lb.textContent = t.langBtn;
+    const tb = $('#themeBtn'); if (tb) tb.textContent = (localStorage.getItem(THEME_KEY)||'light')==='dark' ? t.theme.dark : t.theme.light;
+  }
+
+  document.addEventListener('DOMContentLoaded', () => {
+    // Init state
+    setTheme(localStorage.getItem(THEME_KEY) || 'light');
+    setLang(curLang());
+
+    // Bind once
+    const lb = $('#langBtn');
+    if (lb && !lb.dataset.bound){
+      lb.addEventListener('click', ()=> setLang(curLang()==='sv' ? 'en' : 'sv'));
+      lb.dataset.bound = '1';
+    }
+    const tb = $('#themeBtn');
+    if (tb && !tb.dataset.bound){
+      tb.addEventListener('click', ()=> setTheme((localStorage.getItem(THEME_KEY)||'light')==='light' ? 'dark' : 'light'));
+      tb.dataset.bound = '1';
+    }
+  });
+})();
+</script>
+</body>
+</html>
