@@ -1,20 +1,17 @@
 <!doctype html>
 <html lang="sv" data-theme="light">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>iRepair of Sweden – Samsung</title>
-  <!-- Use relative paths (same folder level as /assets) -->
-  <link rel="stylesheet" href="assets/styles.css?v=11" />
-  <script src="assets/site.js?v=11" defer></script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>iRepair of Sweden – Samsung Reparationer</title>
+  <link rel="stylesheet" href="assets/styles.css">
 </head>
 <body>
-  <!-- Header (shared) -->
   <header class="site-header">
     <div class="container head">
       <div class="brand">
         <div class="brand-badge">🔧</div>
-        <a href="index.html">iRepair <span>of Sweden</span></a>
+        <a href="index.html">iRepair <span style="color:var(--muted)">of Sweden</span></a>
       </div>
       <nav>
         <a href="index.html" data-i18n="nav.home">Hem</a>
@@ -30,59 +27,99 @@
     </div>
   </header>
 
-  <!-- Hero -->
-  <section class="hero">
+  <section class="hero animate-fade-in">
     <div class="container">
       <div class="eyebrow" data-i18n="samsung.eyebrow">SAMSUNG</div>
-      <h1 class="h1" data-i18n="samsung.title">Välj serie</h1>
+      <h1 class="h1" data-i18n="samsung.title">Välj Galaxy-serie</h1>
       <p class="lead" data-i18n="samsung.sub">Reparationer på plats – ofta klara inom en timme. Drop-in.</p>
-
-      <!-- NEW: Back pill-button -->
-      <div class="subnav" style="margin-top:12px">
-        <a id="backBtn"
-           class="pill"
-           href="repairs.html"
-           onclick="if(history.length>1){history.back();return false;}"
-           aria-label="Tillbaka">← Tillbaka</a>
+      <div class="subnav">
+        <a class="pill" href="repairs.html" data-i18n="samsung.back">← Tillbaka till Märken</a>
       </div>
     </div>
   </section>
 
-  <!-- Series grid -->
   <main class="container section">
     <div class="grid">
-      <a class="card link-card" href="samsung-s23.html"><h3>Galaxy S23-serien</h3><p class="muted">Prislista</p></a>
-      <a class="card link-card" href="samsung-s22.html"><h3>Galaxy S22-serien</h3><p class="muted">Prislista</p></a>
-      <a class="card link-card" href="samsung-s21.html"><h3>Galaxy S21-serien</h3><p class="muted">Prislista</p></a>
-      <a class="card link-card" href="samsung-a.html"><h3>Galaxy A-serien</h3><p class="muted">Prislista</p></a>
-      <a class="card link-card" href="samsung-s20.html"><h3>Galaxy S20-serien</h3><p class="muted">Prislista</p></a>
-      <a class="card link-card" href="samsung-s10.html"><h3>Galaxy S10-serien</h3><p class="muted">Prislista</p></a>
-      <a class="card link-card" href="samsung-s9.html"><h3>Galaxy S9-serien</h3><p class="muted">Prislista</p></a>
-      <a class="card link-card" href="samsung-s8.html"><h3>Galaxy S8-serien</h3><p class="muted">Prislista</p></a>
-      <a class="card link-card" href="samsung-a3-a5-a7.html"><h3>Galaxy A3/A5/A7</h3><p class="muted">Prislista</p></a>
-      <a class="card link-card" href="samsung-note.html"><h3>Galaxy Note</h3><p class="muted">Prislista</p></a>
-      <a class="card link-card" href="samsung-tab.html"><h3>Galaxy Tab</h3><p class="muted">Kontakta oss för pris</p></a>
+      <a class="card" href="samsung-s23.html">
+        <span class="badge">Galaxy S</span>
+        <h3>Galaxy S23-serien</h3>
+        <p class="muted">S23, S23+, S23 Ultra</p>
+        <div class="btn ghost mt-12" style="width:100%">Se priser</div>
+      </a>
+      <a class="card" href="samsung-s22.html">
+        <span class="badge">Galaxy S</span>
+        <h3>Galaxy S22-serien</h3>
+        <p class="muted">S22, S22+, S22 Ultra</p>
+        <div class="btn ghost mt-12" style="width:100%">Se priser</div>
+      </a>
+      <a class="card" href="samsung-s21.html">
+        <span class="badge">Galaxy S</span>
+        <h3>Galaxy S21-serien</h3>
+        <p class="muted">S21, S21+, S21 Ultra</p>
+        <div class="btn ghost mt-12" style="width:100%">Se priser</div>
+      </a>
+      <a class="card" href="samsung-a.html">
+        <span class="badge">Galaxy A</span>
+        <h3>Galaxy A-serien</h3>
+        <p class="muted">A12 till A54 och fler</p>
+        <div class="btn ghost mt-12" style="width:100%">Se priser</div>
+      </a>
+      <a class="card" href="samsung-s20.html">
+        <span class="badge">Galaxy S</span>
+        <h3>Galaxy S20-serien</h3>
+        <p class="muted">S20, S20 Ultra, S20 FE</p>
+        <div class="btn ghost mt-12" style="width:100%">Se priser</div>
+      </a>
+      <a class="card" href="samsung-note.html">
+        <span class="badge">Galaxy Note</span>
+        <h3>Galaxy Note-serien</h3>
+        <p class="muted">Note 10 till Note 20 Ultra</p>
+        <div class="btn ghost mt-12" style="width:100%">Se priser</div>
+      </a>
+      <a class="card" href="samsung-tab.html">
+        <span class="badge">Galaxy Tab</span>
+        <h3>Galaxy Tab</h3>
+        <p class="muted">Alla surfplattor från Samsung</p>
+        <div class="btn primary mt-12" style="width:100%">Pris på förfrågan</div>
+      </a>
     </div>
   </main>
 
-  <footer id="site-footer"></footer>
+  <footer>
+    <div class="container footer-content">
+      <div class="footer-brand">iRepair of Sweden</div>
+      <div class="muted">
+        © <span id="footer-year"></span> <span class="copyright-owner">iRepair of Sweden</span>. <span data-i18n="foot.rights">Alla rättigheter förbehållna.</span>
+        <br>
+        <span class="powered-by">Powered by Bston-Tech</span>
+      </div>
+    </div>
+  </footer>
 
-  <!-- Tiny page dictionary so the Back button & hero texts switch with English/Svenska -->
-<script>
-  const DICT={sv:{nav:{home:"Hem",repairs:"Reparationer",about:"Om oss",stores:"Våra butiker"},
-                  apple:{eyebrow:"Apple • iPhone",title:"iPhone 11-serien – prislista",sub:"Reparationer på plats – ofta klara inom en timme. Drop-in."},
-                  t:{service:"Tjänst",price:"Pris",pay:"Betalning: Klarna, Swish, Mastercard, Visa.",contact:"Kontakt: 08-34 88 88 · info@irepairofsweden.com"},
-                  _btn:"English"},
-             en:{nav:{home:"Home",repairs:"Repairs",about:"About us",stores:"Our stores"},
-                  apple:{eyebrow:"Apple • iPhone",title:"iPhone 11 series — price list",sub:"On-site repairs — often within an hour. Walk-in."},
-                  t:{service:"Service",price:"Price",pay:"Payment: Klarna, Swish, Mastercard, Visa.",contact:"Contact: 08-34 88 88 · info@irepairofsweden.com"},
-                  _btn:"Svenska"}};
-  function applyLang(lang){const t=DICT[lang];document.documentElement.lang=lang;document.querySelectorAll("[data-i18n]").forEach(el=>{let c=t;for(const k of el.dataset.i18n.split("."))c=c&&c[k];if(typeof c==="string")el.textContent=c;});document.getElementById('langBtn').textContent=t._btn;}
-
-  (function themeInit(){const KEY='theme',btn=document.getElementById('themeBtn');function set(x){document.documentElement.setAttribute('data-theme',x);localStorage.setItem(KEY,x);btn.textContent=x==='dark'?'🌙 Mörkt':'☀️ Ljust';btn.setAttribute('aria-label',x==='dark'?'Byt till ljust tema':'Byt till mörkt tema');}set(localStorage.getItem(KEY)||'light');btn.addEventListener('click',()=>set(document.documentElement.getAttribute('data-theme')==='dark'?'light':'dark'));})();
-  (function langInit(){const saved=localStorage.getItem('lang')||'sv';applyLang(saved);document.getElementById('langBtn').addEventListener('click',()=>{const next=(localStorage.getItem('lang')||'sv')==='sv'?'en':'sv';localStorage.setItem('lang',next);applyLang(next);});})();
-  document.getElementById('year').textContent=new Date().getFullYear();
-</script>
-
+  <script src="assets/app.js?v=5"></script>
+  <script>
+    const DICT = {
+      sv:{
+        nav:{home:"Hem",repairs:"Reparationer",about:"Om oss",stores:"Våra butiker", contact: "Kontakt"},
+        samsung:{eyebrow:"SAMSUNG",title:"Välj Galaxy-serie",sub:"Reparationer på plats – ofta klara inom en timme. Drop-in.", back: "← Tillbaka till Märken"},
+        foot:{rights:"Alla rättigheter förbehållna."}
+      },
+      en:{
+        nav:{home:"Home",repairs:"Repairs",about:"About us",stores:"Our stores", contact: "Contact"},
+        samsung:{eyebrow:"SAMSUNG",title:"Choose Galaxy Series",sub:"Repairs done on-site — often within an hour. Walk-in.", back: "← Back to Brands"},
+        foot:{rights:"Copyright"}
+      }
+    };
+    window.applyLang = function(lang){
+      const t = DICT[lang];
+      document.querySelectorAll("[data-i18n]").forEach(el=>{
+        const path = el.getAttribute('data-i18n').split('.');
+        let val = t; for (const p of path){ if (val && p in val) val = val[p]; else { val=null; break; } }
+        if (typeof val === 'string') el.textContent = val;
+      });
+    };
+    const savedLang = localStorage.getItem('irepair_lang') || 'sv';
+    window.applyLang(savedLang);
+  </script>
 </body>
 </html>

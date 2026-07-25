@@ -6,7 +6,7 @@
   <title>iRepair of Sweden – iPad Air</title>
   <link rel="stylesheet" href="assets/styles.css?v=9">
   <!-- Optional: you can keep your global script; this page also works without it -->
-  <script src="assets/site.js?v=9" defer></script>
+  <script src="assets/app.js?v=5" defer></script>
 </head>
 <body>
 <header class="site-header">
@@ -55,7 +55,7 @@
         <tr><td>Mjukvara</td><td class="price">Kontakta oss</td></tr>
       </tbody>
     </table>
-    <p class="muted">Ring <a href="tel:08348888">08-34 88 88</a> eller mejla <a href="mailto:info@irepairofsweden.com">info@irepairofsweden.com</a> för pris och reservdelstillgång.</p>
+    <p class="muted">Ring <a href="tel:08348888">08-34 88 88</a> eller mejla <a href="mailto:info@irepairofsweden.se">info@irepairofsweden.se</a> för pris och reservdelstillgång.</p>
   </section>
 </main>
 
@@ -87,7 +87,7 @@
         software:"Mjukvara",
         priceText:"Kontakta oss"
       },
-      note:'Ring <a href="tel:08348888">08-34 88 88</a> eller mejla <a href="mailto:info@irepairofsweden.com">info@irepairofsweden.com</a> för pris och reservdelstillgång.',
+      note:'Ring <a href="tel:08348888">08-34 88 88</a> eller mejla <a href="mailto:info@irepairofsweden.se">info@irepairofsweden.se</a> för pris och reservdelstillgång.',
       rights:'Alla rättigheter förbehållna.',
       langBtn:'English',
       themeLight:'☀️ Ljust',
@@ -108,8 +108,8 @@
         software:"Software",
         priceText:"Contact us"
       },
-      note:'Call <a href="tel:08348888">08-34 88 88</a> or email <a href="mailto:info@irepairofsweden.com">info@irepairofsweden.com</a> for pricing and parts availability.',
-      rights:'All rights reserved.',
+      note:'Call <a href="tel:08348888">08-34 88 88</a> or email <a href="mailto:info@irepairofsweden.se">info@irepairofsweden.se</a> for pricing and parts availability.',
+      rights:'Copyright',
       langBtn:'Svenska',
       themeLight:'☀️ Light',
       themeDark:'🌙 Dark'
@@ -178,6 +178,7 @@
     const theme = localStorage.getItem(THEME_KEY) || 'light';
     const themeBtn = $('#themeBtn'); if (themeBtn) themeBtn.textContent = (theme==='dark') ? t.themeDark : t.themeLight;
   }
+  window.applyLang = applyLangPage;
   function setLang(lang){
     localStorage.setItem(LANG_KEY, lang);
     applyLangPage(lang);

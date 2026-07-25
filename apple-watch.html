@@ -7,7 +7,7 @@
 
   <!-- load shared styles & script (relative paths) -->
   <link rel="stylesheet" href="assets/styles.css?v=12" />
-  <script src="assets/site.js?v=12" defer></script>
+  <script src="assets/app.js?v=5" defer></script>
 </head>
 <body>
   <!-- Header -->
@@ -167,11 +167,11 @@
   <script>
   const DICT={sv:{nav:{home:"Hem",repairs:"Reparationer",about:"Om oss",stores:"Våra butiker"},
                   apple:{eyebrow:"Apple • iPhone",title:"iPhone 11-serien – prislista",sub:"Reparationer på plats – ofta klara inom en timme. Drop-in."},
-                  t:{service:"Tjänst",price:"Pris",pay:"Betalning: Klarna, Swish, Mastercard, Visa.",contact:"Kontakt: 08-34 88 88 · info@irepairofsweden.com"},
+                  t:{service:"Tjänst",price:"Pris",pay:"Betalning: Klarna, Swish, Mastercard, Visa.",contact:"Kontakt: 08-34 88 88 · info@irepairofsweden.se"},
                   _btn:"English"},
              en:{nav:{home:"Home",repairs:"Repairs",about:"About us",stores:"Our stores"},
                   apple:{eyebrow:"Apple • iPhone",title:"iPhone 11 series — price list",sub:"On-site repairs — often within an hour. Walk-in."},
-                  t:{service:"Service",price:"Price",pay:"Payment: Klarna, Swish, Mastercard, Visa.",contact:"Contact: 08-34 88 88 · info@irepairofsweden.com"},
+                  t:{service:"Service",price:"Price",pay:"Payment: Klarna, Swish, Mastercard, Visa.",contact:"Contact: 08-34 88 88 · info@irepairofsweden.se"},
                   _btn:"Svenska"}};
   function applyLang(lang){const t=DICT[lang];document.documentElement.lang=lang;document.querySelectorAll("[data-i18n]").forEach(el=>{let c=t;for(const k of el.dataset.i18n.split("."))c=c&&c[k];if(typeof c==="string")el.textContent=c;});document.getElementById('langBtn').textContent=t._btn;}
 
@@ -179,5 +179,6 @@
   (function langInit(){const saved=localStorage.getItem('lang')||'sv';applyLang(saved);document.getElementById('langBtn').addEventListener('click',()=>{const next=(localStorage.getItem('lang')||'sv')==='sv'?'en':'sv';localStorage.setItem('lang',next);applyLang(next);});})();
   document.getElementById('year').textContent=new Date().getFullYear();
 </script>
+
 </body>
 </html>

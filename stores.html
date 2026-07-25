@@ -1,79 +1,131 @@
 <!doctype html>
 <html lang="sv" data-theme="light">
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>iRepair of Sweden – Våra butiker</title>
   <link rel="stylesheet" href="assets/styles.css">
 </head>
+
 <body>
+
   <header class="site-header">
     <div class="container head">
-      <div class="brand"><div class="brand-badge">🔧</div><a href="index.html">iRepair <span style="color:var(--muted)">of Sweden</span></a></div>
+      <div class="brand">
+        <div class="brand-badge">🔧</div>
+        <a href="index.html">iRepair <span style="color:var(--muted)">of Sweden</span></a>
+      </div>
       <nav>
         <a href="index.html" data-i18n="nav.home">Hem</a>
         <a href="repairs.html" data-i18n="nav.repairs">Reparationer</a>
+        <a href="sell.html" data-i18n="nav.sell">Sälj din mobil</a>
         <a href="about.html" data-i18n="nav.about">Om oss</a>
-        <a href="stores.html" class="active" data-i18n="nav.stores">Våra butiker</a>
+        <a href="stores.html" data-i18n="nav.stores">Våra butiker</a>
         <a href="contact.html" data-i18n="nav.contact">Kontakt</a>
       </nav>
-      <div style="display:flex;gap:8px">
-        <button id="themeBtn" class="theme-btn btn" aria-label="Byt tema">☀️ Ljust</button>
-        <button id="langBtn" class="lang-btn">English</button>
+      <div class="actions">
+        <button id="themeBtn" class="btn ghost" aria-label="Byt tema">☀️ Ljust</button>
+        <button id="langBtn" class="btn">English</button>
       </div>
     </div>
   </header>
 
   <main>
-    <section class="hero">
+    <section class="hero animate-fade-in">
       <div class="container">
-        <h1 class="h1" data-i18n="stores.title">Våra butiker</h1>
-        <p class="muted" data-i18n="stores.sub">Välkommen in – ingen tidsbokning krävs.</p>
+        <div class="eyebrow" data-i18n="stores.eyebrow">VÄLKOMMEN</div>
+        <h1 class="h1" data-i18n="stores.title">Hitta din närmaste butik</h1>
+        <p class="lead" data-i18n="stores.sub">Vi utför reparationer på plats i våra butiker – oftast klara inom en
+          timme. Ingen tidsbokning krävs.</p>
       </div>
     </section>
 
     <section class="container section">
-      <div class="grid grid-2">
+      <div class="grid">
+        <!-- Haninge -->
         <div class="card">
-          <h3>Täby Centrum</h3>
-          <p>Stora marknadsvägen 14, 183 34 Täby</p>
-          <p><strong>Tel:</strong> <a href="tel:0735342338">0735342338</a></p>
-          <p><strong>E-post:</strong> <a href="mailto:info@irepairofsweden.com">info@irepairofsweden.com</a></p>
+          <span class="badge">Haninge • Port 73</span>
+          <h3>iRepair of Sweden – Port 73</h3>
+          <p class="muted">Nynäsvägen 21, 136 47 Haninge</p>
+          <hr style="margin:1.5rem 0; border:none; border-top:1px solid var(--border)">
+          <p><strong>Tel:</strong> <a href="tel:08348888">08-34 88 88</a></p>
+          <p><strong>E-post:</strong> <a href="mailto:info@irepairofsweden.se">info@irepairofsweden.se</a></p>
+          <div class="mt-12">
+            <a class="btn primary" href="contact.html">Kontakta oss</a>
+          </div>
         </div>
+
+        <!-- Solna -->
         <div class="card">
-          <h3>Port 73, Haninge</h3>
-          <p>Centrum Port 73 Haninge, Nynäsvägen 21, 136 47 Haninge</p>
-          <p><strong>Tel:</strong> <a href="tel:08348888">08348888</a></p>
-          <p><strong>E-post:</strong> <a href="mailto:info@irepairofsweden.com">info@irepairofsweden.com</a></p>
+          <span class="badge">Solna • Mall of Scandinavia</span>
+          <h3>Mobildoktorn – Mall of Scandinavia</h3>
+          <p class="muted">Stjärntorget 2, 169 79 Solna</p>
+          <hr style="margin:1.5rem 0; border:none; border-top:1px solid var(--border)">
+          <p><strong>Tel:</strong> <a href="tel:087089999">08-70 89 999</a></p>
+          <p><strong>E-post:</strong> <a href="mailto:info@irepairofsweden.se">info@irepairofsweden.se</a></p>
+          <div class="mt-12">
+            <a class="btn primary" href="contact.html">Kontakta oss</a>
+          </div>
+        </div>
+
+        <!-- Täby -->
+        <div class="card">
+          <span class="badge">Täby • Täby Centrum</span>
+          <h3>iRepair of Sweden – Täby Centrum</h3>
+          <p class="muted">Stora marknadsvägen 14, 183 34 Täby</p>
+          <hr style="margin:1.5rem 0; border:none; border-top:1px solid var(--border)">
+          <p><strong>Tel:</strong> <a href="tel:0735342338">073-534 23 38</a></p>
+          <p><strong>E-post:</strong> <a href="mailto:info@irepairofsweden.se">info@irepairofsweden.se</a></p>
+          <div class="mt-12">
+            <a class="btn primary" href="contact.html">Kontakta oss</a>
+          </div>
         </div>
       </div>
     </section>
   </main>
 
-  <footer>© <span></span> Bston-Tech. <span data-i18n="foot.rights">Alla rättigheter förbehållna.</span></footer>
+  <footer>
+    <div class="container footer-content">
+      <div class="footer-brand">iRepair of Sweden</div>
+      <div class="muted">
+        © <span id="footer-year"></span> <span class="copyright-owner">iRepair of Sweden</span>. <span
+          data-i18n="foot.rights">Alla rättigheter förbehållna.</span>
+        <br>
+        <span class="powered-by">Powered by Bston-Tech</span>
+      </div>
+    </div>
+  </footer>
 
+  <script src="assets/app.js?v=5"></script>
   <script>
-    const DICT={sv:{nav:{home:"Hem",repairs:"Reparationer",about:"Om oss",stores:"Våra butiker"},stores:{title:"Våra butiker",sub:"Välkommen in – ingen tidsbokning krävs."},_btn:"English"},
-               en:{nav:{home:"Home",repairs:"Repairs",about:"About us",stores:"Our stores"},stores:{title:"Our stores",sub:"Walk in — no booking needed."},_btn:"Svenska"}};
+    (function () {
+      const DICT = {
+        sv: {
+          nav: { home: "Hem", repairs: "Reparationer", about: "Om oss", stores: "Våra butiker", contact: "Kontakt" },
+          stores: { eyebrow: "VÄLKOMMEN", title: "Hitta din närmaste butik", sub: "Vi utför reparationer på plats i våra butiker – oftast klara inom en timme. Ingen tidsbokning krävs." },
+          foot: { rights: "Alla rättigheter förbehållna." }
+        },
+        en: {
+          nav: { home: "Home", repairs: "Repairs", about: "About us", stores: "Our stores", contact: "Contact" },
+          stores: { eyebrow: "WELCOME", title: "Find your nearest store", sub: "We perform on-site repairs at our locations — usually finished within one hour. No booking required." },
+          foot: { rights: "Copyright" }
+        }
+      };
 
-    function applyLang(lang){
-      const t=DICT[lang]; document.documentElement.lang=lang;
-      document.querySelectorAll("[data-i18n]").forEach(el=>{let cur=t; for(const k of el.dataset.i18n.split(".")) cur=cur&&cur[k]; if(typeof cur==="string") el.textContent=cur;});
-      document.getElementById("langBtn").textContent=t._btn;
-    }
+      window.applyLang = function (lang) {
+        const t = DICT[lang];
+        document.querySelectorAll('[data-i18n]').forEach(el => {
+          const path = el.getAttribute('data-i18n').split('.');
+          let val = t; for (const p of path) { if (val && p in val) val = val[p]; else { val = null; break; } }
+          if (typeof val === 'string') el.textContent = val;
+        });
+      };
 
-    (function themeInit(){
-      const KEY='theme', btn=document.getElementById('themeBtn');
-      function set(x){ document.documentElement.setAttribute('data-theme',x); localStorage.setItem(KEY,x); btn.textContent=x==='dark'?'🌙 Mörkt':'☀️ Ljust'; }
-      set(localStorage.getItem(KEY)||'light'); btn.addEventListener('click',()=>set(document.documentElement.getAttribute('data-theme')==='dark'?'light':'dark'));
+      const savedLang = localStorage.getItem('irepair_lang') || 'sv';
+      window.applyLang(savedLang);
     })();
-
-    (function langInit(){
-      const saved=localStorage.getItem('lang')||'sv'; applyLang(saved);
-      document.getElementById('langBtn').addEventListener('click',()=>{const next=(localStorage.getItem('lang')||'sv')==='sv'?'en':'sv'; localStorage.setItem('lang',next); applyLang(next);});
-    })();
-
-    document.getElementById('year').textContent=new Date().getFullYear();
   </script>
 </body>
+
 </html>

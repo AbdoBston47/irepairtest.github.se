@@ -3,28 +3,10 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>iRepair of Sweden – Apple</title>
+  <title>iRepair of Sweden – Apple Kategoriväljare</title>
   <link rel="stylesheet" href="assets/styles.css">
-  <style>
-    /* Page-specific tweaks for Apple "choose" layout */
-    .choices { display:grid; gap:16px; grid-template-columns:repeat(3,minmax(0,1fr)); }
-    @media (max-width: 900px){ .choices{ grid-template-columns:1fr; } }
-    .choice {
-      display:flex; align-items:center; justify-content:center; gap:12px;
-      padding:28px 18px; border-radius:16px;
-      border:1px solid var(--border); background:var(--card); text-align:center;
-      font-weight:800; font-size:1.15rem; color:var(--text);
-      transition: transform .12s ease, box-shadow .12s ease, border-color .12s ease;
-    }
-    .choice .icon { font-size:1.6rem; opacity:.9 }
-    .choice:hover { transform: translateY(-2px); border-color: var(--accent);
-      box-shadow: 0 0 0 3px color-mix(in srgb, var(--accent) 22%, transparent); }
-    .choice:active { transform: translateY(0); }
-    .eyebrow { color: var(--muted); font-weight:600; letter-spacing:.04em; text-transform:uppercase; font-size:.9rem; }
-  </style>
 </head>
 <body>
-  <!-- Header -->
   <header class="site-header">
     <div class="container head">
       <div class="brand">
@@ -36,111 +18,85 @@
         <a href="repairs.html" class="active" data-i18n="nav.repairs">Reparationer</a>
         <a href="about.html" data-i18n="nav.about">Om oss</a>
         <a href="stores.html" data-i18n="nav.stores">Våra butiker</a>
-        <a class="active" href="contact.html" data-i18n="nav.contact">Kontakt</a>
+        <a href="contact.html" data-i18n="nav.contact">Kontakt</a>
       </nav>
-      <div style="display:flex;gap:8px">
-        <button id="themeBtn" class="theme-btn btn" aria-label="Byt tema">☀️ Ljust</button>
-        <button id="langBtn" class="lang-btn">English</button>
+      <div class="actions">
+        <button id="themeBtn" class="btn ghost" aria-label="Byt tema">☀️ Ljust</button>
+        <button id="langBtn" class="btn">English</button>
       </div>
     </div>
   </header>
-  
 
-<section class="hero">
-  <div class="container">
-    <div class="eyebrow" data-i18n="apple.eyebrow">APPLE</div>
-    <h1 class="h1" data-i18n="apple.title">Välj ett alternativ</h1>
-    <p class="lead" data-i18n="apple.sub">Reparation på plats – ofta klar inom en timme. Drop-in.</p>
+  <section class="hero animate-fade-in">
+    <div class="container">
+      <div class="eyebrow" data-i18n="apple.eyebrow">APPLE</div>
+      <h1 class="h1" data-i18n="apple.title">Välj en kategori</h1>
+      <p class="lead" data-i18n="apple.sub">Reparation på plats – ofta klar inom en timme. Drop-in.</p>
 
-    <!-- back pill MUST be inside this container -->
-    <div class="subnav" style="margin-top:12px">
-      <a class="pill"
-         href="repairs.html"
-         onclick="if(history.length>1){history.back();return false;}"
-         aria-label="Tillbaka" data-i18n="apple.back">← Tillbaka</a>
+      <div class="subnav">
+        <a class="pill" href="repairs.html" data-i18n="apple.back">← Tillbaka till Märken</a>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 
-  <!-- Choices -->
-  <main class="container section" style="padding-top:24px">
-    <div class="choices">
-      <a class="choice" href="apple-iphone.html">
-        <span class="icon">📱</span> <span data-i18n="apple.iphone">iPhone</span>
+  <main class="container section">
+    <div class="grid">
+      <a class="card" href="apple-iphone.html" style="text-align:center">
+        <div style="font-size:3rem; margin-bottom:1rem">📱</div>
+        <h3 data-i18n="apple.iphone">iPhone</h3>
+        <p class="muted">Från iPhone 6 till iPhone 16 Pro Max.</p>
+        <div class="btn ghost mt-12" style="width:100%">Se iPhone priser</div>
       </a>
-      <a class="choice" href="apple-ipad.html">
-        <span class="icon">📲</span> <span data-i18n="apple.ipad">iPad</span>
+      <a class="card" href="apple-ipad.html" style="text-align:center">
+        <div style="font-size:3rem; margin-bottom:1rem">📲</div>
+        <h3 data-i18n="apple.ipad">iPad</h3>
+        <p class="muted">iPad Air, Pro, Mini och klassiska iPad.</p>
+        <div class="btn ghost mt-12" style="width:100%">Se iPad priser</div>
       </a>
-      <a class="choice" href="apple-watch.html">
-        <span class="icon">⌚</span> <span data-i18n="apple.watch">Apple Watch</span>
+      <a class="card" href="apple-watch.html" style="text-align:center">
+        <div style="font-size:3rem; margin-bottom:1rem">⌚</div>
+        <h3 data-i18n="apple.watch">Apple Watch</h3>
+        <p class="muted">Series 1 till Ultra och SE.</p>
+        <div class="btn ghost mt-12" style="width:100%">Se Watch priser</div>
       </a>
     </div>
   </main>
 
-  <footer>© <span></span> Bston-Tech. <span data-i18n="foot.rights">Alla rättigheter förbehållna.</span></footer>
+  <footer>
+    <div class="container footer-content">
+      <div class="footer-brand">iRepair of Sweden</div>
+      <div class="muted">
+        © <span id="footer-year"></span> <span class="copyright-owner">iRepair of Sweden</span>. <span data-i18n="foot.rights">Alla rättigheter förbehållna.</span>
+        <br>
+        <span class="powered-by">Powered by Bston-Tech</span>
+      </div>
+    </div>
+  </footer>
 
+  <script src="assets/app.js?v=5"></script>
   <script>
-(function(){
-  const LABEL = { sv: "← Tillbaka", en: "← Back" };
-  function update() {
-    const el = document.getElementById("backBtn");
-    if (el) el.textContent = LABEL[localStorage.getItem("lang") || "sv"];
-  }
-  // integrate with any existing applyLang
-  const prev = window.applyLang;
-  window.applyLang = function(lang){
-    if (typeof prev === "function") prev(lang);
-    update();
-  };
-  update();
-})();
-</script>
-
-
-  <script>
-    /* ===== Language dictionary (SV/EN) ===== */
     const DICT = {
       sv:{
-        nav:{home:"Hem",repairs:"Reparationer",about:"Om oss",stores:"Våra butiker"},
-        apple:{eyebrow:"Apple",title:"Välj ett alternativ",sub:"Reparation på plats – ofta klar inom en timme. Drop-in.",iphone:"iPhone",ipad:"iPad",watch:"Apple Watch"},
-        _btn:"English"
+        nav:{home:"Hem",repairs:"Reparationer",about:"Om oss",stores:"Våra butiker", contact: "Kontakt"},
+        apple:{eyebrow:"Apple",title:"Välj en kategori",sub:"Reparation på plats – ofta klar inom en timme. Drop-in.",iphone:"iPhone",ipad:"iPad",watch:"Apple Watch", back: "← Tillbaka till Märken"},
+        foot:{rights:"Alla rättigheter förbehållna."}
       },
       en:{
-        nav:{home:"Home",repairs:"Repairs",about:"About us",stores:"Our stores"},
-        apple:{eyebrow:"Apple",title:"Choose a category",sub:"Repairs done on-site — often within an hour. Walk-in.",iphone:"iPhone",ipad:"iPad",watch:"Apple Watch"},
-        _btn:"Svenska"
+        nav:{home:"Home",repairs:"Repairs",about:"About us",stores:"Our stores", contact: "Contact"},
+        apple:{eyebrow:"Apple",title:"Choose a category",sub:"Repairs done on-site — often within an hour. Walk-in.",iphone:"iPhone",ipad:"iPad",watch:"Apple Watch", back: "← Back to Brands"},
+        foot:{rights:"Copyright"}
       }
     };
-    function applyLang(lang){
-      const t = DICT[lang]; document.documentElement.lang = lang;
+    window.applyLang = function(lang){
+      const t = DICT[lang];
       document.querySelectorAll("[data-i18n]").forEach(el=>{
-        let cur=t; for(const k of el.dataset.i18n.split(".")) cur=cur&&cur[k];
-        if(typeof cur==="string") el.textContent=cur;
+        const path = el.getAttribute('data-i18n').split('.');
+        let val = t; for (const p of path){ if (val && p in val) val = val[p]; else { val=null; break; } }
+        if (typeof val === 'string') el.textContent = val;
       });
-      document.getElementById("langBtn").textContent = t._btn;
-    }
-
-    /* ===== Theme switcher (starts LIGHT) ===== */
-    (function themeInit(){
-      const KEY='theme', btn=document.getElementById('themeBtn');
-      function set(x){ document.documentElement.setAttribute('data-theme',x); localStorage.setItem(KEY,x);
-        btn.textContent = x==='dark' ? '🌙 Mörkt' : '☀️ Ljust';
-        btn.setAttribute('aria-label', x==='dark' ? 'Byt till ljust tema' : 'Byt till mörkt tema'); }
-      set(localStorage.getItem(KEY) || 'light');
-      btn.addEventListener('click',()=> set(document.documentElement.getAttribute('data-theme')==='dark' ? 'light' : 'dark'));
-    })();
-
-    /* ===== Language init + toggle ===== */
-    (function langInit(){
-      const saved = localStorage.getItem('lang') || 'sv';
-      applyLang(saved);
-      document.getElementById('langBtn').addEventListener('click', ()=>{
-        const next = (localStorage.getItem('lang')||'sv')==='sv' ? 'en' : 'sv';
-        localStorage.setItem('lang', next); applyLang(next);
-      });
-    })();
-
-    document.getElementById('year').textContent = new Date().getFullYear();
+    };
+    const savedLang = localStorage.getItem('irepair_lang') || 'sv';
+    window.applyLang(savedLang);
   </script>
 </body>
 </html>

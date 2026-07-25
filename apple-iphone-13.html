@@ -3,274 +3,210 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>iRepair of Sweden – Apple · iPhone 13-serien</title>
+  <title>iRepair of Sweden – iPhone 13 Prislista</title>
   <link rel="stylesheet" href="assets/styles.css">
-  <style>
-    .subnav{display:flex;flex-wrap:wrap;gap:8px;margin:16px 0 0}
-    .pill{display:inline-flex;align-items:center;gap:.5rem;padding:.5rem .9rem;border:1px solid var(--border);border-radius:999px;background:var(--card);color:var(--text);text-decoration:none}
-    .pill:hover{border-color:var(--accent)}
-    .price-card{margin-top:16px}
-    .price-table{width:100%;border-collapse:collapse;font-size:.98rem}
-    .price-table th,.price-table td{border:1px solid var(--border);padding:10px 12px;vertical-align:top}
-    .price-table th{text-align:left;background:var(--surface)}
-    .price{text-align:right;white-space:nowrap;font-weight:700}
-    .hint{color:var(--muted);font-size:.9rem}
-  </style>
 </head>
 <body>
-<header class="site-header">
-  <div class="container head">
-    <div class="brand"><div class="brand-badge">🔧</div><a href="index.html">iRepair <span style="color:var(--muted)">of Sweden</span></a></div>
-    <nav>
-      <a href="index.html" data-i18n="nav.home">Hem</a>
-      <a href="repairs.html" class="active" data-i18n="nav.repairs">Reparationer</a>
-      <a href="about.html" data-i18n="nav.about">Om oss</a>
-      <a href="stores.html" data-i18n="nav.stores">Våra butiker</a>
-      <a href="contact.html" data-i18n="nav.contact">Kontakt</a>
-    </nav>
-    <div style="display:flex;gap:8px">
-      <button id="themeBtn" class="theme-btn btn" aria-label="Byt tema">☀️ Ljust</button>
-      <button id="langBtn" class="lang-btn">English</button>
-    </div>
-  </div>
-</header>
 
-<section class="hero">
-  <div class="container">
-    <div class="eyebrow" style="color:var(--muted);font-weight:600;text-transform:uppercase;letter-spacing:.04em" data-i18n="apple.eyebrow">Apple • iPhone</div>
-    <h1 class="h1" data-i18n="apple.title">iPhone 13-serien – prislista</h1>
-    <p class="muted" data-i18n="apple.sub">Reparationer på plats – ofta klara inom en timme. Drop-in.</p>
-    <div class="subnav">
-      <a class="pill" href="#iphone13">iPhone 13</a>
-      <a class="pill" href="#iphone13mini">iPhone 13 Mini</a>
-      <a class="pill" href="#iphone13pro">iPhone 13 Pro</a>
-      <a class="pill" href="#iphone13promax">iPhone 13 Pro Max</a>
+  <header class="site-header">
+    <div class="container head">
+      <div class="brand">
+        <div class="brand-badge">🔧</div>
+        <a href="index.html">iRepair <span style="color:var(--muted)">of Sweden</span></a>
+      </div>
+      <nav>
+        <a href="index.html" data-i18n="nav.home">Hem</a>
+        <a href="repairs.html" class="active" data-i18n="nav.repairs">Reparationer</a>
+        <a href="about.html" data-i18n="nav.about">Om oss</a>
+        <a href="stores.html" data-i18n="nav.stores">Våra butiker</a>
+        <a href="contact.html" data-i18n="nav.contact">Kontakt</a>
+      </nav>
+      <div class="actions">
+        <button id="themeBtn" class="btn ghost" aria-label="Byt tema">☀️ Ljust</button>
+        <button id="langBtn" class="btn">English</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero animate-fade-in">
+    <div class="container">
+      <div class="eyebrow" data-i18n="apple.eyebrow">Apple • iPhone</div>
+      <h1 class="h1" data-i18n="apple.title">iPhone 13-serien – prislista</h1>
+      <p class="lead" data-i18n="apple.sub">Reparationer på plats – ofta klara inom en timme. Drop-in.</p>
+
+      <div class="subnav">
+        <a class="pill" href="#iphone13">iPhone 13</a>
+        <a class="pill" href="#iphone13mini">iPhone 13 Mini</a>
+        <a class="pill" href="#iphone13pro">iPhone 13 Pro</a>
+        <a class="pill" href="#iphone13promax">iPhone 13 Pro Max</a>
+      </div>
+      <div style="margin-top: 2rem;">
+        <a class="pill" href="repairs.html" id="backLink" data-i18n="apple.back" aria-label="Tillbaka">← iPhone</a>
+      </div>
+    </div>
+  </section>
+
+  <main class="container">
+    <div class="section grid">
       
+      <!-- iPhone 13 -->
+      <section id="iphone13" class="card price-card">
+        <h2 data-i18n="m.iphone13">iPhone 13</h2>
+        <table class="price-table">
+          <thead>
+            <tr><th data-i18n="t.service">Tjänst</th><th class="price" data-i18n="t.price">Pris</th></tr>
+          </thead>
+          <tbody>
+            <tr><td><span data-i18n="svc.screen.copy">Skärmbyte (kopia)</span></td><td class="price">990 kr</td></tr>
+            <tr><td><span data-i18n="svc.screen.oled">Skärmbyte (OLED-skärm)</span></td><td class="price">1690 kr</td></tr>
+            <tr><td><span data-i18n="svc.screen.oem">Skärmbyte (OEM-skärm)</span></td><td class="price">2190 kr</td></tr>
+            <tr><td><span data-i18n="svc.battery">Batteribyte</span></td><td class="price">890 kr</td></tr>
+            <tr><td><span data-i18n="svc.backglass_exclFrame">Baksidebyte (exkl. ram)</span></td><td class="price">1390 kr</td></tr>
+            <tr><td><span data-i18n="svc.backglass_withFrame">Komplett baksidebyte (med ram)</span></td><td class="price">2800 kr</td></tr>
+            <tr><td><span data-i18n="svc.cameraFront">Framkamerabyte</span></td><td class="price">1190 kr</td></tr>
+            <tr><td><span data-i18n="svc.cameraRear">Bakkamerabyte</span></td><td class="price">1390 kr</td></tr>
+            <tr><td><span data-i18n="svc.portMic">Laddportsbyte (inkl. mikrofon)</span></td><td class="price">1190 kr</td></tr>
+            <tr><td><span data-i18n="svc.earpiece.filter">Samtalshögtalare – filterbyte</span></td><td class="price">500 kr</td></tr>
+            <tr><td><span data-i18n="svc.earpiece.replace">Samtalshögtalare – byte</span></td><td class="price">890 kr</td></tr>
+            <tr><td><span data-i18n="svc.diagnostics">Felsökningsavgift</span></td><td class="price">300 kr</td></tr>
+          </tbody>
+        </table>
+        <p class="hint" data-i18n="t.note">* Priser enligt källa, lager och modellens skick kan påverka ledtider.</p>
+      </section>
+
+      <!-- iPhone 13 Mini -->
+      <section id="iphone13mini" class="card price-card">
+        <h2 data-i18n="m.iphone13mini">iPhone 13 Mini</h2>
+        <table class="price-table">
+          <thead>
+            <tr><th data-i18n="t.service">Tjänst</th><th class="price" data-i18n="t.price">Pris</th></tr>
+          </thead>
+          <tbody>
+            <tr><td><span data-i18n="svc.screen.copy">Skärmbyte (kopia)</span></td><td class="price">990 kr</td></tr>
+            <tr><td><span data-i18n="svc.screen.oled">Skärmbyte (OLED-skärm)</span></td><td class="price">1690 kr</td></tr>
+            <tr><td><span data-i18n="svc.screen.oem">Skärmbyte (OEM-skärm)</span></td><td class="price">2700 kr</td></tr>
+            <tr><td><span data-i18n="svc.port">Laddportsbyte</span></td><td class="price">1290 kr</td></tr>
+            <tr><td><span data-i18n="svc.battery">Batteribyte</span></td><td class="price">890 kr</td></tr>
+            <tr><td><span data-i18n="svc.backglass">Baksidebyte</span></td><td class="price">1500 kr</td></tr>
+            <tr><td><span data-i18n="svc.cameraRear">Bakkamerabyte</span></td><td class="price">1390 kr</td></tr>
+            <tr><td><span data-i18n="svc.earpiece.replace">Samtalshögtalare – byte</span></td><td class="price">1190 kr</td></tr>
+            <tr><td><span data-i18n="svc.diagnostics">Felsökningsavgift</span></td><td class="price">300 kr</td></tr>
+          </tbody>
+        </table>
+        <p class="hint" data-i18n="t.note">* Priser enligt källa, lager och modellens skick kan påverka ledtider.</p>
+      </section>
+
+      <!-- iPhone 13 Pro -->
+      <section id="iphone13pro" class="card price-card">
+        <h2 data-i18n="m.iphone13pro">iPhone 13 Pro</h2>
+        <table class="price-table">
+          <thead>
+            <tr><th data-i18n="t.service">Tjänst</th><th class="price" data-i18n="t.price">Pris</th></tr>
+          </thead>
+          <tbody>
+            <tr><td><span data-i18n="svc.screen.incellCopy">Skärmbyte (Incell kopia)</span></td><td class="price">1190 kr</td></tr>
+            <tr><td><span data-i18n="svc.screen.softOled">Skärmbyte (Soft OLED)</span></td><td class="price">2199 kr</td></tr>
+            <tr><td><span data-i18n="svc.screen.oem">Skärmbyte (OEM-skärm)</span></td><td class="price">3199 kr</td></tr>
+            <tr><td><span data-i18n="svc.port">Laddportsbyte</span></td><td class="price">1190 kr</td></tr>
+            <tr><td><span data-i18n="svc.backglass_exclFrame">Baksidebyte (exkl. ram)</span></td><td class="price">1500 kr</td></tr>
+            <tr><td><span data-i18n="svc.backglass_withFrame">Komplett baksidebyte (med ram)</span></td><td class="price">2800 kr</td></tr>
+            <tr><td><span data-i18n="svc.cameraRear">Bakkamerabyte</span></td><td class="price">1690 kr</td></tr>
+            <tr><td><span data-i18n="svc.cameraFront">Framkamerabyte</span></td><td class="price">1200 kr</td></tr>
+            <tr><td><span data-i18n="svc.battery">Batteribyte</span></td><td class="price">890 kr</td></tr>
+            <tr><td><span data-i18n="svc.earpiece.replace">Samtalshögtalare – byte</span></td><td class="price">1200 kr</td></tr>
+            <tr><td><span data-i18n="svc.diagnostics">Felsökningsavgift</span></td><td class="price">300 kr</td></tr>
+          </tbody>
+        </table>
+        <p class="hint" data-i18n="t.note">* Priser enligt källa, lager och modellens skick kan påverka ledtider.</p>
+      </section>
+
+      <!-- iPhone 13 Pro Max -->
+      <section id="iphone13promax" class="card price-card">
+        <h2 data-i18n="m.iphone13promax">iPhone 13 Pro Max</h2>
+        <table class="price-table">
+          <thead>
+            <tr><th data-i18n="t.service">Tjänst</th><th class="price" data-i18n="t.price">Pris</th></tr>
+          </thead>
+          <tbody>
+            <tr><td><span data-i18n="svc.screen.incellCopy">Skärmbyte (Incell kopia)</span></td><td class="price">1390 kr</td></tr>
+            <tr><td><span data-i18n="svc.screen.softOled">Skärmbyte (Soft OLED)</span></td><td class="price">2290 kr</td></tr>
+            <tr><td><span data-i18n="svc.screen.oem">Skärmbyte (OEM-skärm)</span></td><td class="price">3290 kr</td></tr>
+            <tr><td><span data-i18n="svc.backglass_exclFrame">Baksidebyte (exkl. ram)</span></td><td class="price">1500 kr</td></tr>
+            <tr><td><span data-i18n="svc.backglass_withFrame">Komplett baksidebyte (med ram)</span></td><td class="price">3500 kr</td></tr>
+            <tr><td><span data-i18n="svc.portMic">Laddportsbyte (inkl. mikrofon)</span></td><td class="price">1290 kr</td></tr>
+            <tr><td><span data-i18n="svc.cameraRear">Bakkamerabyte</span></td><td class="price">1790 kr</td></tr>
+            <tr><td><span data-i18n="svc.cameraFront">Framkamerabyte</span></td><td class="price">1290 kr</td></tr>
+            <tr><td><span data-i18n="svc.battery">Batteribyte</span></td><td class="price">990 kr</td></tr>
+            <tr><td><span data-i18n="svc.earpiece.replace">Samtalshögtalare – byte</span></td><td class="price">1400 kr</td></tr>
+            <tr><td><span data-i18n="svc.diagnostics">Felsökningsavgift</span></td><td class="price">300 kr</td></tr>
+          </tbody>
+        </table>
+        <p class="hint" data-i18n="t.note">* Priser enligt källa, lager och modellens skick kan påverka ledtider.</p>
+      </section>
+
     </div>
-    <div>
-      <a class="pill" href="repairs.html" id="backLink" data-i18n="apple.back" onclick="if(history.length>1){history.back();return false;}" aria-label="Tillbaka">← iPhone</a>
+
+    <section class="section animate-fade-in" style="padding-top:0">
+      <div class="card" style="text-align:center">
+        <p class="lead" data-i18n="t.pay">Betalning: Klarna, Swish, Mastercard, Visa.</p>
+        <p class="muted" data-i18n="t.contact">Kontakt: 08-34 88 88 · info@irepairofsweden.se</p>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="container footer-content">
+      <div class="footer-brand">iRepair of Sweden</div>
+      <div class="muted">
+        © <span id="footer-year"></span> <span class="copyright-owner">iRepair of Sweden</span>. <span data-i18n="foot.rights">Alla rättigheter förbehållna.</span>
+        <br>
+        <span class="powered-by">Powered by Bston-Tech</span>
+      </div>
     </div>
-  </div>
-</section>
+  </footer>
 
-<main class="container section" style="padding-top:24px">
-  <!-- iPhone 13 -->
-  <section id="iphone13" class="card price-card">
-    <h2 style="margin:0 0 10px">iPhone 13</h2>
-    <table class="price-table">
-      <thead><tr><th data-i18n="t.service">Tjänst</th><th class="price" data-i18n="t.price">Pris</th></tr></thead>
-      <tbody>
-        <tr><td>Skärmbyte (kopia)</td><td class="price">1490 kr</td></tr>
-        <tr><td>Skärmbyte (OEM-skärm)</td><td class="price">2390 kr</td></tr>
-        <tr><td>Batteribyte</td><td class="price">890 kr</td></tr>
-        <tr><td>Baksidebyte (exkl. ram)</td><td class="price">1390 kr</td></tr>
-        <tr><td>Komplett baksidebyte (med ram)</td><td class="price">2800 kr</td></tr>
-        <tr><td>Framkamerabyte</td><td class="price">1290 kr</td></tr>
-        <tr><td>Bakkamerabyte</td><td class="price">1390 kr</td></tr>
-        <tr><td>Laddportsbyte (inkl. mikrofon)</td><td class="price">1290 kr</td></tr>
-        <tr><td>Samtalshögtalare – filterbyte</td><td class="price">500 kr</td></tr>
-        <tr><td>Samtalshögtalare – byte</td><td class="price">990 kr</td></tr>
-        <tr><td>Felsökningsavgift</td><td class="price">300 kr</td></tr>
-      </tbody>
-    </table>
-  </section>
-
-  <!-- iPhone 13 Mini -->
-  <section id="iphone13mini" class="card price-card">
-    <h2 style="margin:0 0 10px">iPhone 13 Mini</h2>
-    <table class="price-table">
-      <thead><tr><th data-i18n="t.service">Tjänst</th><th class="price" data-i18n="t.price">Pris</th></tr></thead>
-      <tbody>
-        <tr><td>Skärmbyte (kopia)</td><td class="price">1500 kr</td></tr>
-        <tr><td>Skärmbyte (OLED-skärm)</td><td class="price">1990 kr</td></tr>
-        <tr><td>Skärmbyte (OEM-skärm)</td><td class="price">2700 kr</td></tr>
-        <tr><td>Laddportsbyte</td><td class="price">1290 kr</td></tr>
-        <tr><td>Batteribyte</td><td class="price">890 kr</td></tr>
-        <tr><td>Baksidebyte</td><td class="price">1500 kr</td></tr>
-        <tr><td>Bakkamerabyte</td><td class="price">1390 kr</td></tr>
-        <tr><td>Samtalshögtalare – byte</td><td class="price">1290 kr</td></tr>
-        <tr><td>Felsökningsavgift</td><td class="price">300 kr</td></tr>
-      </tbody>
-    </table>
-  </section>
-
-  <!-- iPhone 13 Pro -->
-  <section id="iphone13pro" class="card price-card">
-    <h2 style="margin:0 0 10px">iPhone 13 Pro</h2>
-    <table class="price-table">
-      <thead><tr><th data-i18n="t.service">Tjänst</th><th class="price" data-i18n="t.price">Pris</th></tr></thead>
-      <tbody>
-        <tr><td>Skärmbyte (Incell kopia)</td><td class="price">1590 kr</td></tr>
-        <tr><td>Skärmbyte (Soft OLED-skärm)</td><td class="price">2800 kr</td></tr>
-        <tr><td>Skärmbyte (OEM–skärm)</td><td class="price">3990 kr</td></tr>
-        <tr><td>Laddportsbyte</td><td class="price">1490 kr</td></tr>
-        <tr><td>Baksidebyte (exkl. ram)</td><td class="price">1500 kr</td></tr>
-        <tr><td>Komplett baksidebyte (med ram)</td><td class="price">2800 kr</td></tr>
-        <tr><td>Bakkamerabyte</td><td class="price">1890 kr</td></tr>
-        <tr><td>Framkamerabyte</td><td class="price">1200 kr</td></tr>
-        <tr><td>Batteribyte</td><td class="price">990 kr</td></tr>
-        <tr><td>Samtalshögtalare – byte</td><td class="price">1290 kr</td></tr>
-        <tr><td>Felsökningsavgift</td><td class="price">300 kr</td></tr>
-      </tbody>
-    </table>
-  </section>
-
-  <!-- iPhone 13 Pro Max -->
-  <section id="iphone13promax" class="card price-card">
-    <h2 style="margin:0 0 10px">iPhone 13 Pro Max</h2>
-    <table class="price-table">
-      <thead><tr><th data-i18n="t.service">Tjänst</th><th class="price" data-i18n="t.price">Pris</th></tr></thead>
-      <tbody>
-        <tr><td>Skärmbyte (Incell kopia)</td><td class="price">1700 kr</td></tr>
-        <tr><td>Skärmbyte (Soft OLED-skärm)</td><td class="price">2800 kr</td></tr>
-        <tr><td>Skärmbyte (OEM–skärm)</td><td class="price">4300 kr</td></tr>
-        <tr><td>Baksidebyte (exkl. ram)</td><td class="price">1800 kr</td></tr>
-        <tr><td>Komplett baksidebyte (med ram)</td><td class="price">3500 kr</td></tr>
-        <tr><td>Laddportsbyte (inkl. mikrofon)</td><td class="price">1490 kr</td></tr>
-        <tr><td>Bakkamerabyte</td><td class="price">1890 kr</td></tr>
-        <tr><td>Framkamerabyte</td><td class="price">1600 kr</td></tr>
-        <tr><td>Batteribyte</td><td class="price">1200 kr</td></tr>
-        <tr><td>Samtalshögtalare – byte</td><td class="price">1490 kr</td></tr>
-        <tr><td>Felsökningsavgift</td><td class="price">300 kr</td></tr>
-      </tbody>
-    </table>
-  </section>
-
-  <p class="hint" style="margin-top:18px">
-    <span data-i18n="t.pay">Betalning: Klarna, Swish, Mastercard, Visa.</span><br>
-    <span data-i18n="t.contact">Kontakt: 08-34 88 88 · info@irepairofsweden.com</span>
-  </p>
-</main>
-
-<footer>© <span id="footer-year"></span> Bston-Tech. <span data-i18n="foot.rights">Alla rättigheter förbehållna.</span></footer>
-
-<script>
-  (function(){
-    const DICT = {
-      sv:{
-        nav:{home:"Hem",repairs:"Reparationer",about:"Om oss",stores:"Våra butiker",contact:"Kontakt"},
-        apple:{eyebrow:"Apple • iPhone",title:"iPhone 13-serien – prislista",sub:"Reparationer på plats – ofta klara inom en timme. Drop-in.",back:"← iPhone"},
-        cta:{contact:"Kontakta oss"},
-        t:{service:"Tjänst",price:"Pris",pay:"Betalning: Klarna, Swish, Mastercard, Visa.",contact:"Kontakt: 08-34 88 88 · info@irepairofsweden.com"},
-        svc:{
-          screen:{copy:"Skärmbyte (kopia)",oled:"Skärmbyte (OLED-skärm)",oem:"Skärmbyte (OEM-skärm)",incellCopy:"Skärmbyte (Incell kopia)",softOled:"Skärmbyte (Soft OLED-skärm)"},
-          battery:"Batteribyte",
-          port:"Laddportsbyte",
-          portMic:"Laddportsbyte (inkl. mikrofon)",
-          backglass:"Baksidebyte",
-          backglass_exclFrame:"Baksidebyte (exkl. ram)",
-          backglass_withFrame:"Komplett baksidebyte (med ram)",
-          cameraFront:"Framkamerabyte",
-          cameraRear:"Bakkamerabyte",
-          earpiece:{filter:"Samtalshögtalare – filterbyte",replace:"Samtalshögtalare – byte"},
-          diagnostics:"Felsökningsavgift"
+  <script src="assets/app.js?v=5"></script>
+  <script>
+    (function(){
+      const DICT = {
+        sv:{
+          nav:{home:"Hem",repairs:"Reparationer",about:"Om oss",stores:"Våra butiker",contact:"Kontakt"},
+          apple:{eyebrow:"Apple • iPhone",title:"iPhone 13-serien – prislista",sub:"Reparationer på plats – ofta klara inom en timme. Drop-in.",back:"← iPhone"},
+          t:{service:"Tjänst",price:"Pris",note:"* Priser enligt källa, lager och modellens skick kan påverka ledtider.",pay:"Betalning: Klarna, Swish, Mastercard, Visa.",contact:"Kontakt: 08-34 88 88 · info@irepairofsweden.se"},
+          svc:{
+            screen:{copy:"Skärmbyte (kopia)",oled:"Skärmbyte (OLED-skärm)",oem:"Skärmbyte (OEM-skärm)",incellCopy:"Skärmbyte (Incell kopia)",softOled:"Skärmbyte (Soft OLED)"},
+            battery:"Batteribyte", port:"Laddportsbyte", portMic:"Laddportsbyte (inkl. mikrofon)", backglass:"Baksidebyte", backglass_exclFrame:"Baksidebyte (exkl. ram)", backglass_withFrame:"Komplett baksidebyte (med ram)", cameraFront:"Framkamerabyte", cameraRear:"Bakkamerabyte", earpiece:{filter:"Samtalshögtalare (filter)",replace:"Samtalshögtalare (byte)"}, diagnostics:"Felsökningsavgift"
+          },
+          m:{ iphone13:"iPhone 13", iphone13mini:"iPhone 13 Mini", iphone13pro:"iPhone 13 Pro", iphone13promax:"iPhone 13 Pro Max" },
+          foot:{rights:"Alla rättigheter förbehållna."}
         },
-        btn:{themeLight:"☀️ Ljust", themeDark:"🌙 Mörkt", lang:"English"},
-        aria:{themeToLight:"Byt till ljust tema", themeToDark:"Byt till mörkt tema", back:"Tillbaka"},
-        foot:{rights:"Alla rättigheter förbehållna."}
-      },
-      en:{
-        nav:{home:"Home",repairs:"Repairs",about:"About us",stores:"Our stores",contact:"Contact"},
-        apple:{eyebrow:"Apple • iPhone",title:"iPhone 13 series — price list",sub:"On-site repairs — often within an hour. Walk-in.",back:"← iPhone"},
-        cta:{contact:"Contact us"},
-        t:{service:"Service",price:"Price",pay:"Payment: Klarna, Swish, Mastercard, Visa.",contact:"Contact: 08-34 88 88 · info@irepairofsweden.com"},
-        svc:{
-          screen:{copy:"Screen replacement (copy)",oled:"Screen replacement (OLED)",oem:"Screen replacement (OEM)",incellCopy:"Screen replacement (Incell copy)",softOled:"Screen replacement (Soft OLED)"},
-          battery:"Battery replacement",
-          port:"Charging port replacement",
-          portMic:"Charging port (incl. microphone)",
-          backglass:"Back glass replacement",
-          backglass_exclFrame:"Back glass (excl. frame)",
-          backglass_withFrame:"Full back housing (with frame)",
-          cameraFront:"Front camera replacement",
-          cameraRear:"Rear camera replacement",
-          earpiece:{filter:"Earpiece — filter replacement",replace:"Earpiece replacement"},
-          diagnostics:"Diagnostics fee"
-        },
-        btn:{themeLight:"☀️ Light", themeDark:"🌙 Dark", lang:"Svenska"},
-        aria:{themeToLight:"Switch to light theme", themeToDark:"Switch to dark theme", back:"Back"},
-        foot:{rights:"All rights reserved."}
-      }
-    };
-
-    const LANG_KEY='lang', THEME_KEY='theme';
-    const $ = s => document.querySelector(s);
-
-    function curLang(){return localStorage.getItem(LANG_KEY)||'sv';}
-
-    function setTheme(mode){
-      const t = DICT[curLang()];
-      const btn=$('#themeBtn');
-      document.documentElement.setAttribute('data-theme',mode);
-      localStorage.setItem(THEME_KEY,mode);
-      if(btn){btn.textContent=mode==='dark'?t.btn.themeDark:t.btn.themeLight;
-        btn.setAttribute('aria-label',mode==='dark'?t.aria.themeToLight:t.aria.themeToDark);} }
-
-    function translate(lang){
-      const t=DICT[lang]||DICT.sv;
-      document.documentElement.lang=lang;
-      document.querySelectorAll('[data-i18n]').forEach(el=>{
-        const path=el.getAttribute('data-i18n').split('.');
-        let val=t; for(const p of path){ if(val && p in val) val=val[p]; else { val=null; break; } }
-        if(typeof val==='string') el.textContent=val;
-      });
-      [['index.html','home'],['repairs.html','repairs'],['about.html','about'],['stores.html','stores'],['contact.html','contact']]
-        .forEach(([href,key])=>{const a=document.querySelector(`nav a[href="${href}"]`); if(a&&t.nav[key]) a.textContent=t.nav[key];});
-      setTheme(localStorage.getItem(THEME_KEY)||'light');
-      const y=document.getElementById('footer-year'); if(y) y.textContent=new Date().getFullYear();
-      const rights=document.querySelector('footer [data-i18n="foot.rights"]'); if(rights) rights.textContent=t.foot.rights;
-    }
-
-    function autowrapServiceLabels(){
-      const map={
-        'Skärmbyte (kopia)':'svc.screen.copy',
-        'Skärmbyte (OLED-skärm)':'svc.screen.oled',
-        'Skärmbyte (OEM-skärm)':'svc.screen.oem',
-        'Skärmbyte (Incell kopia)':'svc.screen.incellCopy',
-        'Skärmbyte (Soft OLED-skärm)':'svc.screen.softOled',
-        'Batteribyte':'svc.battery',
-        'Baksidebyte':'svc.backglass',
-        'Baksidebyte (exkl. ram)':'svc.backglass_exclFrame',
-        'Komplett baksidebyte (med ram)':'svc.backglass_withFrame',
-        'Framkamerabyte':'svc.cameraFront',
-        'Bakkamerabyte':'svc.cameraRear',
-        'Laddportsbyte':'svc.port',
-        'Laddportsbyte (inkl. mikrofon)':'svc.portMic',
-        'Samtalshögtalare – filterbyte':'svc.earpiece.filter',
-        'Samtalshögtalare – byte':'svc.earpiece.replace',
-        'Felsökningsavgift':'svc.diagnostics'
-      };
-      document.querySelectorAll('table.price-table tbody tr td:first-child').forEach(td=>{
-        if(!td.querySelector('[data-i18n]')){
-          const txt=td.textContent.trim();
-          const k=map[txt];
-          if(k) td.innerHTML=`<span data-i18n="${k}">${txt}</span>`;
+        en:{
+          nav:{home:"Home",repairs:"Repairs",about:"About us",stores:"Our stores",contact:"Contact"},
+          apple:{eyebrow:"Apple • iPhone",title:"iPhone 13 series — price list",sub:"On-site repairs — often within an hour. Walk-in.",back:"← iPhone"},
+          t:{service:"Service",price:"Price",note:"* Prices per source; parts availability and device condition may affect turnaround.",pay:"Payment: Klarna, Swish, Mastercard, Visa.",contact:"Contact: 08-34 88 88 · info@irepairofsweden.se"},
+          svc:{
+            screen:{copy:"Screen replacement (copy)",oled:"Screen replacement (OLED)",oem:"Screen replacement (OEM)",incellCopy:"Screen replacement (Incell copy)",softOled:"Screen replacement (Soft OLED)"},
+            battery:"Battery replacement", port:"Charging port replacement", portMic:"Charging port (incl. mic)", backglass:"Back glass replacement", backglass_exclFrame:"Back glass (excl. frame)", backglass_withFrame:"Full housing (with frame)", cameraFront:"Front camera replacement", cameraRear:"Rear camera replacement", earpiece:{filter:"Earpiece (filter)",replace:"Earpiece (replace)"}, diagnostics:"Diagnostics fee"
+          },
+          m:{ iphone13:"iPhone 13", iphone13mini:"iPhone 13 Mini", iphone13pro:"iPhone 13 Pro", iphone13promax:"iPhone 13 Pro Max" },
+          foot:{rights:"Copyright"}
         }
-      });
-    }
+      };
 
-    document.addEventListener('DOMContentLoaded',()=>{
-      autowrapServiceLabels();
-      setTheme(localStorage.getItem(THEME_KEY)||'light');
-      const themeBtn=$('#themeBtn');
-      if(themeBtn && !themeBtn.dataset.bound){
-        themeBtn.addEventListener('click',()=>{
-          const next=(localStorage.getItem(THEME_KEY)||'light')==='dark'?'light':'dark';
-          setTheme(next);
+      window.applyLang = function(lang) {
+        const t = DICT[lang];
+        document.querySelectorAll('[data-i18n]').forEach(el => {
+          const path = el.getAttribute('data-i18n').split('.');
+          let val = t; for (const p of path){ if (val && p in val) val = val[p]; else { val=null; break; } }
+          if (typeof val === 'string') el.textContent = val;
         });
-        themeBtn.dataset.bound='1';
-      }
-      translate(localStorage.getItem(LANG_KEY)||'sv');
-      const langBtn=$('#langBtn');
-      if(langBtn && !langBtn.dataset.bound){
-        langBtn.addEventListener('click',()=>{
-          const next=(localStorage.getItem(LANG_KEY)||'sv')==='sv'?'en':'sv';
-          localStorage.setItem(LANG_KEY,next); translate(next);
-        });
-        langBtn.dataset.bound='1';
-      }
-    });
-  })();
-</script>
+      };
+
+      const savedLang = localStorage.getItem('irepair_lang') || 'sv';
+      window.applyLang(savedLang);
+    })();
+  </script>
 </body>
 </html>

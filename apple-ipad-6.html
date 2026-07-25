@@ -6,7 +6,7 @@
   <title>iRepair of Sweden – iPad 6 (2018) 9,7"</title>
   <link rel="stylesheet" href="assets/styles.css?v=9">
   <!-- Keep it if you want; this page also works without it -->
-  <script src="assets/site.js?v=9" defer></script>
+  <script src="assets/app.js?v=5" defer></script>
 </head>
 <body>
 <header class="site-header">
@@ -105,7 +105,7 @@
         software:"Software"
       },
       note:'Source: iPad 6 price list at iRepair of Sweden.',
-      rights:'All rights reserved.',
+      rights:'Copyright',
       langBtn:'Svenska',
       themeLight:'☀️ Light',
       themeDark:'🌙 Dark'
@@ -173,6 +173,7 @@
     const theme = localStorage.getItem(THEME_KEY) || 'light';
     const themeBtn = $('#themeBtn'); if (themeBtn) themeBtn.textContent = (theme==='dark') ? t.themeDark : t.themeLight;
   }
+  window.applyLang = applyLangPage;
 
   function setLang(lang){
     localStorage.setItem(LANG_KEY, lang);

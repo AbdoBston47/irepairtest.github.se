@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>iRepair of Sweden – Google Pixel</title>
   <link rel="stylesheet" href="assets/styles.css?v=19" />
-  <script src="assets/site.js?v=19" defer></script>
+  <script src="assets/app.js?v=5" defer></script>
 </head>
 <body>
   <header class="site-header">
@@ -55,7 +55,7 @@
       <p class="muted" style="margin:0" data-i18n="px.info">
         Priser varierar beroende på modell och del (skärm, batteri, laddport, kamera, bakglas m.m.). 
         Kontakta oss för aktuella priser och tider. Telefon <a href="tel:08348888">08-34 88 88</a> eller 
-        <a href="mailto:info@irepairofsweden.com">info@irepairofsweden.com</a>.
+        <a href="mailto:info@irepairofsweden.se">info@irepairofsweden.se</a>.
       </p>
     </section>
   </main>
@@ -70,13 +70,13 @@
                 lead:"Kontakta oss för priser – de flesta reparationer klara inom en timme. Drop-in.",
                 back:"← Tillbaka", fold:"Vikbar",
                 ctaTitle:"Hittar du inte din modell?", ctaText:"Kontakta oss för pris och lagerstatus",
-                info:'Priser varierar beroende på modell och del (skärm, batteri, laddport, kamera, bakglas m.m.). Kontakta oss för aktuella priser och tider. Telefon <a href="tel:08348888">08-34 88 88</a> eller <a href="mailto:info@irepairofsweden.com">info@irepairofsweden.com</a>.'}},
+                info:'Priser varierar beroende på modell och del (skärm, batteri, laddport, kamera, bakglas m.m.). Kontakta oss för aktuella priser och tider. Telefon <a href="tel:08348888">08-34 88 88</a> eller <a href="mailto:info@irepairofsweden.se">info@irepairofsweden.se</a>.'}},
         en:{nav:{home:"Home",repairs:"Repairs",about:"About us",stores:"Our stores",contact:"Contact"},
             px:{eyebrow:"GOOGLE PIXEL",choose:"Choose model/series",
                 lead:"Contact us for prices — most repairs are done within an hour. Walk-in.",
                 back:"← Back", fold:"Foldable",
                 ctaTitle:"Can’t find your model?", ctaText:"Contact us for price and stock",
-                info:'Prices vary by model and part (display, battery, charge port, camera, back glass, etc.). Contact us for current pricing and times. Phone <a href="tel:08348888">08-34 88 88</a> or <a href="mailto:info@irepairofsweden.com">info@irepairofsweden.com</a>.'}}
+                info:'Prices vary by model and part (display, battery, charge port, camera, back glass, etc.). Contact us for current pricing and times. Phone <a href="tel:08348888">08-34 88 88</a> or <a href="mailto:info@irepairofsweden.se">info@irepairofsweden.se</a>.'}}
       };
       const prev = window.applyLang;
       window.applyLang = function(lang){
@@ -93,11 +93,11 @@
   <script>
   const DICT={sv:{nav:{home:"Hem",repairs:"Reparationer",about:"Om oss",stores:"Våra butiker"},
                   apple:{eyebrow:"Apple • iPhone",title:"iPhone 11-serien – prislista",sub:"Reparationer på plats – ofta klara inom en timme. Drop-in."},
-                  t:{service:"Tjänst",price:"Pris",pay:"Betalning: Klarna, Swish, Mastercard, Visa.",contact:"Kontakt: 08-34 88 88 · info@irepairofsweden.com"},
+                  t:{service:"Tjänst",price:"Pris",pay:"Betalning: Klarna, Swish, Mastercard, Visa.",contact:"Kontakt: 08-34 88 88 · info@irepairofsweden.se"},
                   _btn:"English"},
              en:{nav:{home:"Home",repairs:"Repairs",about:"About us",stores:"Our stores"},
                   apple:{eyebrow:"Apple • iPhone",title:"iPhone 11 series — price list",sub:"On-site repairs — often within an hour. Walk-in."},
-                  t:{service:"Service",price:"Price",pay:"Payment: Klarna, Swish, Mastercard, Visa.",contact:"Contact: 08-34 88 88 · info@irepairofsweden.com"},
+                  t:{service:"Service",price:"Price",pay:"Payment: Klarna, Swish, Mastercard, Visa.",contact:"Contact: 08-34 88 88 · info@irepairofsweden.se"},
                   _btn:"Svenska"}};
   function applyLang(lang){const t=DICT[lang];document.documentElement.lang=lang;document.querySelectorAll("[data-i18n]").forEach(el=>{let c=t;for(const k of el.dataset.i18n.split("."))c=c&&c[k];if(typeof c==="string")el.textContent=c;});document.getElementById('langBtn').textContent=t._btn;}
 
@@ -106,9 +106,15 @@
   document.getElementById('year').textContent=new Date().getFullYear();
 </script>
 
-<footer id="site-footer" class="site-footer">
-  © <span id="footer-year"></span> <strong>Bston-Tech</strong>.
-  <span id="footer-rights" data-i18n="foot.rights">Alla rättigheter förbehållna.</span>
+<footer class="site-footer">
+  <div class="container footer-content">
+    <div class="footer-brand">iRepair of Sweden</div>
+    <div class="muted">
+      © <span id="footer-year"></span> <span class="copyright-owner">iRepair of Sweden</span>. <span data-i18n="foot.rights">Alla rättigheter förbehållna.</span>
+      <br>
+      <span class="powered-by">Powered by Bston-Tech</span>
+    </div>
+  </div>
 </footer>
 
 <script>
@@ -122,7 +128,7 @@
     window.applyLang = function(lang){
       if (typeof prev === 'function') prev(lang);
       var rights = (lang === 'en')
-        ? 'All rights reserved.'
+        ? 'Copyright'
         : 'Alla rättigheter förbehållna.';
       var el = document.getElementById('footer-rights');
       if (el) el.textContent = rights;

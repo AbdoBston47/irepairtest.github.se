@@ -3,23 +3,11 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>iRepair of Sweden – Apple · iPhone X-serien</title>
+  <title>iRepair of Sweden – iPhone X Prislista</title>
   <link rel="stylesheet" href="assets/styles.css">
-
-  <style>
-    .subnav{display:flex;flex-wrap:wrap;gap:8px;margin:16px 0 0}
-    .pill{display:inline-flex;align-items:center;gap:.5rem;padding:.5rem .9rem;border:1px solid var(--border);border-radius:999px;background:var(--card);color:var(--text);text-decoration:none}
-    .pill:hover{border-color:var(--accent)}
-    .price-card{margin-top:16px}
-    .price-table{width:100%;border-collapse:collapse;font-size:.98rem}
-    .price-table th,.price-table td{border:1px solid var(--border);padding:10px 12px;vertical-align:top}
-    .price-table th{text-align:left;background:var(--surface)}
-    .price{text-align:right;white-space:nowrap;font-weight:700}
-    .hint{color:var(--muted);font-size:.9rem}
-  </style>
 </head>
 <body>
-  <!-- Header -->
+
   <header class="site-header">
     <div class="container head">
       <div class="brand">
@@ -33,329 +21,190 @@
         <a href="stores.html" data-i18n="nav.stores">Våra butiker</a>
         <a href="contact.html" data-i18n="nav.contact">Kontakt</a>
       </nav>
-      <div style="display:flex;gap:8px">
-        <button id="themeBtn" class="theme-btn btn" aria-label="Byt tema">☀️ Ljust</button>
-        <button id="langBtn" class="lang-btn">English</button>
+      <div class="actions">
+        <button id="themeBtn" class="btn ghost" aria-label="Byt tema">☀️ Ljust</button>
+        <button id="langBtn" class="btn">English</button>
       </div>
     </div>
   </header>
 
   <!-- Hero -->
-  <section class="hero">
+  <section class="hero animate-fade-in">
     <div class="container">
-      <div class="eyebrow" style="color:var(--muted);font-weight:600;text-transform:uppercase;letter-spacing:.04em" data-i18n="apple.eyebrow">Apple • iPhone</div>
+      <div class="eyebrow" data-i18n="apple.eyebrow">Apple • iPhone</div>
       <h1 class="h1" data-i18n="apple.title">iPhone X-serien – prislista</h1>
-      <p class="muted" data-i18n="apple.sub">Reparationer på plats – ofta klara inom en timme. Drop-in.</p>
+      <p class="lead" data-i18n="apple.sub">Reparationer på plats – ofta klara inom en timme. Drop-in.</p>
 
-      <!-- Section pills -->
       <div class="subnav">
         <a class="pill" href="#iphonex">iPhone X</a>
         <a class="pill" href="#iphonexs">iPhone XS</a>
         <a class="pill" href="#iphonexsmax">iPhone XS Max</a>
         <a class="pill" href="#iphonexr">iPhone XR</a>
-        <a class="pill" href="contact.html" data-i18n="cta.contact">Kontakta oss</a>
       </div>
-      <div>
-        <a class="pill" href="repairs.html" id="backLink" data-i18n="apple.back" onclick="if(history.length>1){history.back();return false;}" aria-label="Tillbaka">← iPhone</a>
+      <div style="margin-top: 2rem;">
+        <a class="pill" href="repairs.html" id="backLink" data-i18n="apple.back" aria-label="Tillbaka">← iPhone</a>
       </div>
     </div>
   </section>
 
-  <main class="container section" style="padding-top:24px">
+  <main class="container">
+    <div class="section grid">
+      
+      <!-- iPhone X -->
+      <section id="iphonex" class="card price-card">
+        <h2 data-i18n="m.iphonex">iPhone X</h2>
+        <table class="price-table">
+          <thead>
+            <tr><th data-i18n="t.service">Tjänst</th><th class="price" data-i18n="t.price">Pris</th></tr>
+          </thead>
+          <tbody>
+            <tr><td><span data-i18n="svc.screen.copy">Skärmbyte (kopia)</span></td><td class="price">890 kr</td></tr>
+            <tr><td><span data-i18n="svc.screen.oled">Skärmbyte (OLED-skärm)</span></td><td class="price">1149 kr</td></tr>
+            <tr><td><span data-i18n="svc.screen.oem">Skärmbyte (OEM-skärm)</span></td><td class="price">1390 kr</td></tr>
+            <tr><td><span data-i18n="svc.battery">Batteribyte</span></td><td class="price">590 kr</td></tr>
+            <tr><td><span data-i18n="svc.chargePort">Laddportsbyte</span></td><td class="price">790 kr</td></tr>
+            <tr><td><span data-i18n="svc.earpieceSensor">Samtalshögtalare & sensor</span></td><td class="price">799 kr</td></tr>
+            <tr><td><span data-i18n="svc.camRear">Bakkamerabyte</span></td><td class="price">990 kr</td></tr>
+            <tr><td><span data-i18n="svc.backglass">Baksida/Bakglas – byte</span></td><td class="price">990 kr</td></tr>
+            <tr><td><span data-i18n="svc.diagnostics">Felsökningsavgift</span></td><td class="price">300 kr</td></tr>
+          </tbody>
+        </table>
+        <p class="hint" data-i18n="t.note">* Priser enligt källa, lager och modellens skick kan påverka ledtider.</p>
+      </section>
 
-    <!-- iPhone X -->
-    <section id="iphonex" class="card price-card">
-      <h2 style="margin:0 0 10px">iPhone X</h2>
-      <table class="price-table">
-        <thead>
-          <tr><th data-i18n="t.service">Tjänst</th><th class="price" data-i18n="t.price">Pris</th></tr>
-        </thead>
-        <tbody>
-          <tr><td>Skärmbyte (720p)</td><td class="price">790 kr</td></tr>
-          <tr><td>Skärmbyte (kopia Full HD)</td><td class="price">1090 kr</td></tr>
-          <tr><td>Skärmbyte (OEM–skärm)</td><td class="price">1490 kr</td></tr>
-          <tr><td>Batteribyte</td><td class="price">590 kr</td></tr>
-          <tr><td>Laddportsbyte</td><td class="price">790 kr</td></tr>
-          <tr><td>Mikrofonbyte</td><td class="price">790 kr</td></tr>
-          <tr><td>Samtalshögtalare &amp; sensor – byte</td><td class="price">799 kr</td></tr>
-          <tr><td>Musikhögtalare – byte</td><td class="price">790 kr</td></tr>
-          <tr><td>On/Off-knapp – byte</td><td class="price">790 kr</td></tr>
-          <tr><td>Framkamerabyte</td><td class="price">890 kr</td></tr>
-          <tr><td>Bakkamerabyte</td><td class="price">990 kr</td></tr>
-          <tr><td>Kameraglas – byte</td><td class="price">390 kr</td></tr>
-          <tr><td>Baksida/Bakglas – byte</td><td class="price">990 kr</td></tr>
-          <tr><td>Volymknappar – byte</td><td class="price">790 kr</td></tr>
-          <tr><td>Wi-Fi modul – byte</td><td class="price">790 kr</td></tr>
-          <tr><td>Bluetooth – byte</td><td class="price">790 kr</td></tr>
-          <tr><td>Felsökningsavgift</td><td class="price">300 kr</td></tr>
-          <tr><td>Lödningsarbete</td><td class="price">fr. 700 kr</td></tr>
-          <tr><td>Fuktsanering</td><td class="price">699 kr</td></tr>
-          <tr><td>Mjukvara</td><td class="price">fr. 200 kr</td></tr>
-        </tbody>
-      </table>
-      <p class="hint">Källa: iRepair of Sweden – iPhone X prislista.</p>
+      <!-- iPhone XS -->
+      <section id="iphonexs" class="card price-card">
+        <h2 data-i18n="m.iphonexs">iPhone XS</h2>
+        <table class="price-table">
+          <thead>
+            <tr><th data-i18n="t.service">Tjänst</th><th class="price" data-i18n="t.price">Pris</th></tr>
+          </thead>
+          <tbody>
+            <tr><td><span data-i18n="svc.screen.copy">Skärmbyte (kopia)</span></td><td class="price">890 kr</td></tr>
+            <tr><td><span data-i18n="svc.screen.oled">Skärmbyte (OLED-skärm)</span></td><td class="price">1090 kr</td></tr>
+            <tr><td><span data-i18n="svc.screen.oem">Skärmbyte (OEM-skärm)</span></td><td class="price">1590 kr</td></tr>
+            <tr><td><span data-i18n="svc.battery">Batteribyte</span></td><td class="price">650 kr</td></tr>
+            <tr><td><span data-i18n="svc.backglass">Baksida/Bakglas – byte</span></td><td class="price">1190 kr</td></tr>
+            <tr><td><span data-i18n="svc.camRear">Bakkamerabyte</span></td><td class="price">1190 kr</td></tr>
+            <tr><td><span data-i18n="svc.chargePort">Laddportsbyte</span></td><td class="price">790 kr</td></tr>
+            <tr><td><span data-i18n="svc.diagnostics">Felsökningsavgift</span></td><td class="price">300 kr</td></tr>
+          </tbody>
+        </table>
+        <p class="hint" data-i18n="t.note">* Priser enligt källa, lager och modellens skick kan påverka ledtider.</p>
+      </section>
+
+      <!-- iPhone XS Max -->
+      <section id="iphonexsmax" class="card price-card">
+        <h2 data-i18n="m.iphonexsmax">iPhone XS Max</h2>
+        <table class="price-table">
+          <thead>
+            <tr><th data-i18n="t.service">Tjänst</th><th class="price" data-i18n="t.price">Pris</th></tr>
+          </thead>
+          <tbody>
+            <tr><td><span data-i18n="svc.screen.copy">Skärmbyte (kopia)</span></td><td class="price">990 kr</td></tr>
+            <tr><td><span data-i18n="svc.screen.oled">Skärmbyte (OLED-skärm)</span></td><td class="price">1190 kr</td></tr>
+            <tr><td><span data-i18n="svc.screen.oem">Skärmbyte (OEM-skärm)</span></td><td class="price">1690 kr</td></tr>
+            <tr><td><span data-i18n="svc.battery">Batteribyte</span></td><td class="price">690 kr</td></tr>
+            <tr><td><span data-i18n="svc.backglass">Baksida/Bakglas – byte</span></td><td class="price">1290 kr</td></tr>
+            <tr><td><span data-i18n="svc.camRear">Bakkamerabyte</span></td><td class="price">1099 kr</td></tr>
+            <tr><td><span data-i18n="svc.chargePort">Laddportsbyte</span></td><td class="price">790 kr</td></tr>
+            <tr><td><span data-i18n="svc.diagnostics">Felsökningsavgift</span></td><td class="price">300 kr</td></tr>
+          </tbody>
+        </table>
+        <p class="hint" data-i18n="t.note">* Priser enligt källa, lager och modellens skick kan påverka ledtider.</p>
+      </section>
+
+      <!-- iPhone XR -->
+      <section id="iphonexr" class="card price-card">
+        <h2 data-i18n="m.iphonexr">iPhone XR</h2>
+        <table class="price-table">
+          <thead>
+            <tr><th data-i18n="t.service">Tjänst</th><th class="price" data-i18n="t.price">Pris</th></tr>
+          </thead>
+          <tbody>
+            <tr><td><span data-i18n="svc.screen.copy">Skärmbyte (kopia)</span></td><td class="price">890 kr</td></tr>
+            <tr><td><span data-i18n="svc.screen.lcd">Skärmbyte (LCD-skärm)</span></td><td class="price">1149 kr</td></tr>
+            <tr><td><span data-i18n="svc.screen.oem">Skärmbyte (OEM-skärm)</span></td><td class="price">1290 kr</td></tr>
+            <tr><td><span data-i18n="svc.battery">Batteribyte</span></td><td class="price">590 kr</td></tr>
+            <tr><td><span data-i18n="svc.backglass">Baksida/Bakglas – byte</span></td><td class="price">1190 kr</td></tr>
+            <tr><td><span data-i18n="svc.camRear">Bakkamerabyte</span></td><td class="price">990 kr</td></tr>
+            <tr><td><span data-i18n="svc.chargePortMic">Laddport & mikrofon – byte</span></td><td class="price">790 kr</td></tr>
+            <tr><td><span data-i18n="svc.diagnostics">Felsökningsavgift</span></td><td class="price">300 kr</td></tr>
+          </tbody>
+        </table>
+        <p class="hint" data-i18n="t.note">* Priser enligt källa, lager och modellens skick kan påverka ledtider.</p>
+      </section>
+
+    </div>
+
+    <section class="section animate-fade-in" style="padding-top:0">
+      <div class="card" style="text-align:center">
+        <div style="display:flex; gap:2rem; justify-content:center; flex-wrap:wrap">
+          <div><p class="muted" data-i18n="svc.solder">Lödningsarbete</p><p class="price">fr. 700 kr</p></div>
+          <div><p class="muted" data-i18n="svc.liquid">Fuktsanering</p><p class="price">699 kr</p></div>
+          <div><p class="muted" data-i18n="svc.software">Mjukvara</p><p class="price">fr. 200 kr</p></div>
+        </div>
+        <hr style="margin:2rem 0; border:none; border-top:1px solid var(--border)">
+        <p class="lead" data-i18n="t.pay">Betalning: Klarna, Swish, Mastercard, Visa.</p>
+        <p class="muted" data-i18n="t.contact">Kontakt: 08-34 88 88 · info@irepairofsweden.se</p>
+      </div>
     </section>
 
-    <!-- iPhone XS -->
-    <section id="iphonexs" class="card price-card">
-      <h2 style="margin:0 0 10px">iPhone XS</h2>
-      <table class="price-table">
-        <thead>
-          <tr><th data-i18n="t.service">Tjänst</th><th class="price" data-i18n="t.price">Pris</th></tr>
-        </thead>
-        <tbody>
-          <tr><td>Skärmbyte (kopia)</td><td class="price">890 kr</td></tr>
-          <tr><td>Skärmbyte (Full HD)</td><td class="price">1090 kr</td></tr>
-          <tr><td>Skärmbyte (OEM–skärm)</td><td class="price">1590 kr</td></tr>
-          <tr><td>Baksida/Bakglas – byte</td><td class="price">1190 kr</td></tr>
-          <tr><td>Batteribyte</td><td class="price">650 kr</td></tr>
-          <tr><td>Sensor – byte</td><td class="price">790 kr</td></tr>
-          <tr><td>Samtalshögtalare – byte</td><td class="price">790 kr</td></tr>
-          <tr><td>Bakkamerabyte</td><td class="price">1190 kr</td></tr>
-          <tr><td>Kameraglas – byte</td><td class="price">490 kr</td></tr>
-          <tr><td>Laddportsbyte</td><td class="price">790 kr</td></tr>
-          <tr><td>Felsökningsavgift</td><td class="price">300 kr</td></tr>
-          <tr><td>Lödningsarbete</td><td class="price">fr. 700 kr</td></tr>
-          <tr><td>Fuktsanering</td><td class="price">699 kr</td></tr>
-          <tr><td>Mjukvara</td><td class="price">fr. 200 kr</td></tr>
-        </tbody>
-      </table>
-      <p class="hint">Källa: iRepair of Sweden – iPhone XS prislista.</p>
-    </section>
-
-    <!-- iPhone XS Max -->
-    <section id="iphonexsmax" class="card price-card">
-      <h2 style="margin:0 0 10px">iPhone XS Max</h2>
-      <table class="price-table">
-        <thead>
-          <tr><th data-i18n="t.service">Tjänst</th><th class="price" data-i18n="t.price">Pris</th></tr>
-        </thead>
-        <tbody>
-          <tr><td>Skärmbyte (kopia)</td><td class="price">1090 kr</td></tr>
-          <tr><td>Skärmbyte (OEM–skärm)</td><td class="price">1990 kr</td></tr>
-          <tr><td>Batteribyte</td><td class="price">690 kr</td></tr>
-          <tr><td>Sensor – byte</td><td class="price">790 kr</td></tr>
-          <tr><td>Samtalshögtalare – byte</td><td class="price">790 kr</td></tr>
-          <tr><td>Mikrofon – byte</td><td class="price">790 kr</td></tr>
-          <tr><td>Bakkamerabyte</td><td class="price">1099 kr</td></tr>
-          <tr><td>Baksida/Bakglas – byte</td><td class="price">1290 kr</td></tr>
-          <tr><td>Framkamerabyte</td><td class="price">990 kr</td></tr>
-          <tr><td>Kameraglas – byte</td><td class="price">490 kr</td></tr>
-          <tr><td>Laddportsbyte</td><td class="price">790 kr</td></tr>
-          <tr><td>Bluetooth – byte</td><td class="price">690 kr</td></tr>
-          <tr><td>Volymknappar – byte</td><td class="price">690 kr</td></tr>
-          <tr><td>Av/på-knapp – byte</td><td class="price">690 kr</td></tr>
-          <tr><td>Felsökningsavgift</td><td class="price">300 kr</td></tr>
-          <tr><td>Lödningsarbete</td><td class="price">fr. 700 kr</td></tr>
-          <tr><td>Fuktsanering</td><td class="price">699 kr</td></tr>
-          <tr><td>Mjukvara</td><td class="price">fr. 200 kr</td></tr>
-        </tbody>
-      </table>
-      <p class="hint">Källa: iRepair of Sweden – iPhone XS Max prislista.</p>
-    </section>
-
-    <!-- iPhone XR -->
-    <section id="iphonexr" class="card price-card">
-      <h2 style="margin:0 0 10px">iPhone XR</h2>
-      <table class="price-table">
-        <thead>
-          <tr><th data-i18n="t.service">Tjänst</th><th class="price" data-i18n="t.price">Pris</th></tr>
-        </thead>
-        <tbody>
-          <tr><td>Skärmbyte (kopia)</td><td class="price">899 kr</td></tr>
-          <tr><td>Skärmbyte (OEM–skärm)</td><td class="price">1290 kr</td></tr>
-          <tr><td>Kameraglas – byte</td><td class="price">490 kr</td></tr>
-          <tr><td>Bakkamerabyte</td><td class="price">990 kr</td></tr>
-          <tr><td>Laddport &amp; mikrofon – byte</td><td class="price">799 kr</td></tr>
-          <tr><td>Batteribyte</td><td class="price">590 kr</td></tr>
-          <tr><td>Baksida/Bakglas – byte</td><td class="price">1190 kr</td></tr>
-          <tr><td>Felsökningsavgift</td><td class="price">300 kr</td></tr>
-          <tr><td>Lödningsarbete</td><td class="price">fr. 700 kr</td></tr>
-          <tr><td>Fuktsanering</td><td class="price">699 kr</td></tr>
-          <tr><td>Mjukvara</td><td class="price">fr. 200 kr</td></tr>
-        </tbody>
-      </table>
-      <p class="hint">Källa: iRepair of Sweden – iPhone XR prislista.</p>
-    </section>
-
-    <p class="hint" style="margin-top:18px">
-      <span data-i18n="t.pay">Betalning: Klarna, Swish, Mastercard, Visa.</span>
-      <br><span data-i18n="t.contact">Kontakt: 08-34 88 88 · info@irepairofsweden.com</span>
-    </p>
   </main>
 
-  <footer>© <span id="footer-year"></span> Bston-Tech. <span data-i18n="foot.rights">Alla rättigheter förbehållna.</span></footer>
+  <footer>
+    <div class="container footer-content">
+      <div class="footer-brand">iRepair of Sweden</div>
+      <div class="muted">
+        © <span id="footer-year"></span> <span class="copyright-owner">iRepair of Sweden</span>. <span data-i18n="foot.rights">Alla rättigheter förbehållna.</span>
+        <br>
+        <span class="powered-by">Powered by Bston-Tech</span>
+      </div>
+    </div>
+  </footer>
 
+  <script src="assets/app.js?v=5"></script>
   <script>
-  (function(){
-    const DICT = {
-      sv:{
-        nav:{home:"Hem",repairs:"Reparationer",about:"Om oss",stores:"Våra butiker",contact:"Kontakt"},
-        apple:{eyebrow:"Apple • iPhone",title:"iPhone X-serien – prislista",sub:"Reparationer på plats – ofta klara inom en timme. Drop-in.",back:"← iPhone"},
-        cta:{contact:"Kontakta oss"},
-        t:{service:"Tjänst",price:"Pris",pay:"Betalning: Klarna, Swish, Mastercard, Visa.",contact:"Kontakt: 08-34 88 88 · info@irepairofsweden.com"},
-        svc:{
-          screen:{p720:"Skärmbyte (720p)", copyFHD:"Skärmbyte (kopia Full HD)", fhd:"Skärmbyte (Full HD)", oem:"Skärmbyte (OEM–skärm)", copy:"Skärmbyte (kopia)"},
-          battery:"Batteribyte",
-          chargePort:"Laddportsbyte",
-          chargePortMic:"Laddport & mikrofon – byte",
-          mic:"Mikrofon – byte",
-          mic2:"Mikrofonbyte",
-          earpieceSensor:"Samtalshögtalare & sensor – byte",
-          loudspeaker:"Musikhögtalare – byte",
-          power:"On/Off-knapp – byte",
-          power2:"Av/på-knapp – byte",
-          volKeys:"Volymknappar – byte",
-          wifi:"Wi-Fi modul – byte",
-          bt:"Bluetooth – byte",
-          camFront:"Framkamerabyte",
-          camRear:"Bakkamerabyte",
-          camGlass:"Kameraglas – byte",
-          backglass:"Baksida/Bakglas – byte",
-          sensor:"Sensor – byte",
-          diagnostics:"Felsökningsavgift",
-          solder:"Lödningsarbete",
-          liquid:"Fuktsanering",
-          software:"Mjukvara"
+    (function(){
+      const DICT = {
+        sv:{
+          nav:{home:"Hem",repairs:"Reparationer",about:"Om oss",stores:"Våra butiker",contact:"Kontakt"},
+          apple:{eyebrow:"Apple • iPhone",title:"iPhone X-serien – prislista",sub:"Reparationer på plats – ofta klara inom en timme. Drop-in.",back:"← iPhone"},
+          t:{service:"Tjänst",price:"Pris",note:"* Priser enligt källa, lager och modellens skick kan påverka ledtider.",pay:"Betalning: Klarna, Swish, Mastercard, Visa.",contact:"Kontakt: 08-34 88 88 · info@irepairofsweden.se"},
+          svc:{
+            screen:{copy:"Skärmbyte (kopia)",oled:"Skärmbyte (OLED-skärm)",oem:"Skärmbyte (OEM-skärm)", lcd: "Skärmbyte (LCD-skärm)"},
+            battery:"Batteribyte", chargePort: "Laddportsbyte", chargePortMic: "Laddport & mikrofon – byte", earpieceSensor: "Samtalshögtalare & sensor", camRear:"Bakkamerabyte", backglass:"Baksida/Bakglas – byte", diagnostics:"Felsökningsavgift",
+            solder: "Lödningsarbete", liquid: "Fuktsanering", software: "Mjukvara"
+          },
+          m:{ iphonex:"iPhone X", iphonexs:"iPhone XS", iphonexsmax:"iPhone XS Max", iphonexr: "iPhone XR" },
+          foot:{rights:"Alla rättigheter förbehållna."}
         },
-        btn:{themeLight:"☀️ Ljust", themeDark:"🌙 Mörkt", lang:"English"},
-        aria:{themeToLight:"Byt till ljust tema", themeToDark:"Byt till mörkt tema", back:"Tillbaka"},
-        foot:{rights:"Alla rättigheter förbehållna."}
-      },
-      en:{
-        nav:{home:"Home",repairs:"Repairs",about:"About us",stores:"Our stores",contact:"Contact"},
-        apple:{eyebrow:"Apple • iPhone",title:"iPhone X series — price list",sub:"On-site repairs — often within an hour. Walk-in.",back:"← iPhone"},
-        cta:{contact:"Contact us"},
-        t:{service:"Service",price:"Price",pay:"Payment: Klarna, Swish, Mastercard, Visa.",contact:"Contact: 08-34 88 88 · info@irepairofsweden.com"},
-        svc:{
-          screen:{p720:"Screen replacement (720p)", copyFHD:"Screen replacement (copy, Full HD)", fhd:"Screen replacement (Full HD)", oem:"Screen replacement (OEM)", copy:"Screen replacement (copy)"},
-          battery:"Battery replacement",
-          chargePort:"Charging port replacement",
-          chargePortMic:"Charging port & microphone replacement",
-          mic:"Microphone replacement",
-          mic2:"Microphone replacement",
-          earpieceSensor:"Earpiece & sensor replacement",
-          loudspeaker:"Loudspeaker replacement",
-          power:"Power button replacement",
-          power2:"Power button replacement",
-          volKeys:"Volume buttons replacement",
-          wifi:"Wi‑Fi module replacement",
-          bt:"Bluetooth replacement",
-          camFront:"Front camera replacement",
-          camRear:"Rear camera replacement",
-          camGlass:"Camera lens glass replacement",
-          backglass:"Back glass replacement",
-          sensor:"Sensor replacement",
-          diagnostics:"Diagnostics fee",
-          solder:"Soldering work",
-          liquid:"Liquid damage treatment",
-          software:"Software service"
-        },
-        btn:{themeLight:"☀️ Light", themeDark:"🌙 Dark", lang:"Svenska"},
-        aria:{themeToLight:"Switch to light theme", themeToDark:"Switch to dark theme", back:"Back"},
-        foot:{rights:"All rights reserved."}
-      }
-    };
-
-    const LANG_KEY='lang', THEME_KEY='theme';
-    const $ = s => document.querySelector(s);
-
-    function curLang(){ return localStorage.getItem(LANG_KEY) || 'sv'; }
-
-    function setTheme(mode){
-      const t = DICT[curLang()];
-      const btn = $('#themeBtn');
-      document.documentElement.setAttribute('data-theme', mode);
-      localStorage.setItem(THEME_KEY, mode);
-      if (btn){
-        btn.textContent = mode==='dark' ? t.btn.themeDark : t.btn.themeLight;
-        btn.setAttribute('aria-label', mode==='dark' ? t.aria.themeToLight : t.aria.themeToDark);
-      }
-    }
-
-    function translate(lang){
-      const t = DICT[lang] || DICT.sv;
-      document.documentElement.lang = lang;
-
-      // data-i18n elements
-      document.querySelectorAll('[data-i18n]').forEach(el=>{
-        const path = el.getAttribute('data-i18n').split('.');
-        let val = t; for (const p of path){ if (val && p in val) val = val[p]; else { val=null; break; } }
-        if (typeof val === 'string') el.textContent = val;
-      });
-
-      // header nav (by href)
-      [['index.html','home'],['repairs.html','repairs'],['about.html','about'],['stores.html','stores'],['contact.html','contact']]
-        .forEach(([href,key])=>{const a=document.querySelector(`nav a[href="${href}"]`); if(a&&t.nav[key]) a.textContent=t.nav[key];});
-
-      setTheme(localStorage.getItem(THEME_KEY) || 'light');
-
-      const y = document.getElementById('footer-year'); if (y) y.textContent = new Date().getFullYear();
-      const rights = document.querySelector('footer [data-i18n="foot.rights"]'); if (rights) rights.textContent = t.foot.rights;
-    }
-
-    // Auto-wrap Swedish labels so they translate with DICT.svc keys
-    function autowrapServiceLabels(){
-      const map = {
-        'Skärmbyte (720p)':'svc.screen.p720',
-        'Skärmbyte (kopia Full HD)':'svc.screen.copyFHD',
-        'Skärmbyte (Full HD)':'svc.screen.fhd',
-        'Skärmbyte (OEM–skärm)':'svc.screen.oem',
-        'Skärmbyte (kopia)':'svc.screen.copy',
-        'Batteribyte':'svc.battery',
-        'Laddportsbyte':'svc.chargePort',
-        'Laddport & mikrofon – byte':'svc.chargePortMic',
-        'Mikrofon – byte':'svc.mic',
-        'Mikrofonbyte':'svc.mic2',
-        'Samtalshögtalare & sensor – byte':'svc.earpieceSensor',
-        'Musikhögtalare – byte':'svc.loudspeaker',
-        'On/Off-knapp – byte':'svc.power',
-        'Av/på-knapp – byte':'svc.power2',
-        'Volymknappar – byte':'svc.volKeys',
-        'Wi-Fi modul – byte':'svc.wifi',
-        'Bluetooth – byte':'svc.bt',
-        'Framkamerabyte':'svc.camFront',
-        'Bakkamerabyte':'svc.camRear',
-        'Kameraglas – byte':'svc.camGlass',
-        'Baksida/Bakglas – byte':'svc.backglass',
-        'Sensor – byte':'svc.sensor',
-        'Felsökningsavgift':'svc.diagnostics',
-        'Lödningsarbete':'svc.solder',
-        'Fuktsanering':'svc.liquid',
-        'Mjukvara':'svc.software'
-      };
-      document.querySelectorAll('table.price-table tbody tr td:first-child').forEach(td=>{
-        if (!td.querySelector('[data-i18n]')){
-          const txt = td.textContent.trim();
-          const k = map[txt];
-          if (k) td.innerHTML = `<span data-i18n="${k}">${txt}</span>`;
+        en:{
+          nav:{home:"Home",repairs:"Repairs",about:"About us",stores:"Our stores",contact:"Contact"},
+          apple:{eyebrow:"Apple • iPhone",title:"iPhone X series — price list",sub:"On-site repairs — often within an hour. Walk-in.",back:"← iPhone"},
+          t:{service:"Service",price:"Price",note:"* Prices per source; parts availability and device condition may affect turnaround.",pay:"Payment: Klarna, Swish, Mastercard, Visa.",contact:"Contact: 08-34 88 88 · info@irepairofsweden.se"},
+          svc:{
+            screen:{copy:"Screen replacement (copy)",oled:"Screen replacement (OLED)",oem:"Screen replacement (OEM)", lcd: "Screen replacement (LCD)"},
+            battery:"Battery replacement", chargePort: "Charging port", chargePortMic: "Charging port & mic", earpieceSensor: "Ear speaker & sensor", camRear:"Rear camera replacement", backglass:"Back glass replacement", diagnostics:"Diagnostics fee",
+            solder: "Soldering work", liquid: "Liquid treat", software: "Software service"
+          },
+          m:{ iphonex:"iPhone X", iphonexs:"iPhone XS", iphonexsmax:"iPhone XS Max", iphonexr: "iPhone XR" },
+          foot:{rights:"Copyright"}
         }
-      });
-    }
+      };
 
-    document.addEventListener('DOMContentLoaded', function(){
-      autowrapServiceLabels();
-
-      // Theme init + bind
-      setTheme(localStorage.getItem(THEME_KEY) || 'light');
-      const tb = $('#themeBtn');
-      if (tb && !tb.dataset.bound){
-        tb.addEventListener('click', ()=> setTheme((localStorage.getItem(THEME_KEY)||'light')==='dark'?'light':'dark'));
-        tb.dataset.bound = '1';
-      }
-
-      // Language init + bind
-      translate(localStorage.getItem(LANG_KEY) || 'sv');
-      const lb = $('#langBtn');
-      if (lb && !lb.dataset.bound){
-        lb.addEventListener('click', ()=>{
-          const next = (localStorage.getItem(LANG_KEY)||'sv')==='sv' ? 'en' : 'sv';
-          localStorage.setItem(LANG_KEY, next); translate(next);
+      window.applyLang = function(lang) {
+        const t = DICT[lang];
+        document.querySelectorAll('[data-i18n]').forEach(el => {
+          const path = el.getAttribute('data-i18n').split('.');
+          let val = t; for (const p of path){ if (val && p in val) val = val[p]; else { val=null; break; } }
+          if (typeof val === 'string') el.textContent = val;
         });
-        lb.dataset.bound = '1';
-      }
-    });
-  })();
+      };
+
+      const savedLang = localStorage.getItem('irepair_lang') || 'sv';
+      window.applyLang(savedLang);
+    })();
   </script>
 </body>
 </html>

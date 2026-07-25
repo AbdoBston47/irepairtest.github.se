@@ -3,7 +3,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Samsung Galaxy S8 – prislista</title>
   <link rel="stylesheet" href="assets/styles.css?v=10" />
-  <script src="assets/site.js?v=10" defer></script>
+  <script src="assets/app.js?v=5" defer></script>
 </head><body>
 <header class="site-header"><div class="container head">
   <div class="brand"><div class="brand-badge">🔧</div><a href="index.html">iRepair <span>of Sweden</span></a></div>
@@ -41,13 +41,14 @@
 <script>
   const DICT={sv:{nav:{home:"Hem",repairs:"Reparationer",about:"Om oss",stores:"Våra butiker"},
                   apple:{eyebrow:"Apple • iPhone",title:"iPhone 11-serien – prislista",sub:"Reparationer på plats – ofta klara inom en timme. Drop-in."},
-                  t:{service:"Tjänst",price:"Pris",pay:"Betalning: Klarna, Swish, Mastercard, Visa.",contact:"Kontakt: 08-34 88 88 · info@irepairofsweden.com"},
+                  t:{service:"Tjänst",price:"Pris",pay:"Betalning: Klarna, Swish, Mastercard, Visa.",contact:"Kontakt: 08-34 88 88 · info@irepairofsweden.se"},
                   _btn:"English"},
              en:{nav:{home:"Home",repairs:"Repairs",about:"About us",stores:"Our stores"},
                   apple:{eyebrow:"Apple • iPhone",title:"iPhone 11 series — price list",sub:"On-site repairs — often within an hour. Walk-in."},
-                  t:{service:"Service",price:"Price",pay:"Payment: Klarna, Swish, Mastercard, Visa.",contact:"Contact: 08-34 88 88 · info@irepairofsweden.com"},
+                  t:{service:"Service",price:"Price",pay:"Payment: Klarna, Swish, Mastercard, Visa.",contact:"Contact: 08-34 88 88 · info@irepairofsweden.se"},
                   _btn:"Svenska"}};
   function applyLang(lang){const t=DICT[lang];document.documentElement.lang=lang;document.querySelectorAll("[data-i18n]").forEach(el=>{let c=t;for(const k of el.dataset.i18n.split("."))c=c&&c[k];if(typeof c==="string")el.textContent=c;});document.getElementById('langBtn').textContent=t._btn;}
+  window.applyLang = applyLang;
 
   (function themeInit(){const KEY='theme',btn=document.getElementById('themeBtn');function set(x){document.documentElement.setAttribute('data-theme',x);localStorage.setItem(KEY,x);btn.textContent=x==='dark'?'🌙 Mörkt':'☀️ Ljust';btn.setAttribute('aria-label',x==='dark'?'Byt till ljust tema':'Byt till mörkt tema');}set(localStorage.getItem(KEY)||'light');btn.addEventListener('click',()=>set(document.documentElement.getAttribute('data-theme')==='dark'?'light':'dark'));})();
   (function langInit(){const saved=localStorage.getItem('lang')||'sv';applyLang(saved);document.getElementById('langBtn').addEventListener('click',()=>{const next=(localStorage.getItem('lang')||'sv')==='sv'?'en':'sv';localStorage.setItem('lang',next);applyLang(next);});})();

@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="sv" data-theme="light">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>iRepair of Sweden – Sony</title>
+  <link rel="stylesheet" href="assets/styles.css" />
+  <script src="assets/app.js?v=5" defer></script>
+</head>
+<body>
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container head">
+      <div class="brand">
+        <div class="brand-badge">🔧</div>
+        <a href="index.html">iRepair <span>of Sweden</span></a>
+      </div>
+      <nav>
+        <a href="index.html">Hem</a>
+        <a href="repairs.html" class="active">Reparationer</a>
+        <a href="about.html">Om oss</a>
+        <a href="stores.html">Våra butiker</a>
+        <a href="contact.html">Kontakt</a>
+      </nav>
+      <div class="actions">
+        <button id="themeBtn" class="btn ghost" aria-label="Byt tema">☀️ Ljust</button>
+        <button id="langBtn" class="btn">English</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container">
+      <div class="eyebrow">SONY</div>
+      <h1 class="h1">Sony Xperia Reparationer</h1>
+      <p class="lead" style="color:var(--muted)">För Sony Xperia har vi inga prisuppgifter online för tillfället.</p>
+      <div class="subnav" style="margin-top:12px">
+        <a class="pill" href="repairs.html" onclick="if(history.length>1){history.back();return false;}">← Tillbaka</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Content -->
+  <main class="container section">
+    <div class="card price-card">
+      <h2 style="margin:0 0 10px">Kontakta oss för prisuppgifter</h2>
+      <p class="muted">
+        Vi utför skärmbyten, batteribyten och andra reparationer på Sony Xperia-enheter. 
+        Kontakta oss direkt för att få prisuppgifter och kontrollera tillgänglighet på delar.
+      </p>
+      <div style="margin-top:20px; display:flex; gap:10px; flex-wrap:wrap">
+        <a class="btn primary" href="tel:08348888">Ring oss 08-34 88 88</a>
+        <a class="btn" href="mailto:info@irepairofsweden.se">Maila oss info@irepairofsweden.se</a>
+      </div>
+    </div>
+  </main>
+
+  <footer>© <span id="year"></span> Bston-Tech. <span data-i18n="foot.rights">Alla rättigheter förbehållna.</span></footer>
+
+  <script>
+    const DICT={sv:{nav:{home:"Hem",repairs:"Reparationer",about:"Om oss",stores:"Våra butiker"},
+                    t:{service:"Tjänst",price:"Pris",pay:"Betalning: Klarna, Swish, Mastercard, Visa.",contact:"Kontakt: 08-34 88 88 · info@irepairofsweden.se"},
+                    _btn:"English"},
+               en:{nav:{home:"Home",repairs:"Repairs",about:"About us",stores:"Our stores"},
+                    t:{service:"Service",price:"Price",pay:"Payment: Klarna, Swish, Mastercard, Visa.",contact:"Contact: 08-34 88 88 · info@irepairofsweden.se"},
+                    _btn:"Svenska"}};
+    function applyLang(lang){
+      const t=DICT[lang];document.documentElement.lang=lang;
+      document.querySelectorAll("[data-i18n]").forEach(el=>{let c=t;for(const k of el.dataset.i18n.split("."))c=c&&c[k];if(typeof c==="string")el.textContent=c;});
+      document.getElementById('langBtn').textContent=t._btn;
+    }
+  window.applyLang = applyLang;
+    (function themeInit(){const KEY='theme',btn=document.getElementById('themeBtn');function set(x){document.documentElement.setAttribute('data-theme',x);localStorage.setItem(KEY,x);btn.textContent=x==='dark'?'🌙 Mörkt':'☀️ Ljust';btn.setAttribute('aria-label',x==='dark'?'Byt till ljust tema':'Byt till mörkt tema');}set(localStorage.getItem(KEY)||'light');btn.addEventListener('click',()=>set(document.documentElement.getAttribute('data-theme')==='dark'?'light':'dark'));})();
+    (function langInit(){const saved=localStorage.getItem('lang')||'sv';applyLang(saved);document.getElementById('langBtn').addEventListener('click',()=>{const next=(localStorage.getItem('lang')||'sv')==='sv'?'en':'sv';localStorage.setItem('lang',next);applyLang(next);});})();
+    document.getElementById('year').textContent=new Date().getFullYear();
+  </script>
+</body>
+</html>

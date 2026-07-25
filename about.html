@@ -1,13 +1,12 @@
 <!doctype html>
 <html lang="sv" data-theme="light">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>iRepair of Sweden – Om oss</title>
-  <link rel="stylesheet" href="assets/styles.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Om oss – iRepair of Sweden</title>
+  <link rel="stylesheet" href="assets/styles.css" />
 </head>
 <body>
-  <!-- Header -->
   <header class="site-header">
     <div class="container head">
       <div class="brand">
@@ -17,191 +16,148 @@
       <nav>
         <a href="index.html" data-i18n="nav.home">Hem</a>
         <a href="repairs.html" data-i18n="nav.repairs">Reparationer</a>
-        <a href="about.html" class="active" data-i18n="nav.about">Om oss</a>
+        <a href="sell.html" data-i18n="nav.sell">Sälj mobil</a>
         <a href="stores.html" data-i18n="nav.stores">Våra butiker</a>
+        <a href="about.html" class="active" data-i18n="nav.about">Om oss</a>
         <a href="contact.html" data-i18n="nav.contact">Kontakt</a>
       </nav>
-      <div style="display:flex;gap:8px">
-        <button id="themeBtn" class="theme-btn btn" aria-label="Byt tema">☀️ Ljust</button>
-        <button id="langBtn" class="lang-btn">English</button>
+      <div class="actions">
+        <button id="themeBtn" class="btn ghost">☀️ Ljust</button>
+        <button id="langBtn" class="btn">English</button>
       </div>
     </div>
   </header>
 
-  <main>
-    <!-- Hero -->
-    <section class="hero">
-      <div class="container">
-        <h1 class="h1" data-i18n="about.title">Om iRepair of Sweden</h1>
-        <p class="muted" data-i18n="about.tagline">
-          Vi reparerar telefoner och surfplattor och säljer mobiltillbehör. De flesta jobb blir klara på plats inom en timme – drop-in utan tidsbokning.
-        </p>
+  <section class="hero animate-fade-in">
+    <div class="container">
+      <div class="eyebrow" data-i18n="about.eyebrow">ERFARENHET & KOMPETENS</div>
+      <h1 class="h1" data-i18n="about.hero_title">iRepair of Sweden</h1>
+      <p class="lead" data-i18n="about.hero_sub">En av Stockholms mest erfarna aktörer inom mobilreparation och surfplattservice. Vi räddar enheter som andra inte kan laga.</p>
+      
+      <div class="subnav">
+        <div class="card" style="padding: 1rem 2rem; display: flex; gap: 2rem; flex-wrap: wrap; justify-content: center;">
+          <div style="text-align:center">
+            <span style="font-size: 2rem; font-weight: 800; display: block; color: var(--accent)">19+</span>
+            <span style="font-size: 0.8rem; font-weight: 700; text-transform: uppercase; color: var(--muted)" data-i18n="about.stat_years">Års erfarenhet</span>
+          </div>
+          <div style="text-align:center">
+            <span style="font-size: 2rem; font-weight: 800; display: block; color: var(--accent)">60 min</span>
+            <span style="font-size: 0.8rem; font-weight: 700; text-transform: uppercase; color: var(--muted)" data-i18n="about.stat_express">Express-rep</span>
+          </div>
+          <div style="text-align:center">
+            <span style="font-size: 2rem; font-weight: 800; display: block; color: var(--accent)">3</span>
+            <span style="font-size: 0.8rem; font-weight: 700; text-transform: uppercase; color: var(--muted)" data-i18n="about.stat_stores">Butiker</span>
+          </div>
+        </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- Your full Swedish paragraph (added) -->
-    <section class="container section" style="padding-top:20px;">
+  <main class="container section">
+    <div class="grid">
       <div class="card">
-        <p class="muted" style="line-height:1.65" data-i18n="about.long">
-          iRepair of Sweden är ett företag med inriktning på reparation av surfplattor och telefoner samt försäljning av mobiltillbehör.
-          Vår idé är att utföra express service på plats då de flesta reparationer oftast utförs inom en timme. I vår butik erbjuds drop-in service vilket gör att ingen tidsbokning krävs.
-          Allt för att göra det så enkelt och bekvämt för våra kunder som möjligt. Vad som gör oss unika är att vi inte begränsar oss, utan vi erbjuder reparationer av de flesta märkena som idag används på marknaden.
-          Vi är även specialiserade inom lödningsarbeten av moderkort då vi har 19 års erfarenhet inom mobilreparations branschen. Du hittar våra butiker i Port 73, Haninge och Täby Centrum.
-        </p>
+        <h3 data-i18n="about.f1_title">⚡ Snabb service</h3>
+        <p class="muted" data-i18n="about.f1_text">Vår affärsidé är enkel: expressreparationer på plats. De flesta mobilreparationer utförs inom en timme. Drop-in välkommen!</p>
       </div>
-    </section>
-
-    <!-- Three feature cards -->
-    <section class="container section" style="padding-top:0;">
-      <div class="grid grid-3">
-        <div class="card">
-          <h3 data-i18n="pill.brands.title">Märken vi reparerar</h3>
-          <p class="muted" data-i18n="pill.brands.body">
-            Vi begränsar oss inte till ett enstaka märke – vi tar hand om de flesta modeller på marknaden.
-          </p>
-        </div>
-        <div class="card">
-          <h3 data-i18n="pill.board.title">Moderkort & lödning</h3>
-          <p class="muted" data-i18n="pill.board.body">
-            Specialister på lödningsarbeten och avancerad felsökning på moderkort med 19 års erfarenhet.
-          </p>
-        </div>
-        <div class="card">
-          <h3 data-i18n="pill.locations.title">Här finns vi</h3>
-          <p class="muted" data-i18n="pill.locations.body">
-            Butiker i Port 73 (Haninge) och Täby Centrum.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <!-- Services list -->
-    <section class="container section" style="padding-top:0;">
+      
       <div class="card">
-        <h3 style="margin:0 0 6px" data-i18n="services.title">Tjänster & erbjudanden</h3>
-        <ul class="muted" style="margin:8px 0 0; padding-left:18px; line-height:1.6">
-          <li data-i18n="services.point1">Snabba och prisvärda mobilreparationer med hög kvalitet – vi arbetar bl.a. med Apple, Samsung, Sony, Huawei, LG och OnePlus.</li>
-          <li data-i18n="services.point2">Vi köper och säljer begagnade telefoner. Ta med din enhet så ger vi ett rättvist pris.</li>
-          <li data-i18n="services.point3">Tillbehör som skal och skärmskydd – alltid uppdaterat sortiment.</li>
-        </ul>
+        <h3 data-i18n="about.f2_title">🔬 Teknisk expertis</h3>
+        <p class="muted" data-i18n="about.f2_text">Vi är specialiserade på lödningsarbeten på moderkort. Vi räddar enheter som andra verkstäder ger upp på.</p>
       </div>
-    </section>
 
-    <!-- Business customers note (dashed) -->
-    <section class="container section" style="padding-top:0;">
-      <div class="card" style="border-style:dashed;">
-        <h3 style="margin:0 0 6px" data-i18n="biz.title">Företagskunder</h3>
-        <p class="muted" data-i18n="biz.body">
-          Vi hjälper både privat- och företagskunder. Som företagskund får du prioriterad service och snabba reparationer samt möjlighet till fakturering eller direktbetalning. Kontakta oss via telefon eller e-post.
-        </p>
+      <div class="card">
+        <h3 data-i18n="about.f3_title">📱 Alla märken</h3>
+        <p class="muted" data-i18n="about.f3_text">Vi reparerar iPhone, Samsung, Xiaomi, Huawei, Sony, OnePlus, Google Pixel och många fler märken.</p>
+        <div style="display: flex; flex-wrap: wrap; gap: 8px; margin-top: 1rem;">
+          <span class="badge">iPhone</span><span class="badge">Samsung</span><span class="badge">Xiaomi</span><span class="badge">OnePlus</span>
+        </div>
       </div>
-    </section>
+
+      <div class="card">
+        <h3 data-i18n="about.f4_title">🛍️ Begagnat & Tillbehör</h3>
+        <p class="muted" data-i18n="about.f4_text">Hos oss hittar du även kvalitetssäkrade mobiltillbehör. Vi köper och säljer även begagnade telefoner.</p>
+      </div>
+    </div>
+
+    <div class="card animate-fade-in" style="background: var(--accent-gradient); color: white; margin-top: 4rem; text-align: center; border: none;">
+      <h2 style="color: white; margin-bottom: 1rem;" data-i18n="about.biz_title">Driver du företag?</h2>
+      <p style="color: rgba(255,255,255,0.9); margin-bottom: 2rem;" data-i18n="about.biz_text">Som företagskund får ni prioriterad service, snabba reparationer och smidig fakturering.</p>
+      <a href="contact.html" class="btn" style="background: white; color: var(--accent); border: none;" data-i18n="about.biz_btn">Kontakta oss för samarbete</a>
+    </div>
   </main>
 
+  <footer>
+    <div class="container footer-content">
+      <div class="footer-brand">iRepair of Sweden</div>
+      <div class="muted">
+        © <span id="footer-year"></span> <span class="copyright-owner">iRepair of Sweden</span>. <span data-i18n="foot.rights">Alla rättigheter förbehållna.</span>
+        <br>
+        <span class="powered-by">Powered by Bston-Tech</span>
+      </div>
+    </div>
+  </footer>
 
-
+  <script src="assets/app.js?v=5"></script>
   <script>
-    /* ====== Language dictionary ====== */
-    const DICT = {
-      sv:{
-        nav:{home:"Hem",repairs:"Reparationer",about:"Om oss",stores:"Våra butiker"},
-        about:{
-          title:"Om iRepair of Sweden",
-          tagline:"Vi reparerar telefoner och surfplattor och säljer mobiltillbehör. De flesta jobb blir klara på plats inom en timme – drop-in utan tidsbokning.",
-          long:"iRepair of Sweden är ett företag med inriktning på reparation av surfplattor och telefoner samt försäljning av mobiltillbehör. Vår idé är att utföra express service på plats då de flesta reparationer oftast utförs inom en timme. I vår butik erbjuds drop-in service vilket gör att ingen tidsbokning krävs. Allt för att göra det så enkelt och bekvämt för våra kunder som möjligt. Vad som gör oss unika är att vi inte begränsar oss, utan vi erbjuder reparationer av de flesta märkena som idag används på marknaden. Vi är även specialiserade inom lödningsarbeten av moderkort då vi har 19 års erfarenhet inom mobilreparations branschen. Du hittar våra butiker i Port 73, Haninge och Täby Centrum."
+    (function(){
+      const D = {
+        sv: {
+          nav: { home: "Hem", repairs: "Reparationer", about: "Om oss", stores: "Våra butiker", sell: "Sälj mobil", contact: "Kontakt" },
+          about: {
+            eyebrow: "ERFARENHET & KOMPETENS",
+            hero_title: "iRepair of Sweden",
+            hero_sub: "En av Stockholms mest erfarna aktörer inom mobilreparation och surfplattservice. Vi räddar enheter som andra inte kan laga.",
+            stat_years: "Års erfarenhet",
+            stat_express: "Express-rep",
+            stat_stores: "Butiker",
+            f1_title: "⚡ Snabb service",
+            f1_text: "Vår affärsidé är enkel: expressreparationer på plats. De flesta mobilreparationer utförs inom en timme. Drop-in välkommen!",
+            f2_title: "🔬 Teknisk expertis",
+            f2_text: "Vi är specialiserade på lödningsarbeten på moderkort. Vi räddar enheter som andra verkstäder ger upp på.",
+            f3_title: "📱 Alla märken",
+            f3_text: "Vi reparerar iPhone, Samsung, Xiaomi, Huawei, Sony, OnePlus, Google Pixel och många fler märken.",
+            f4_title: "🛍️ Begagnat & Tillbehör",
+            f4_text: "Hos oss hittar du även kvalitetssäkrade mobiltillbehör. Vi köper och säljer även begagnade telefoner.",
+            biz_title: "Driver du företag?",
+            biz_text: "Som företagskund får ni prioriterad service, snabba reparationer och smidig fakturering.",
+            biz_btn: "Kontakta oss för samarbete"
+          }
         },
-        pill:{
-          brands:{title:"Märken vi reparerar",body:"Vi begränsar oss inte till ett enstaka märke – vi tar hand om de flesta modeller på marknaden."},
-          board:{title:"Moderkort & lödning",body:"Specialister på lödningsarbeten och avancerad felsökning på moderkort med 19 års erfarenhet."},
-          locations:{title:"Här finns vi",body:"Butiker i Port 73 (Haninge) och Täby Centrum."}
-        },
-        services:{
-          title:"Tjänster & erbjudanden",
-          point1:"Snabba och prisvärda mobilreparationer med hög kvalitet – vi arbetar bl.a. med Apple, Samsung, Sony, Huawei, LG och OnePlus.",
-          point2:"Vi köper och säljer begagnade telefoner. Ta med din enhet så ger vi ett rättvist pris.",
-          point3:"Tillbehör som skal och skärmskydd – alltid uppdaterat sortiment."
-        },
-        biz:{title:"Företagskunder",body:"Vi hjälper både privat- och företagskunder. Som företagskund får du prioriterad service och snabba reparationer samt möjlighet till fakturering eller direktbetalning. Kontakta oss via telefon eller e-post."},
-        _btn:"English"
-      },
-      en:{
-        nav:{home:"Home",repairs:"Repairs",about:"About us",stores:"Our stores"},
-        about:{
-          title:"About iRepair of Sweden",
-          tagline:"We repair phones and tablets and sell accessories. Most jobs are done on-site within an hour — drop-in, no booking.",
-          long:"iRepair of Sweden focuses on repairing tablets and phones and selling mobile accessories. Our idea is on-site express service where most repairs are finished within an hour. We offer drop-in service so no booking is required — making it easy and convenient. We repair most brands on the market and are specialized in motherboard micro-soldering with 19 years of experience. You can find our stores in Port 73 (Haninge) and Täby Centrum."
-        },
-        pill:{
-          brands:{title:"Brands we repair",body:"We don’t limit ourselves to one brand — we handle most models on the market."},
-          board:{title:"Motherboard & micro-soldering",body:"Specialists in board-level soldering and advanced diagnostics with 19 years of experience."},
-          locations:{title:"Where to find us",body:"Stores at Port 73 (Haninge) and Täby Centrum."}
-        },
-        services:{
-          title:"Services & offers",
-          point1:"Fast, fairly priced repairs with high quality — including Apple, Samsung, Sony, Huawei, LG and OnePlus.",
-          point2:"We buy and sell pre-owned phones. Bring your device for a fair offer.",
-          point3:"Accessories like cases and screen protectors — always up-to-date selection."
-        },
-        biz:{title:"Business customers",body:"We support both consumers and businesses. Business customers get priority service and quick turnaround, with invoicing or direct payment options. Contact us by phone or email."},
-        _btn:"Svenska"
-      }
-    };
+        en: {
+          nav: { home: "Home", repairs: "Repairs", about: "About Us", stores: "Stores", sell: "Sell Phone", contact: "Contact" },
+          about: {
+            eyebrow: "EXPERIENCE & EXPERTISE",
+            hero_title: "iRepair of Sweden",
+            hero_sub: "One of Stockholm's most experienced players in mobile and tablet service. We save devices that others cannot repair.",
+            stat_years: "Years experience",
+            stat_express: "Express-rep",
+            stat_stores: "Stores",
+            f1_title: "⚡ Fast service",
+            f1_text: "Our business idea is simple: on-site express repairs. Most mobile repairs are completed within an hour. Walk-in welcome!",
+            f2_title: "🔬 Technical expertise",
+            f2_text: "We specialize in motherboard soldering. We save devices that other workshops give up on.",
+            f3_title: "📱 All brands",
+            f3_text: "We repair iPhone, Samsung, Xiaomi, Huawei, Sony, OnePlus, Google Pixel and many more brands.",
+            f4_title: "🛍️ Used & Accessories",
+            f4_text: "You will also find quality-assured mobile accessories. We also buy and sell used phones.",
+            biz_title: "Running a business?",
+            biz_text: "As a business customer, you get prioritized service, fast repairs, and easy invoicing.",
+            biz_btn: "Contact us for collaboration"
+          }
+        }
+      };
 
-    function applyLang(lang){
-      const t = DICT[lang]; document.documentElement.lang = lang;
-      document.querySelectorAll("[data-i18n]").forEach(el=>{
-        let cur = t; for(const k of el.dataset.i18n.split(".")) cur = cur && cur[k];
-        if(typeof cur === "string") el.textContent = cur;
-      });
-      document.getElementById("langBtn").textContent = t._btn;
-    }
-
-    // Theme switcher (starts LIGHT)
-    (function themeInit(){
-      const KEY='theme', btn=document.getElementById('themeBtn');
-      function set(x){ document.documentElement.setAttribute('data-theme',x); localStorage.setItem(KEY,x); btn.textContent = x==='dark' ? '🌙 Mörkt' : '☀️ Ljust'; }
-      set(localStorage.getItem(KEY) || 'light');
-      btn.addEventListener('click',()=> set(document.documentElement.getAttribute('data-theme')==='dark' ? 'light' : 'dark'));
+      window.applyLang = function (lang) {
+        const t = D[lang] || D.sv;
+        document.querySelectorAll("[data-i18n]").forEach(el => {
+          let v = t; el.dataset.i18n.split(".").forEach(k => v = v && v[k]);
+          if (typeof v === "string") el.textContent = v;
+        });
+      };
+      
+      const savedLang = localStorage.getItem('irepair_lang') || 'sv';
+      window.applyLang(savedLang);
     })();
-
-    // Language init + toggle
-    (function langInit(){
-      const saved = localStorage.getItem('lang') || 'sv';
-      applyLang(saved);
-      document.getElementById('langBtn').addEventListener('click', ()=>{
-        const next = (localStorage.getItem('lang')||'sv') === 'sv' ? 'en' : 'sv';
-        localStorage.setItem('lang', next); applyLang(next);
-      });
-    })();
-
-    document.getElementById('year').textContent = new Date().getFullYear();
   </script>
-
-  <footer id="site-footer" class="site-footer">
-  © <span id="footer-year"></span> <strong>Bston-Tech</strong>.
-  <span id="footer-rights" data-i18n="foot.rights">Alla rättigheter förbehållna.</span>
-</footer>
-
-<script>
-  (function(){
-    // Set current year
-    var y = document.getElementById('footer-year');
-    if (y) y.textContent = new Date().getFullYear();
-
-    // Hook into your global language switch
-    var prev = window.applyLang;
-    window.applyLang = function(lang){
-      if (typeof prev === 'function') prev(lang);
-      var rights = (lang === 'en')
-        ? 'All rights reserved.'
-        : 'Alla rättigheter förbehållna.';
-      var el = document.getElementById('footer-rights');
-      if (el) el.textContent = rights;
-    };
-
-    // Apply on load using saved language (defaults to sv)
-    window.applyLang(localStorage.getItem('lang') || 'sv');
-  })();
-</script>
 </body>
 </html>

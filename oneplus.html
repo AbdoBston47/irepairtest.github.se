@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="sv" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>iRepair of Sweden – OnePlus Reparationer</title>
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container head">
+      <div class="brand">
+        <div class="brand-badge">🔧</div>
+        <a href="index.html">iRepair <span style="color:var(--muted)">of Sweden</span></a>
+      </div>
+      <nav>
+        <a href="index.html" data-i18n="nav.home">Hem</a>
+        <a href="repairs.html" class="active" data-i18n="nav.repairs">Reparationer</a>
+        <a href="about.html" data-i18n="nav.about">Om oss</a>
+        <a href="stores.html" data-i18n="nav.stores">Våra butiker</a>
+        <a href="contact.html" data-i18n="nav.contact">Kontakt</a>
+      </nav>
+      <div class="actions">
+        <button id="themeBtn" class="btn ghost" aria-label="Byt tema">☀️ Ljust</button>
+        <button id="langBtn" class="btn">English</button>
+      </div>
+    </div>
+  </header>
+
+  <section class="hero animate-fade-in">
+    <div class="container">
+      <div class="eyebrow" data-i18n="oneplus.eyebrow">ONEPLUS</div>
+      <h1 class="h1" data-i18n="oneplus.title">OnePlus Prislista</h1>
+      <p class="lead" data-i18n="oneplus.sub">De flesta reparationer på plats klara inom en timme. Drop-in.</p>
+      <div class="subnav">
+        <a class="pill" href="repairs.html" data-i18n="oneplus.back">← Tillbaka till Märken</a>
+      </div>
+    </div>
+  </section>
+
+  <main class="container section">
+    <div class="card price-card">
+      <h2 data-i18n="oneplus.table_title">Prislista – Äldre modeller</h2>
+      <table class="price-table">
+        <thead>
+          <tr><th data-i18n="t.model">Modell</th><th data-i18n="t.screen">Skärmbyte</th><th class="price" data-i18n="t.other">Övrigt*</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>OnePlus 8 Pro</td><td>4000 kr</td><td class="price">790 kr</td></tr>
+          <tr><td>OnePlus 8T</td><td>2990 kr</td><td class="price">790 kr</td></tr>
+          <tr><td>OnePlus 8</td><td>2600 kr</td><td class="price">790 kr</td></tr>
+          <tr><td>OnePlus 7 / 7T</td><td>2600 kr</td><td class="price">790 kr</td></tr>
+          <tr><td>OnePlus 6 / 6T</td><td>1800 kr</td><td class="price">790 kr</td></tr>
+          <tr><td>OnePlus 5 / 5T</td><td>1090 kr</td><td class="price">790 kr</td></tr>
+        </tbody>
+      </table>
+      <div class="hint">
+        <p data-i18n="oneplus.note">* Övrigt inkluderar baksida, batteri eller laddport för ovanstående modeller.</p>
+        <p><strong>OnePlus 9, 10, 11, 12 & Nord:</strong> <span data-i18n="oneplus.contact">Kontakta oss för dagsaktuella priser.</span></p>
+      </div>
+    </div>
+
+    <div class="card animate-fade-in" style="margin-top:2rem; text-align:center">
+      <h3 data-i18n="oneplus.contact_h">Hittar du inte din modell?</h3>
+      <p class="muted" data-i18n="oneplus.contact_p">Vi reparerar i stort sett alla OnePlus-enheter. Kontakta oss för en offert!</p>
+      <div style="display:flex; gap:1rem; justify-content:center; margin-top:1rem; flex-wrap:wrap">
+        <a href="tel:08348888" class="btn">08-34 88 88</a>
+        <a href="mailto:info@irepairofsweden.se" class="btn primary">Maila oss</a>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container footer-content">
+      <div class="footer-brand">iRepair of Sweden</div>
+      <div class="muted">
+        © <span id="footer-year"></span> <span class="copyright-owner">iRepair of Sweden</span>. <span data-i18n="foot.rights">Alla rättigheter förbehållna.</span>
+        <br>
+        <span class="powered-by">Powered by Bston-Tech</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/app.js?v=5"></script>
+  <script>
+    const DICT = {
+      sv:{
+        nav:{home:"Hem",repairs:"Reparationer",about:"Om oss",stores:"Våra butiker", contact: "Kontakt"},
+        oneplus:{eyebrow:"ONEPLUS",title:"OnePlus Prislista",sub:"De flesta reparationer på plats klara inom en timme. Drop-in.", back: "← Tillbaka till Märken", table_title: "Prislista – Äldre modeller", note: "* Övrigt inkluderar baksida, batteri eller laddport för ovanstående modeller.", contact: "Kontakta oss för dagsaktuella priser.", contact_h: "Hittar du inte din modell?", contact_p: "Vi reparerar i stort sett alla OnePlus-enheter. Kontakta oss för en offert!"},
+        t:{model: "Modell", screen: "Skärmbyte", other: "Övrigt*"},
+        foot:{rights:"Alla rättigheter förbehållna."}
+      },
+      en:{
+        nav:{home:"Home",repairs:"Repairs",about:"About us",stores:"Our stores", contact: "Contact"},
+        oneplus:{eyebrow:"ONEPLUS",title:"OnePlus Price List",sub:"Most repairs done on-site within an hour. Walk-in.", back: "← Back to Brands", table_title: "Price List – Older models", note: "* Other includes back glass, battery or charging port for the above models.", contact: "Contact us for current daily prices.", contact_h: "Can't find your model?", contact_p: "We repair almost all OnePlus devices. Contact us for a quote!"},
+        t:{model: "Model", screen: "Screen Replacement", other: "Other*"},
+        foot:{rights:"Copyright"}
+      }
+    };
+    window.applyLang = function(lang){
+      const t = DICT[lang];
+      document.querySelectorAll("[data-i18n]").forEach(el=>{
+        const path = el.getAttribute('data-i18n').split('.');
+        let val = t; for (const p of path){ if (val && p in val) val = val[p]; else { val=null; break; } }
+        if (typeof val === 'string') el.textContent = val;
+      });
+    };
+    const savedLang = localStorage.getItem('irepair_lang') || 'sv';
+    window.applyLang(savedLang);
+  </script>
+</body>
+</html>

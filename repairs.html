@@ -5,116 +5,137 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>iRepair of Sweden – Reparationer & Reservdelar</title>
   <link rel="stylesheet" href="assets/styles.css">
-  <style>
-    /* make brand cards clickable and pretty */
-    .link-card { display:block; text-decoration:none; transition:transform .12s ease, border-color .12s ease, box-shadow .12s ease; }
-    .link-card:hover { transform:translateY(-2px); border-color:var(--accent);
-      box-shadow:0 0 0 3px color-mix(in srgb, var(--accent) 22%, transparent); }
-    .link-card h3 { margin:0 0 6px; }
-    .link-card .muted { color:var(--muted); }
-  </style>
 </head>
 <body>
   <header class="site-header">
     <div class="container head">
-      <div class="brand"><div class="brand-badge">🔧</div><a href="index.html">iRepair <span style="color:var(--muted)">of Sweden</span></a></div>
+      <div class="brand">
+        <div class="brand-badge">🔧</div>
+        <a href="index.html">iRepair <span style="color:var(--muted)">of Sweden</span></a>
+      </div>
       <nav>
         <a href="index.html" data-i18n="nav.home">Hem</a>
         <a href="repairs.html" class="active" data-i18n="nav.repairs">Reparationer</a>
+        <a href="sell.html" data-i18n="nav.sell">Sälj mobil</a>
         <a href="about.html" data-i18n="nav.about">Om oss</a>
         <a href="stores.html" data-i18n="nav.stores">Våra butiker</a>
         <a href="contact.html" data-i18n="nav.contact">Kontakt</a>
       </nav>
-      <div style="display:flex;gap:8px">
-        <button id="themeBtn" class="theme-btn btn" aria-label="Byt tema">☀️ Ljust</button>
-        <button id="langBtn" class="lang-btn">English</button>
+      <div class="actions">
+        <button id="themeBtn" class="btn ghost" aria-label="Byt tema">☀️ Ljust</button>
+        <button id="langBtn" class="btn">English</button>
       </div>
     </div>
   </header>
 
   <main>
-    <section class="hero">
+    <section class="hero animate-fade-in">
       <div class="container">
-        <h1 class="h1" data-i18n="t.title">REPARATION – PRISER OCH REPARATIONER</h1>
-        <p class="muted" data-i18n="t.l1">Vi är ett företag med 19 års erfarenhet inom reparation av kommunikationsutrustning.</p>
-        <p class="muted" data-i18n="t.l2">Vi strävar främst efter nöjda kunder.</p>
+        <h1 class="h1" data-i18n="t.title">REPARATION – PRISER OCH MODELLER</h1>
+        <p class="lead" data-i18n="t.l1">Vi är ett företag med 19 års erfarenhet inom reparation av kommunikationsutrustning. Vi strävar främst efter nöjda kunder.</p>
       </div>
     </section>
 
-    <!-- Brand grid (APPLE now links to apple.html) -->
+    <!-- Brand grid -->
     <section class="container section">
-      <div class="grid grid-3">
-        <a class="card link-card" href="apple.html">
-          <h3>APPLE</h3>
-          <div class="muted">iPhone, iPad, Apple Watch</div>
+      <div class="grid">
+        <a class="card" href="apple.html">
+          <span class="badge">Apple</span>
+          <h3>iPhone, iPad, Watch</h3>
+          <p class="muted">Reparationer för alla Apple-enheter.</p>
+          <div class="btn ghost mt-12" style="width:100%">Se priser</div>
         </a>
 
-        <a class="card link-card" href="samsung.html">
-          <h3>SAMSUNG</h3>
-          <div class="muted">Galaxy-serien</div>
+        <a class="card" href="samsung.html">
+          <span class="badge">Samsung</span>
+          <h3>Galaxy S & A-serien</h3>
+          <p class="muted">Skärmbyten, batterier och mer.</p>
+          <div class="btn ghost mt-12" style="width:100%">Se priser</div>
         </a>
 
-        <a class="card link-card" href="xiaomi.html">
-          <h3>XIAOMI</h3>
+        <a class="card" href="xiaomi.html">
+          <span class="badge">Xiaomi</span>
+          <h3>Mi, Redmi & Poco</h3>
+          <p class="muted">Prisvärda reparationer för Xiaomi.</p>
+          <div class="btn ghost mt-12" style="width:100%">Se priser</div>
         </a>
 
-        <a class="card link-card" href="pixel.html">
-          <h3>GOOGLE PIXEL</h3>
+        <a class="card" href="pixel.html">
+          <span class="badge">Google Pixel</span>
+          <h3>Pixel 4 till Pixel 9</h3>
+          <p class="muted">Originaldelar och snabb service.</p>
+          <div class="btn ghost mt-12" style="width:100%">Se priser</div>
         </a>
 
-        <a class="card link-card" href="#">
-          <h3>ONEPLUS</h3>
+        <a class="card" href="oneplus.html">
+          <span class="badge">OnePlus</span>
+          <h3>OnePlus 7 till 12</h3>
+          <p class="muted">Expertis på OnePlus mobiler.</p>
+          <div class="btn ghost mt-12" style="width:100%">Se priser</div>
         </a>
 
-        <a class="card link-card" href="#">
-          <h3>HUAWEI</h3>
+        <a class="card" href="huawei.html">
+          <span class="badge">Huawei</span>
+          <h3>P & Mate-serien</h3>
+          <p class="muted">Vi hjälper dig med din Huawei.</p>
+          <div class="btn ghost mt-12" style="width:100%">Se priser</div>
         </a>
 
-        <a class="card link-card" href="#">
-          <h3>NOKIA</h3>
+        <a class="card" href="sony.html">
+          <span class="badge">Sony</span>
+          <h3>Xperia-serien</h3>
+          <p class="muted">Klassisk Sony-service.</p>
+          <div class="btn ghost mt-12" style="width:100%">Se priser</div>
         </a>
 
-        <a class="card link-card" href="#">
-          <h3>SONY</h3>
+        <a class="card" href="contact.html">
+          <span class="badge">Övrigt</span>
+          <h3>Annat märke?</h3>
+          <p class="muted">Hittar du inte din modell? Kontakta oss!</p>
+          <div class="btn primary mt-12" style="width:100%">Maila oss</div>
         </a>
 
-      </div>
-
-      <div class="card" style="margin-top:16px">
-        <strong data-i18n="t.help">Hittar du inte din modell? Kontakta oss så hjälper vi dig.</strong>
       </div>
     </section>
   </main>
 
-  <footer>© <span></span> Bston-Tech. <span data-i18n="foot.rights">Alla rättigheter förbehållna.</span></footer>
+  <footer>
+    <div class="container footer-content">
+      <div class="footer-brand">iRepair of Sweden</div>
+      <div class="muted">
+        © <span id="footer-year"></span> <span class="copyright-owner">iRepair of Sweden</span>. <span data-i18n="foot.rights">Alla rättigheter förbehållna.</span>
+        <br>
+        <span class="powered-by">Powered by Bston-Tech</span>
+      </div>
+    </div>
+  </footer>
 
+  <script src="assets/app.js?v=5"></script>
   <script>
-    const DICT={sv:{nav:{home:"Hem",repairs:"Reparationer",about:"Om oss",stores:"Våra butiker"},
-      t:{title:"REPARATION – PRISER OCH REPARATIONER",l1:"Vi är ett företag med 19 års erfarenhet inom reparation av kommunikationsutrustning.",l2:"Vi strävar främst efter nöjda kunder.",other:"ANNAT",help:"Hittar du inte din modell? Kontakta oss så hjälper vi dig."},
-      _btn:"English"},
-      en:{nav:{home:"Home",repairs:"Repairs",about:"About us",stores:"Our stores"},
-      t:{title:"REPAIRS – PRICES & SERVICES",l1:"We have 19 years of experience repairing communication devices.",l2:"Our primary goal is satisfied customers.",other:"OTHER",help:"Can’t find your model? Contact us and we’ll help."},
-      _btn:"Svenska"}};
+    const DICT={
+      sv:{
+        nav:{home:"Hem",repairs:"Reparationer",about:"Om oss",stores:"Våra butiker", sell: "Sälj mobil", contact: "Kontakt"},
+        t:{title:"REPARATION – PRISER OCH MODELLER",l1:"Vi är ett företag med 19 års erfarenhet inom reparation av kommunikationsutrustning. Vi strävar främst efter nöjda kunder.",help:"Hittar du inte din modell? Kontakta oss så hjälper vi dig."},
+        foot:{rights:"Alla rättigheter förbehållna."}
+      },
+      en:{
+        nav:{home:"Home",repairs:"Repairs",about:"About us",stores:"Our stores", sell: "Sell phone", contact: "Contact"},
+        t:{title:"REPAIRS – PRICES & MODELS",l1:"We have 19 years of experience repairing communication devices. Our primary goal is satisfied customers.",help:"Can’t find your model? Contact us and we’ll help."},
+        foot:{rights:"Copyright"}
+      }
+    };
 
-    function applyLang(lang){
-      const t=DICT[lang]; document.documentElement.lang=lang;
-      document.querySelectorAll("[data-i18n]").forEach(el=>{ let cur=t; for(const k of el.dataset.i18n.split(".")) cur=cur&&cur[k]; if(typeof cur==="string") el.textContent=cur; });
-      document.querySelectorAll('nav a')[1].classList.add('active');
-      document.getElementById("langBtn").textContent=t._btn;
-    }
+    window.applyLang = function(lang){
+      const t=DICT[lang];
+      document.querySelectorAll("[data-i18n]").forEach(el=>{
+        const path = el.getAttribute('data-i18n').split('.');
+        let val = t; for (const p of path){ if (val && p in val) val = val[p]; else { val=null; break; } }
+        if (typeof val === 'string') el.textContent = val;
+      });
+    };
 
-    (function themeInit(){
-      const KEY='theme', btn=document.getElementById('themeBtn');
-      function set(x){ document.documentElement.setAttribute('data-theme',x); localStorage.setItem(KEY,x); btn.textContent=x==='dark'?'🌙 Mörkt':'☀️ Ljust'; }
-      set(localStorage.getItem(KEY)||'light'); btn.addEventListener('click',()=>set(document.documentElement.getAttribute('data-theme')==='dark'?'light':'dark'));
-    })();
-
-    (function langInit(){
-      const saved=localStorage.getItem('lang')||'sv'; applyLang(saved);
-      document.getElementById('langBtn').addEventListener('click',()=>{const next=(localStorage.getItem('lang')||'sv')==='sv'?'en':'sv'; localStorage.setItem('lang',next); applyLang(next);});
-    })();
-
-    document.getElementById('year').textContent=new Date().getFullYear();
+    const savedLang = localStorage.getItem('irepair_lang') || 'sv';
+    window.applyLang(savedLang);
   </script>
 </body>
 </html>
